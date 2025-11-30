@@ -18,9 +18,29 @@ download_file() {
     # Create destination directory
     mkdir -p "${destination_dir}"
     
+    # Build wget command with authentication if needed
+    local wget_cmd="wget --progress=bar:force"
+    local download_url="${url}"
+    
+    # Add HuggingFace authentication header if URL matches and token is set
+    if [[ "${url}" == *"huggingface.co"* ]] && [[ -n "${HF_TOKEN}" ]]; then
+        wget_cmd="${wget_cmd} --header=\"Authorization: Bearer ${HF_TOKEN}\""
+        echo "DOWNLOAD: Using HuggingFace authentication..."
+    fi
+    
+    # Add Civitai API key if URL matches and key is set
+    if [[ "${url}" == *"civitai.com"* ]] && [[ -n "${CIVITAI_API_KEY}" ]]; then
+        if [[ "${url}" == *"?"* ]]; then
+            download_url="${url}&token=${CIVITAI_API_KEY}"
+        else
+            download_url="${url}?token=${CIVITAI_API_KEY}"
+        fi
+        echo "DOWNLOAD: Using Civitai authentication..."
+    fi
+    
     # Download file with wget
     echo "DOWNLOAD: Downloading ${filename} to ${destination_dir}..."
-    if wget --progress=bar:force -O "${destination_path}" "${url}" 2>&1; then
+    if eval "${wget_cmd} -O \"${destination_path}\" \"${download_url}\"" 2>&1; then
         echo "DOWNLOAD: SUCCESS: ${filename} downloaded to ${destination_path}\n"
         return 0
     else
