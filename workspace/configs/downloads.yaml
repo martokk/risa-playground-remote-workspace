@@ -4,7 +4,7 @@ groups:
       - url: "https://huggingface.co/comfyanonymous/flux_text_encoders/blob/main/clip_l.safetensors"
         destination: "/workspace/models/clip/flux1"
       - url: "https://huggingface.co/city96/t5-v1_1-xxl-encoder-gguf/resolve/main/t5-v1_1-xxl-encoder-Q8_0.gguf"
-        destination: "/workspace/models/text_encoders/flux1"
+        destination: "/workspace/models/clip/flux1"
       - url: "https://huggingface.co/black-forest-labs/FLUX.1-schnell/blob/main/ae.safetensors"
         destination: "/workspace/models/vae/flux1"
   - name: "flux1-fill-dev-gguf"
@@ -13,7 +13,7 @@ groups:
         destination: "/workspace/models/unet/flux1"
   - name: "flux1-kontext-dev-gguf"
     downloads:
-      - url: "https://huggingface.co/QuantStack/FLUX.1-Kontext-dev-GGUF/resolve/main/flux1-kontext-dev-Q8_0.gguf?download=true"
+      - url: "https://huggingface.co/QuantStack/FLUX.1-Kontext-dev-GGUF/resolve/main/flux1-kontext-dev-Q8_0.gguf"
         destination: "/workspace/models/unet/flux1"
   - name: "flux1-dev-gguf"
     downloads:
