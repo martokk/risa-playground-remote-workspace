@@ -11,7 +11,7 @@ download_file() {
     
     # Check if file already exists
     if [[ -f "${destination_path}" ]]; then
-        echo "DOWNLOAD: SKIP: File already exists: ${destination_path}"
+        echo "DOWNLOAD: SKIP: File already exists: ${destination_path}\n"
         return 0
     fi
     
@@ -21,10 +21,10 @@ download_file() {
     # Download file with wget
     echo "DOWNLOAD: Downloading ${filename} to ${destination_dir}..."
     if wget --progress=bar:force -O "${destination_path}" "${url}" 2>&1; then
-        echo "DOWNLOAD: SUCCESS: ${filename}"
+        echo "DOWNLOAD: SUCCESS: ${filename} downloaded to ${destination_path}\n"
         return 0
     else
-        echo "DOWNLOAD: ERROR: Failed to download ${url}"
+        echo "\nDOWNLOAD: ERROR: Failed to download ${url}\n\n\n"
         rm -f "${destination_path}"  # Clean up partial download
         return 1
     fi
@@ -64,8 +64,8 @@ parse_and_download_models() {
         group=$(echo "${group}" | xargs)  # Trim whitespace
         echo "DOWNLOAD: Processing group: ${group}"
         
-        # Extract downloads for this group
-        yq -r ".groups[] | select(.name == \"${group}\") | .downloads[] | .url + \"\u0000\" + .destination" "${downloads_config}" 2>/dev/null | while IFS= read -r -d '' url && IFS= read -r -d '' destination; do
+        # Extract downloads for this group using pipe delimiter
+        yq -r ".groups[] | select(.name == \"${group}\") | .downloads[] | .url + \"|\" + .destination" "${downloads_config}" 2>/dev/null | while IFS='|' read -r url destination; do
             # Skip empty entries
             if [[ -z "${url}" || -z "${destination}" ]]; then
                 continue
@@ -89,11 +89,11 @@ parse_and_download_models() {
         return
     fi
     
-    echo "DOWNLOAD: Found ${total_downloads} unique files to download."
+    echo "\n\nDOWNLOAD: Found ${total_downloads} unique files to download."
     
     # Determine download mode (async or sync)
     local download_mode="${DOWNLOAD_MODE:-async}"
-    echo "DOWNLOAD: Mode: ${download_mode}"
+    echo "DOWNLOAD: Mode: ${download_mode}\n\n"
     
     # Track background jobs for async mode
     local -a download_pids=()
@@ -102,7 +102,7 @@ parse_and_download_models() {
     local count=0
     while IFS='|' read -r url destination; do
         ((count++))
-        echo "DOWNLOAD: [${count}/${total_downloads}] Processing: ${url}"
+        echo "\n\nDOWNLOAD: [${count}/${total_downloads}] Processing: ${url}\n\n"
         
         if [[ "${download_mode}" == "async" ]]; then
             # Download in background
@@ -120,19 +120,19 @@ parse_and_download_models() {
         for pid in "${download_pids[@]}"; do
             wait "${pid}" 2>/dev/null || true
         done
-        echo "DOWNLOAD: All background downloads completed."
+        echo "\n\nDOWNLOAD: All background downloads completed."
     fi
     
     # Cleanup
     rm -f "${temp_downloads}"
     
-    echo "DOWNLOAD: Download process complete."
+    echo "DOWNLOAD: Download process complete.\n\n"
 }
 
 echo "POST-START: START --------------------------------------------------------------"
 
-echo "POST-START: DOWNLOADING MODELS -------------------------------------------------"
+echo "\n\n\nPOST-START: DOWNLOADING MODELS -------------------------------------------------"
 parse_and_download_models
 
-echo "POST-START: DONE ---------------------------------------------------------------"
+echo "\n\n\nPOST-START: DONE ---------------------------------------------------------------"
 echo "--------------------------------------------------------------------------------\n\n"

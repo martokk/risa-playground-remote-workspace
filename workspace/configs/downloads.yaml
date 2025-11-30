@@ -1,31 +1,38 @@
 groups:
+  # Flux.1 Base Models
   - name: "flux1-base"
     downloads:
       - url: "https://huggingface.co/comfyanonymous/flux_text_encoders/blob/main/clip_l.safetensors"
         destination: "/workspace/models/clip/flux1"
       - url: "https://huggingface.co/city96/t5-v1_1-xxl-encoder-gguf/resolve/main/t5-v1_1-xxl-encoder-Q8_0.gguf"
         destination: "/workspace/models/clip/flux1"
-      - url: "https://huggingface.co/black-forest-labs/FLUX.1-schnell/blob/main/ae.safetensors"
+      - url: "https://huggingface.co/modelzpalace/ae.safetensors/resolve/main/ae.safetensors"
         destination: "/workspace/models/vae/flux1"
+
+  # Flux.1 Fill Dev GGUF
   - name: "flux1-fill-dev-gguf"
     downloads:
       - url: "https://huggingface.co/YarvixPA/FLUX.1-Fill-dev-GGUF/resolve/main/flux1-fill-dev-Q8_0.gguf"
         destination: "/workspace/models/unet/flux1"
+
+  # Flux.1 Kontext Dev GGUF
   - name: "flux1-kontext-dev-gguf"
     downloads:
       - url: "https://huggingface.co/QuantStack/FLUX.1-Kontext-dev-GGUF/resolve/main/flux1-kontext-dev-Q8_0.gguf"
         destination: "/workspace/models/unet/flux1"
+
+  # Flux.1 Dev GGUF
   - name: "flux1-dev-gguf"
     downloads:
       - url: "https://huggingface.co/city96/FLUX.1-dev-gguf/resolve/main/flux1-dev-Q8_0.gguf"
         destination: "/workspace/models/unet/flux1"
-      - url: ""
-        destination: ""
+
+  # Flux.1 Kontext LORAS
   - name: "flux1-kontext-loras"
     downloads:
-      - url: "https://huggingface.co/Civarchivist/daily/resolve/main/1800528/2037657/zoomout-fal-v1.safetensors"
+      - url: "https://huggingface.co/botSolar/zoom-out-kontext/resolve/main/zoomout-fal-v1.safetensors"
         destination: "/workspace/models/lora/flux1/kontext/styles/camera"
-      - url: "https://huggingface.co/amayprro552/Flux_kontext_deblur/resolve/main/Flux_kontext_deblur.safetensors"
+      - url: "https://huggingface.co/Civarchivist/base_kontiki/resolve/main/1737381/1966280/Flux_kontext_deblur.safetensors"
         destination: "/workspace/models/lora/flux1/kontext/styles/detail"
       - url: "https://huggingface.co/Civarchivist/base_kontiki/resolve/main/1793097/2029194/lr_relight-19-2500.safetensors"
         destination: "/workspace/models/lora/flux1/kontext/styles/detail"
