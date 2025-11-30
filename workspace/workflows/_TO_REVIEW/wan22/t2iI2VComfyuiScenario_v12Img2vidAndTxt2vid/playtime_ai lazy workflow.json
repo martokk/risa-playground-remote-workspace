@@ -1,0 +1,3830 @@
+{
+    "id": "ec7da562-7e21-4dac-a0d2-f4441e1efd3b",
+    "revision": 0,
+    "last_node_id": 95,
+    "last_link_id": 186,
+    "nodes": [
+        {
+            "id": 39,
+            "type": "VAELoader",
+            "pos": [
+                44.5534230357671,
+                134.4713096403558
+            ],
+            "size": [
+                344.731689453125,
+                59.98149108886719
+            ],
+            "flags": {},
+            "order": 0,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "VAE",
+                    "type": "VAE",
+                    "slot_index": 0,
+                    "links": [
+                        76
+                    ]
+                }
+            ],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.45",
+                "Node name for S&R": "VAELoader",
+                "models": [
+                    {
+                        "name": "wan_2.1_vae.safetensors",
+                        "url": "https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/vae/wan_2.1_vae.safetensors",
+                        "directory": "vae"
+                    }
+                ],
+                "ue_properties": {
+                    "version": "7.3",
+                    "widget_ue_connectable": {},
+                    "input_ue_unconnectable": {}
+                }
+            },
+            "widgets_values": [
+                "wan_2.1_vae.safetensors"
+            ],
+            "ndSuperSelectorEnabled": false,
+            "ndPowerEnabled": false
+        },
+        {
+            "id": 37,
+            "type": "UNETLoader",
+            "pos": [
+                36.49808497313381,
+                -287.3078041291751
+            ],
+            "size": [
+                346.7470703125,
+                82
+            ],
+            "flags": {},
+            "order": 1,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "MODEL",
+                    "type": "MODEL",
+                    "slot_index": 0,
+                    "links": [
+                        164
+                    ]
+                }
+            ],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.45",
+                "Node name for S&R": "UNETLoader",
+                "models": [
+                    {
+                        "name": "wan2.2_t2v_high_noise_14B_fp8_scaled.safetensors",
+                        "url": "https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/diffusion_models/wan2.2_t2v_high_noise_14B_fp8_scaled.safetensors",
+                        "directory": "diffusion_models"
+                    }
+                ],
+                "ue_properties": {
+                    "version": "7.3",
+                    "widget_ue_connectable": {},
+                    "input_ue_unconnectable": {}
+                }
+            },
+            "widgets_values": [
+                "wan2.2_t2v_high_noise_14B_fp8_scaled.safetensors",
+                "default"
+            ],
+            "ndSuperSelectorEnabled": false,
+            "ndPowerEnabled": false
+        },
+        {
+            "id": 38,
+            "type": "CLIPLoader",
+            "pos": [
+                31.17876822724351,
+                -27.17530603160639
+            ],
+            "size": [
+                346.391845703125,
+                106
+            ],
+            "flags": {},
+            "order": 2,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "CLIP",
+                    "type": "CLIP",
+                    "slot_index": 0,
+                    "links": [
+                        75,
+                        153,
+                        165
+                    ]
+                }
+            ],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.45",
+                "Node name for S&R": "CLIPLoader",
+                "models": [
+                    {
+                        "name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+                        "url": "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/text_encoders/umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+                        "directory": "text_encoders"
+                    }
+                ],
+                "ue_properties": {
+                    "version": "7.3",
+                    "widget_ue_connectable": {},
+                    "input_ue_unconnectable": {}
+                }
+            },
+            "widgets_values": [
+                "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+                "wan",
+                "default"
+            ],
+            "ndSuperSelectorEnabled": false,
+            "ndPowerEnabled": false
+        },
+        {
+            "id": 56,
+            "type": "UNETLoader",
+            "pos": [
+                39.256528962280804,
+                -158.35308840041566
+            ],
+            "size": [
+                346.7470703125,
+                82
+            ],
+            "flags": {},
+            "order": 3,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "MODEL",
+                    "type": "MODEL",
+                    "slot_index": 0,
+                    "links": [
+                        175
+                    ]
+                }
+            ],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.45",
+                "Node name for S&R": "UNETLoader",
+                "models": [
+                    {
+                        "name": "wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors",
+                        "url": "https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/diffusion_models/wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors",
+                        "directory": "diffusion_models"
+                    }
+                ],
+                "ue_properties": {
+                    "version": "7.3",
+                    "widget_ue_connectable": {},
+                    "input_ue_unconnectable": {}
+                }
+            },
+            "widgets_values": [
+                "wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors",
+                "default"
+            ],
+            "ndSuperSelectorEnabled": false,
+            "ndPowerEnabled": false
+        },
+        {
+            "id": 57,
+            "type": "KSamplerAdvanced",
+            "pos": [
+                890,
+                -60
+            ],
+            "size": [
+                304.748046875,
+                546
+            ],
+            "flags": {},
+            "order": 21,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "model",
+                    "type": "MODEL",
+                    "link": 125
+                },
+                {
+                    "name": "positive",
+                    "type": "CONDITIONING",
+                    "link": 127
+                },
+                {
+                    "name": "negative",
+                    "type": "CONDITIONING",
+                    "link": 129
+                },
+                {
+                    "name": "latent_image",
+                    "type": "LATENT",
+                    "link": 126
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "LATENT",
+                    "type": "LATENT",
+                    "links": [
+                        113
+                    ]
+                }
+            ],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.45",
+                "Node name for S&R": "KSamplerAdvanced",
+                "ue_properties": {
+                    "version": "7.3",
+                    "widget_ue_connectable": {},
+                    "input_ue_unconnectable": {}
+                }
+            },
+            "widgets_values": [
+                "enable",
+                720320151985460,
+                "fixed",
+                4,
+                1,
+                "euler",
+                "simple",
+                0,
+                2,
+                "enable"
+            ]
+        },
+        {
+            "id": 62,
+            "type": "MarkdownNote",
+            "pos": [
+                -480,
+                -120
+            ],
+            "size": [
+                480,
+                350
+            ],
+            "flags": {},
+            "order": 4,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [],
+            "title": "Model Links",
+            "properties": {
+                "ue_properties": {
+                    "version": "7.3",
+                    "widget_ue_connectable": {},
+                    "input_ue_unconnectable": {}
+                }
+            },
+            "widgets_values": [
+                "[Tutorial](https://docs.comfy.org/tutorials/video/wan/wan2_2\n) | [教程](https://docs.comfy.org/zh-CN/tutorials/video/wan/wan2_2\n)\n\n**Diffusion Model**\n- [wan2.2_t2v_high_noise_14B_fp8_scaled.safetensors](https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/diffusion_models/wan2.2_t2v_high_noise_14B_fp8_scaled.safetensors)\n- [wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors](https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/diffusion_models/wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors)\n\n**VAE**\n- [wan_2.1_vae.safetensors](https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/vae/wan_2.1_vae.safetensors)\n\n**Text Encoder**   \n- [umt5_xxl_fp8_e4m3fn_scaled.safetensors](https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/text_encoders/umt5_xxl_fp8_e4m3fn_scaled.safetensors)\n\n\nFile save location\n\n```\nComfyUI/\n├───📂 models/\n│   ├───📂 diffusion_models/\n│   │   ├─── wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors\n│   │   └─── wan2.2_t2v_high_noise_14B_fp8_scaled.safetensors\n│   ├───📂 text_encoders/\n│   │   └─── umt5_xxl_fp8_e4m3fn_scaled.safetensors \n│   └───📂 vae/\n│       └── wan_2.1_vae.safetensors\n```\n"
+            ],
+            "color": "#432",
+            "bgcolor": "#653"
+        },
+        {
+            "id": 6,
+            "type": "CLIPTextEncode",
+            "pos": [
+                428.6810823612068,
+                186.43815858415843
+            ],
+            "size": [
+                422.84503173828125,
+                164.31304931640625
+            ],
+            "flags": {
+                "collapsed": true
+            },
+            "order": 17,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "clip",
+                    "type": "CLIP",
+                    "link": 153
+                },
+                {
+                    "name": "text",
+                    "type": "STRING",
+                    "widget": {
+                        "name": "text"
+                    },
+                    "link": 178
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "CONDITIONING",
+                    "type": "CONDITIONING",
+                    "slot_index": 0,
+                    "links": [
+                        127,
+                        128
+                    ]
+                }
+            ],
+            "title": "CLIP Text Encode (Positive Prompt)",
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.45",
+                "Node name for S&R": "CLIPTextEncode",
+                "ue_properties": {
+                    "version": "7.3",
+                    "widget_ue_connectable": {},
+                    "input_ue_unconnectable": {}
+                }
+            },
+            "widgets_values": [
+                "A slow, predatory dolly-in pushes through the shimmering heat haze of a deserted, sun-bleached gas station in the middle of nowhere. A beautiful, dangerous girl is leaning back against the hood of a vintage, cherry-red muscle car, a bead of condensation from her cold soda bottle tracing a path down her toned stomach. She is wearing a frayed, oil-stained, and ridiculously short cutoff tank top. As she tilts her head back to take a long, slow swallow, the camera captures the magnificent, undeniable truth: her top reveals her underboob, a glorious, sun-kissed proclamation in the vast, empty, and beautifully desolate silence.\n"
+            ],
+            "color": "#232",
+            "bgcolor": "#353"
+        },
+        {
+            "id": 7,
+            "type": "CLIPTextEncode",
+            "pos": [
+                429.89824992498336,
+                387.9736441306283
+            ],
+            "size": [
+                440.33065327148597,
+                136.70255120849117
+            ],
+            "flags": {},
+            "order": 10,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "clip",
+                    "type": "CLIP",
+                    "link": 75
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "CONDITIONING",
+                    "type": "CONDITIONING",
+                    "slot_index": 0,
+                    "links": [
+                        129,
+                        130
+                    ]
+                }
+            ],
+            "title": "CLIP Text Encode (Negative Prompt)",
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.45",
+                "Node name for S&R": "CLIPTextEncode",
+                "ue_properties": {
+                    "version": "7.3",
+                    "widget_ue_connectable": {},
+                    "input_ue_unconnectable": {}
+                }
+            },
+            "widgets_values": [
+                "bright colors, overexposed, static, blurred details, subtitles, style, artwork, painting, picture, still, overall gray, worst quality, low quality, JPEG compression residue, ugly, incomplete, extra fingers, poorly drawn hands, poorly drawn faces, deformed, disfigured, malformed limbs, fused fingers, still picture, cluttered background, three legs, many people in the background, walking backwards, closed eyes"
+            ],
+            "color": "#322",
+            "bgcolor": "#533"
+        },
+        {
+            "id": 93,
+            "type": "MarkdownNote",
+            "pos": [
+                -1480.7292534846813,
+                294.90868717388906
+            ],
+            "size": [
+                480,
+                351.28739724327414
+            ],
+            "flags": {},
+            "order": 5,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [],
+            "title": "Subject and Scene setup",
+            "properties": {
+                "ue_properties": {
+                    "version": "7.3",
+                    "widget_ue_connectable": {},
+                    "input_ue_unconnectable": {}
+                }
+            },
+            "widgets_values": [
+                "Setup is the same for both nodes. \n\nPerson is set up for WAN 2.1\n\nScene is set up for WAN 2.2\n\n```\nPerson text file format \n(For this example, the LoRA for the person is in the models\\loras\\person\\ folder)\n\nperson\\wan_2.1_LoraName.safetensors\n#\nbodytype\\wan_2.1_LoraName.safetensors\n#\nPerson description/prompt and any trigger words for the LoRAs.\n\n```\n\n```\nScene text file format \n(For this example, the LoRA for the position is in the models\\loras\\position\\ folder)\n\nposition\\wan_2.2_LoraName_High.safetensors\n#\nposition\\wan_2.1_LoraName_Low.safetensors\n#\nLoRA prompt and any trigger words for the LoRAs.\n\n```"
+            ],
+            "color": "#432",
+            "bgcolor": "#653"
+        },
+        {
+            "id": 88,
+            "type": "PreviewAny",
+            "pos": [
+                428.7935407634955,
+                186.99429496799547
+            ],
+            "size": [
+                433.07271759195476,
+                162.82878836892394
+            ],
+            "flags": {},
+            "order": 18,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "source",
+                    "type": "*",
+                    "link": 179
+                }
+            ],
+            "outputs": [],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.67",
+                "Node name for S&R": "PreviewAny",
+                "ue_properties": {
+                    "widget_ue_connectable": {},
+                    "input_ue_unconnectable": {},
+                    "version": "7.3"
+                }
+            },
+            "widgets_values": []
+        },
+        {
+            "id": 54,
+            "type": "ModelSamplingSD3",
+            "pos": [
+                665.9170766783186,
+                40.925088183202334
+            ],
+            "size": [
+                210,
+                60
+            ],
+            "flags": {},
+            "order": 19,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "model",
+                    "type": "MODEL",
+                    "link": 146
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "MODEL",
+                    "type": "MODEL",
+                    "slot_index": 0,
+                    "links": [
+                        125
+                    ]
+                }
+            ],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.45",
+                "Node name for S&R": "ModelSamplingSD3",
+                "ue_properties": {
+                    "version": "7.3",
+                    "widget_ue_connectable": {},
+                    "input_ue_unconnectable": {}
+                }
+            },
+            "widgets_values": [
+                8.000000000000002
+            ]
+        },
+        {
+            "id": 59,
+            "type": "EmptyHunyuanLatentVideo",
+            "pos": [
+                455.0313486506143,
+                -139.53118474039502
+            ],
+            "size": [
+                315,
+                130
+            ],
+            "flags": {},
+            "order": 6,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "LATENT",
+                    "type": "LATENT",
+                    "slot_index": 0,
+                    "links": [
+                        126
+                    ]
+                }
+            ],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.45",
+                "Node name for S&R": "EmptyHunyuanLatentVideo",
+                "ue_properties": {
+                    "version": "7.3",
+                    "widget_ue_connectable": {},
+                    "input_ue_unconnectable": {}
+                }
+            },
+            "widgets_values": [
+                480,
+                720,
+                81,
+                1
+            ]
+        },
+        {
+            "id": 55,
+            "type": "ModelSamplingSD3",
+            "pos": [
+                442.7212856907749,
+                44.967058843508205
+            ],
+            "size": [
+                210,
+                58
+            ],
+            "flags": {},
+            "order": 20,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "model",
+                    "type": "MODEL",
+                    "link": 147
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "MODEL",
+                    "type": "MODEL",
+                    "slot_index": 0,
+                    "links": [
+                        123
+                    ]
+                }
+            ],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.45",
+                "Node name for S&R": "ModelSamplingSD3",
+                "ue_properties": {
+                    "version": "7.3",
+                    "widget_ue_connectable": {},
+                    "input_ue_unconnectable": {}
+                }
+            },
+            "widgets_values": [
+                8
+            ]
+        },
+        {
+            "id": 58,
+            "type": "KSamplerAdvanced",
+            "pos": [
+                900.8287963867188,
+                548.2706298828125
+            ],
+            "size": [
+                304.748046875,
+                546
+            ],
+            "flags": {},
+            "order": 22,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "model",
+                    "type": "MODEL",
+                    "link": 123
+                },
+                {
+                    "name": "positive",
+                    "type": "CONDITIONING",
+                    "link": 128
+                },
+                {
+                    "name": "negative",
+                    "type": "CONDITIONING",
+                    "link": 130
+                },
+                {
+                    "name": "latent_image",
+                    "type": "LATENT",
+                    "link": 113
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "LATENT",
+                    "type": "LATENT",
+                    "links": [
+                        124
+                    ]
+                }
+            ],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.45",
+                "Node name for S&R": "KSamplerAdvanced",
+                "ue_properties": {
+                    "version": "7.3",
+                    "widget_ue_connectable": {},
+                    "input_ue_unconnectable": {}
+                }
+            },
+            "widgets_values": [
+                "disable",
+                600983027659178,
+                "fixed",
+                4,
+                1.8,
+                "euler",
+                "simple",
+                2,
+                10000,
+                "disable"
+            ]
+        },
+        {
+            "id": 64,
+            "type": "Power Lora Loader (rgthree)",
+            "pos": [
+                -7.620902952676849,
+                573.5866362160767
+            ],
+            "size": [
+                426.58200130979947,
+                303.9377271105975
+            ],
+            "flags": {},
+            "order": 15,
+            "mode": 0,
+            "inputs": [
+                {
+                    "dir": 3,
+                    "name": "model",
+                    "type": "MODEL",
+                    "link": 172
+                },
+                {
+                    "dir": 3,
+                    "name": "clip",
+                    "type": "CLIP",
+                    "link": 169
+                }
+            ],
+            "outputs": [
+                {
+                    "dir": 4,
+                    "name": "MODEL",
+                    "shape": 3,
+                    "type": "MODEL",
+                    "links": [
+                        146
+                    ]
+                },
+                {
+                    "dir": 4,
+                    "name": "CLIP",
+                    "shape": 3,
+                    "type": "CLIP",
+                    "links": []
+                }
+            ],
+            "properties": {
+                "cnr_id": "rgthree-comfy",
+                "ver": "1.0.2506230015",
+                "Show Strengths": "Single Strength",
+                "ue_properties": {
+                    "version": "7.3",
+                    "widget_ue_connectable": {},
+                    "input_ue_unconnectable": {}
+                }
+            },
+            "widgets_values": [
+                {},
+                {
+                    "type": "PowerLoraLoaderHeaderWidget"
+                },
+                {
+                    "on": true,
+                    "lora": "wan2.2_t2v_lightx2v_4steps_lora_v1.1_high_noise.safetensors",
+                    "strength": 0.9999999999999991,
+                    "strengthTwo": null
+                },
+                {},
+                ""
+            ]
+        },
+        {
+            "id": 65,
+            "type": "Power Lora Loader (rgthree)",
+            "pos": [
+                423.017490385269,
+                576.4047674637035
+            ],
+            "size": [
+                477.00773485472746,
+                295.6587761364758
+            ],
+            "flags": {},
+            "order": 16,
+            "mode": 0,
+            "inputs": [
+                {
+                    "dir": 3,
+                    "name": "model",
+                    "type": "MODEL",
+                    "link": 173
+                },
+                {
+                    "dir": 3,
+                    "name": "clip",
+                    "type": "CLIP",
+                    "link": 170
+                }
+            ],
+            "outputs": [
+                {
+                    "dir": 4,
+                    "name": "MODEL",
+                    "shape": 3,
+                    "type": "MODEL",
+                    "links": [
+                        147
+                    ]
+                },
+                {
+                    "dir": 4,
+                    "name": "CLIP",
+                    "shape": 3,
+                    "type": "CLIP",
+                    "links": []
+                }
+            ],
+            "properties": {
+                "cnr_id": "rgthree-comfy",
+                "ver": "1.0.2506230015",
+                "Show Strengths": "Single Strength",
+                "ue_properties": {
+                    "version": "7.3",
+                    "widget_ue_connectable": {},
+                    "input_ue_unconnectable": {}
+                }
+            },
+            "widgets_values": [
+                {},
+                {
+                    "type": "PowerLoraLoaderHeaderWidget"
+                },
+                {
+                    "on": true,
+                    "lora": "wan2.2_t2v_lightx2v_4steps_lora_v1.1_low_noise.safetensors",
+                    "strength": 1,
+                    "strengthTwo": null
+                },
+                {},
+                ""
+            ]
+        },
+        {
+            "id": 92,
+            "type": "DPRandomGenerator",
+            "pos": [
+                -10.193834068875457,
+                294.48256432242295
+            ],
+            "size": [
+                415.88053007367034,
+                238.357273483911
+            ],
+            "flags": {},
+            "order": 14,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "text",
+                    "type": "STRING",
+                    "widget": {
+                        "name": "text"
+                    },
+                    "link": 177
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "STRING",
+                    "type": "STRING",
+                    "links": [
+                        178,
+                        179
+                    ]
+                }
+            ],
+            "title": "Random Prompts fix",
+            "properties": {
+                "cnr_id": "comfyui-dynamicprompts",
+                "ver": "3f2fff32358cf39e21b8b440ca87eac9a8e2bade",
+                "Node name for S&R": "DPRandomGenerator",
+                "ue_properties": {
+                    "widget_ue_connectable": {},
+                    "input_ue_unconnectable": {},
+                    "version": "7.3"
+                }
+            },
+            "widgets_values": [
+                "",
+                430,
+                "randomize",
+                "No"
+            ]
+        },
+        {
+            "id": 89,
+            "type": "MarkdownNote",
+            "pos": [
+                -975.0379632601187,
+                -118.89437666090436
+            ],
+            "size": [
+                485.31982331931476,
+                372.566690520533
+            ],
+            "flags": {},
+            "order": 7,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [],
+            "title": "Custom node links",
+            "properties": {
+                "ue_properties": {
+                    "version": "7.3",
+                    "widget_ue_connectable": {},
+                    "input_ue_unconnectable": {}
+                }
+            },
+            "widgets_values": [
+                "[Comfy-ui-textsplit now available in custom nodes in Comfy](https://github.com/vsaan212/Vsaan212-workflow-utilities)\n\n\nFolder setup for SubjectFiles and ComfyUI_ScenarioSelector\n\n```\nyour-comfyui-root/\n└─ custom_nodes/\n   └─ comfyui-scenario-selector/\n      ├─ __init__.py          # the node implementation\n      └─ ScenarioFiles/        # put your .txt files here\n         ├─ city_walk.txt\n         ├─ studio_portrait.txt\n         └─ beach_evening.txt\n```\n```\nyour-comfyui-root/\n└─ custom_nodes/\n   └─ ComfyUI_subjectselector/\n      ├─ __init__.py          # the node implementation\n      └─ SubjectFiles/        # put your .txt files here\n         ├─ woman1.txt\n         ├─ woman2.txt\n         └─ woman1.txt\n```\nSetup:\nshould find Vsaan212-workflow-utilities but if not search in comfyui for that node and install. \n\nManual:\ndownload/clone the custom nodes and place it in your comfyui custom nodes folder. \nNo install needed.\n\nfolders for the scenario and SubjectFiles and a bypass text with example formatting should be included \n"
+            ],
+            "color": "#432",
+            "bgcolor": "#653"
+        },
+        {
+            "id": 60,
+            "type": "CreateVideo",
+            "pos": [
+                1210.7843862898967,
+                59.05756084806115
+            ],
+            "size": [
+                270,
+                78
+            ],
+            "flags": {},
+            "order": 25,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "images",
+                    "type": "IMAGE",
+                    "link": 134
+                },
+                {
+                    "name": "audio",
+                    "shape": 7,
+                    "type": "AUDIO",
+                    "link": null
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "VIDEO",
+                    "type": "VIDEO",
+                    "links": [
+                        148
+                    ]
+                }
+            ],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.45",
+                "Node name for S&R": "CreateVideo",
+                "ue_properties": {
+                    "version": "7.3",
+                    "widget_ue_connectable": {},
+                    "input_ue_unconnectable": {}
+                }
+            },
+            "widgets_values": [
+                32
+            ]
+        },
+        {
+            "id": 8,
+            "type": "VAEDecode",
+            "pos": [
+                1216.4390212015303,
+                -30.575608480611493
+            ],
+            "size": [
+                210,
+                46
+            ],
+            "flags": {},
+            "order": 23,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "samples",
+                    "type": "LATENT",
+                    "link": 124
+                },
+                {
+                    "name": "vae",
+                    "type": "VAE",
+                    "link": 76
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "IMAGE",
+                    "type": "IMAGE",
+                    "slot_index": 0,
+                    "links": [
+                        133
+                    ]
+                }
+            ],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.45",
+                "Node name for S&R": "VAEDecode",
+                "ue_properties": {
+                    "version": "7.3",
+                    "widget_ue_connectable": {},
+                    "input_ue_unconnectable": {}
+                }
+            }
+        },
+        {
+            "id": 63,
+            "type": "FILM VFI",
+            "pos": [
+                1489.0269105657424,
+                12.650312126169435
+            ],
+            "size": [
+                316.0859375,
+                126
+            ],
+            "flags": {},
+            "order": 24,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "frames",
+                    "type": "IMAGE",
+                    "link": 133
+                },
+                {
+                    "name": "optional_interpolation_states",
+                    "shape": 7,
+                    "type": "INTERPOLATION_STATES",
+                    "link": null
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "IMAGE",
+                    "type": "IMAGE",
+                    "links": [
+                        134
+                    ]
+                }
+            ],
+            "properties": {
+                "cnr_id": "comfyui-frame-interpolation",
+                "ver": "1.0.7",
+                "Node name for S&R": "FILM VFI",
+                "ue_properties": {
+                    "version": "7.3",
+                    "widget_ue_connectable": {},
+                    "input_ue_unconnectable": {}
+                }
+            },
+            "widgets_values": [
+                "film_net_fp32.pt",
+                10,
+                2
+            ],
+            "ndSuperSelectorEnabled": false,
+            "ndPowerEnabled": false
+        },
+        {
+            "id": 84,
+            "type": "94697922-ab0f-48ba-b771-e205cc8053f8",
+            "pos": [
+                -492.6766162958002,
+                331.4113588731886
+            ],
+            "size": [
+                475.6705078125,
+                202.8092312054705
+            ],
+            "flags": {},
+            "order": 12,
+            "mode": 0,
+            "inputs": [
+                {
+                    "label": "lora 1 model path",
+                    "name": "lora_names",
+                    "type": "STRING",
+                    "widget": {
+                        "name": "lora_names"
+                    },
+                    "link": 157
+                },
+                {
+                    "label": "lora 2 model path",
+                    "name": "lora_names_1",
+                    "type": "STRING",
+                    "widget": {
+                        "name": "lora_names_1"
+                    },
+                    "link": 158
+                },
+                {
+                    "label": "model high",
+                    "name": "model",
+                    "type": "MODEL",
+                    "link": 164
+                },
+                {
+                    "label": "model low",
+                    "name": "model_1",
+                    "type": "MODEL",
+                    "link": 175
+                },
+                {
+                    "name": "clip",
+                    "type": "CLIP",
+                    "link": 165
+                }
+            ],
+            "outputs": [
+                {
+                    "label": "MODEL HIGH",
+                    "name": "MODEL",
+                    "type": "MODEL",
+                    "links": [
+                        174
+                    ]
+                },
+                {
+                    "label": "Model Low",
+                    "name": "MODEL_1",
+                    "type": "MODEL",
+                    "links": [
+                        163
+                    ]
+                },
+                {
+                    "label": "clip high",
+                    "name": "CLIP",
+                    "type": "CLIP",
+                    "links": [
+                        167
+                    ]
+                },
+                {
+                    "label": "clip low",
+                    "name": "CLIP_1",
+                    "type": "CLIP",
+                    "links": [
+                        168
+                    ]
+                }
+            ],
+            "properties": {
+                "proxyWidgets": [
+                    [
+                        "-1",
+                        "lora_names"
+                    ],
+                    [
+                        "-1",
+                        "lora_names_1"
+                    ]
+                ],
+                "cnr_id": "comfy-core",
+                "ver": "0.3.66",
+                "ue_properties": {
+                    "widget_ue_connectable": {
+                        "lora_names": true,
+                        "lora_names_1": true
+                    },
+                    "version": "7.1",
+                    "input_ue_unconnectable": {}
+                }
+            },
+            "widgets_values": [
+                "",
+                "\n"
+            ]
+        },
+        {
+            "id": 82,
+            "type": "ComfyUI_subjectselector",
+            "pos": [
+                -979.0879347764719,
+                336.28461056946924
+            ],
+            "size": [
+                442.3338775169958,
+                102
+            ],
+            "flags": {},
+            "order": 8,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "text",
+                    "type": "STRING",
+                    "links": [
+                        186
+                    ]
+                },
+                {
+                    "name": "preview",
+                    "type": "STRING",
+                    "links": null
+                }
+            ],
+            "properties": {
+                "cnr_id": "vsaan212-workflow-utilities",
+                "ver": "1.0.0",
+                "Node name for S&R": "ComfyUI_subjectselector",
+                "ue_properties": {
+                    "widget_ue_connectable": {},
+                    "input_ue_unconnectable": {},
+                    "version": "7.3"
+                }
+            },
+            "widgets_values": [
+                "none",
+                "⟳ Refresh Subjects"
+            ]
+        },
+        {
+            "id": 86,
+            "type": "40041e12-edc0-4f0f-9d64-48a998f2440e",
+            "pos": [
+                -502.08838763773537,
+                577.1272704826644
+            ],
+            "size": [
+                474.17846723263517,
+                286.25745865832187
+            ],
+            "flags": {},
+            "order": 13,
+            "mode": 0,
+            "inputs": [
+                {
+                    "label": "2.2 scene in",
+                    "name": "text1",
+                    "type": "STRING",
+                    "widget": {
+                        "name": "text1"
+                    },
+                    "link": 183
+                },
+                {
+                    "label": "character lora prompt in",
+                    "name": "text",
+                    "type": "STRING",
+                    "widget": {
+                        "name": "text"
+                    },
+                    "link": 161
+                },
+                {
+                    "label": "wan 2.2 high in",
+                    "name": "model",
+                    "type": "MODEL",
+                    "link": 174
+                },
+                {
+                    "label": "wan 2.2 low in",
+                    "name": "model_1",
+                    "type": "MODEL",
+                    "link": 163
+                },
+                {
+                    "label": "clip high in",
+                    "name": "clip",
+                    "type": "CLIP",
+                    "link": 167
+                },
+                {
+                    "label": "clip low in",
+                    "name": "clip_1",
+                    "type": "CLIP",
+                    "link": 168
+                }
+            ],
+            "outputs": [
+                {
+                    "label": "final prompt out",
+                    "name": "concat",
+                    "type": "STRING",
+                    "links": [
+                        177
+                    ]
+                },
+                {
+                    "label": "wan lora high out",
+                    "name": "MODEL",
+                    "type": "MODEL",
+                    "links": [
+                        172
+                    ]
+                },
+                {
+                    "label": "wan lora low out",
+                    "name": "MODEL_1",
+                    "type": "MODEL",
+                    "links": [
+                        173
+                    ]
+                },
+                {
+                    "label": "clip high",
+                    "name": "CLIP",
+                    "type": "CLIP",
+                    "links": [
+                        169
+                    ]
+                },
+                {
+                    "label": "clip low",
+                    "name": "CLIP_1",
+                    "type": "CLIP",
+                    "links": [
+                        170
+                    ]
+                }
+            ],
+            "properties": {
+                "proxyWidgets": [
+                    [
+                        "-1",
+                        "text1"
+                    ],
+                    [
+                        "-1",
+                        "text_1"
+                    ],
+                    [
+                        "-1",
+                        "text"
+                    ]
+                ],
+                "cnr_id": "comfy-core",
+                "ver": "0.3.67",
+                "ue_properties": {
+                    "widget_ue_connectable": {
+                        "text1": true
+                    },
+                    "input_ue_unconnectable": {},
+                    "version": "7.3"
+                }
+            },
+            "widgets_values": [
+                "",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": 83,
+            "type": "ComfyUI_ScenarioSelector",
+            "pos": [
+                -980.3676639636983,
+                481.6035475904374
+            ],
+            "size": [
+                446.9742350935305,
+                103.84015274579724
+            ],
+            "flags": {},
+            "order": 9,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "text",
+                    "type": "STRING",
+                    "links": [
+                        161
+                    ]
+                },
+                {
+                    "name": "preview",
+                    "type": "STRING",
+                    "links": null
+                }
+            ],
+            "properties": {
+                "cnr_id": "vsaan212-workflow-utilities",
+                "ver": "1.0.0",
+                "Node name for S&R": "ComfyUI_ScenarioSelector",
+                "ue_properties": {
+                    "widget_ue_connectable": {},
+                    "input_ue_unconnectable": {},
+                    "version": "7.3"
+                }
+            },
+            "widgets_values": [
+                "Img2vid/none",
+                "⟳ Refresh Scenarios"
+            ]
+        },
+        {
+            "id": 85,
+            "type": "0eaecb59-19ea-4512-ab11-4897b421c216",
+            "pos": [
+                -977.1533074357644,
+                622.7947610806561
+            ],
+            "size": [
+                457.7254808227171,
+                236.00000000000023
+            ],
+            "flags": {
+                "collapsed": false
+            },
+            "order": 11,
+            "mode": 0,
+            "inputs": [
+                {
+                    "label": "Lora and lora triggers",
+                    "name": "text",
+                    "type": "STRING",
+                    "widget": {
+                        "name": "text"
+                    },
+                    "link": 186
+                }
+            ],
+            "outputs": [
+                {
+                    "label": "Final Prompt",
+                    "name": "concat",
+                    "type": "STRING",
+                    "links": [
+                        183
+                    ]
+                },
+                {
+                    "label": "Lora 1",
+                    "name": "text_1",
+                    "type": "STRING",
+                    "links": [
+                        157
+                    ]
+                },
+                {
+                    "label": "Lora 2",
+                    "name": "text_2",
+                    "type": "STRING",
+                    "links": [
+                        158
+                    ]
+                }
+            ],
+            "properties": {
+                "proxyWidgets": [
+                    [
+                        "-1",
+                        "text_1"
+                    ],
+                    [
+                        "-1",
+                        "text_2"
+                    ],
+                    [
+                        "-1",
+                        "text"
+                    ]
+                ],
+                "cnr_id": "comfy-core",
+                "ver": "0.3.66",
+                "ue_properties": {
+                    "widget_ue_connectable": {
+                        "text": true
+                    },
+                    "input_ue_unconnectable": {},
+                    "version": "7.3"
+                }
+            },
+            "widgets_values": [
+                "",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": 71,
+            "type": "SaveVideo",
+            "pos": [
+                1211.4577683882253,
+                180.06344479092485
+            ],
+            "size": [
+                599.8904724121094,
+                997.8357086181641
+            ],
+            "flags": {},
+            "order": 26,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "video",
+                    "type": "VIDEO",
+                    "link": 148
+                }
+            ],
+            "outputs": [],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.47",
+                "Node name for S&R": "SaveVideo",
+                "ue_properties": {
+                    "widget_ue_connectable": {},
+                    "version": "7.3",
+                    "input_ue_unconnectable": {}
+                }
+            },
+            "widgets_values": [
+                "video/ComfyUI",
+                "auto",
+                "auto"
+            ]
+        }
+    ],
+    "links": [
+        [
+            75,
+            38,
+            0,
+            7,
+            0,
+            "CLIP"
+        ],
+        [
+            76,
+            39,
+            0,
+            8,
+            1,
+            "VAE"
+        ],
+        [
+            113,
+            57,
+            0,
+            58,
+            3,
+            "LATENT"
+        ],
+        [
+            123,
+            55,
+            0,
+            58,
+            0,
+            "MODEL"
+        ],
+        [
+            124,
+            58,
+            0,
+            8,
+            0,
+            "LATENT"
+        ],
+        [
+            125,
+            54,
+            0,
+            57,
+            0,
+            "MODEL"
+        ],
+        [
+            126,
+            59,
+            0,
+            57,
+            3,
+            "LATENT"
+        ],
+        [
+            127,
+            6,
+            0,
+            57,
+            1,
+            "CONDITIONING"
+        ],
+        [
+            128,
+            6,
+            0,
+            58,
+            1,
+            "CONDITIONING"
+        ],
+        [
+            129,
+            7,
+            0,
+            57,
+            2,
+            "CONDITIONING"
+        ],
+        [
+            130,
+            7,
+            0,
+            58,
+            2,
+            "CONDITIONING"
+        ],
+        [
+            133,
+            8,
+            0,
+            63,
+            0,
+            "IMAGE"
+        ],
+        [
+            134,
+            63,
+            0,
+            60,
+            0,
+            "IMAGE"
+        ],
+        [
+            146,
+            64,
+            0,
+            54,
+            0,
+            "MODEL"
+        ],
+        [
+            147,
+            65,
+            0,
+            55,
+            0,
+            "MODEL"
+        ],
+        [
+            148,
+            60,
+            0,
+            71,
+            0,
+            "VIDEO"
+        ],
+        [
+            153,
+            38,
+            0,
+            6,
+            0,
+            "CLIP"
+        ],
+        [
+            157,
+            85,
+            1,
+            84,
+            0,
+            "STRING"
+        ],
+        [
+            158,
+            85,
+            2,
+            84,
+            1,
+            "STRING"
+        ],
+        [
+            161,
+            83,
+            0,
+            86,
+            1,
+            "STRING"
+        ],
+        [
+            163,
+            84,
+            1,
+            86,
+            3,
+            "MODEL"
+        ],
+        [
+            164,
+            37,
+            0,
+            84,
+            2,
+            "MODEL"
+        ],
+        [
+            165,
+            38,
+            0,
+            84,
+            4,
+            "CLIP"
+        ],
+        [
+            167,
+            84,
+            2,
+            86,
+            4,
+            "CLIP"
+        ],
+        [
+            168,
+            84,
+            3,
+            86,
+            5,
+            "CLIP"
+        ],
+        [
+            169,
+            86,
+            3,
+            64,
+            1,
+            "CLIP"
+        ],
+        [
+            170,
+            86,
+            4,
+            65,
+            1,
+            "CLIP"
+        ],
+        [
+            172,
+            86,
+            1,
+            64,
+            0,
+            "MODEL"
+        ],
+        [
+            173,
+            86,
+            2,
+            65,
+            0,
+            "MODEL"
+        ],
+        [
+            174,
+            84,
+            0,
+            86,
+            2,
+            "MODEL"
+        ],
+        [
+            175,
+            56,
+            0,
+            84,
+            3,
+            "MODEL"
+        ],
+        [
+            177,
+            86,
+            0,
+            92,
+            0,
+            "STRING"
+        ],
+        [
+            178,
+            92,
+            0,
+            6,
+            1,
+            "STRING"
+        ],
+        [
+            179,
+            92,
+            0,
+            88,
+            0,
+            "*"
+        ],
+        [
+            183,
+            85,
+            0,
+            86,
+            0,
+            "STRING"
+        ],
+        [
+            186,
+            82,
+            0,
+            85,
+            0,
+            "STRING"
+        ]
+    ],
+    "groups": [
+        {
+            "id": 1,
+            "title": "Step1 - Load models",
+            "bounding": [
+                24.553423035767132,
+                -365.528690359644,
+                371.0310363769531,
+                571.3974609375
+            ],
+            "color": "#3f789e",
+            "font_size": 24,
+            "flags": {}
+        },
+        {
+            "id": 2,
+            "title": "Step2 - Video size",
+            "bounding": [
+                425.03134865061423,
+                -219.5311847403951,
+                367.5572814941406,
+                222.82713317871094
+            ],
+            "color": "#3f789e",
+            "font_size": 24,
+            "flags": {}
+        },
+        {
+            "id": 3,
+            "title": "Step3 Prompt",
+            "bounding": [
+                421.0386012988293,
+                113.41223863524344,
+                454.37726514868837,
+                420.5287427084721
+            ],
+            "color": "#3f789e",
+            "font_size": 24,
+            "flags": {}
+        },
+        {
+            "id": 4,
+            "title": "Subject and scene selector",
+            "bounding": [
+                -983.7924677799405,
+                258.13084462603723,
+                963.4136283745959,
+                614.6373277754113
+            ],
+            "color": "#3f789e",
+            "font_size": 24,
+            "flags": {}
+        }
+    ],
+    "definitions": {
+        "subgraphs": [
+            {
+                "id": "94697922-ab0f-48ba-b771-e205cc8053f8",
+                "version": 1,
+                "state": {
+                    "lastGroupId": 5,
+                    "lastNodeId": 167,
+                    "lastLinkId": 222,
+                    "lastRerouteId": 0
+                },
+                "revision": 0,
+                "config": {},
+                "name": "subject prompt and models single model (wan2.1 to wan 2.2 workflow)",
+                "inputNode": {
+                    "id": -10,
+                    "bounding": [
+                        -536.7038601544778,
+                        2436.407822205765,
+                        132.724609375,
+                        140
+                    ]
+                },
+                "outputNode": {
+                    "id": -20,
+                    "bounding": [
+                        792.0196088868342,
+                        2436.407822205765,
+                        120,
+                        120
+                    ]
+                },
+                "inputs": [
+                    {
+                        "id": "4a51cfde-108d-4f53-9ab6-e713e142fe51",
+                        "name": "lora_names",
+                        "type": "STRING",
+                        "linkIds": [
+                            182,
+                            212,
+                            213,
+                            222
+                        ],
+                        "label": "lora 1 model path",
+                        "pos": [
+                            -423.97925077947775,
+                            2456.407822205765
+                        ]
+                    },
+                    {
+                        "id": "bc911a48-9d3d-4aa3-97b9-432d5ede3aca",
+                        "name": "lora_names_1",
+                        "type": "STRING",
+                        "linkIds": [
+                            183,
+                            214,
+                            221
+                        ],
+                        "label": "lora 2 model path",
+                        "pos": [
+                            -423.97925077947775,
+                            2476.407822205765
+                        ]
+                    },
+                    {
+                        "id": "4371fbea-dcf4-4139-9cf3-2b8f2618bb67",
+                        "name": "model",
+                        "type": "MODEL",
+                        "linkIds": [
+                            184,
+                            199
+                        ],
+                        "label": "model high",
+                        "pos": [
+                            -423.97925077947775,
+                            2496.407822205765
+                        ]
+                    },
+                    {
+                        "id": "46d27815-3ba9-4566-b1c5-7bbfb59b52f9",
+                        "name": "model_1",
+                        "type": "MODEL",
+                        "linkIds": [
+                            185,
+                            204
+                        ],
+                        "label": "model low",
+                        "pos": [
+                            -423.97925077947775,
+                            2516.407822205765
+                        ]
+                    },
+                    {
+                        "id": "03fc240c-0252-41f4-895d-54fc4c894be6",
+                        "name": "clip",
+                        "type": "CLIP",
+                        "linkIds": [
+                            186,
+                            187,
+                            200,
+                            205
+                        ],
+                        "pos": [
+                            -423.97925077947775,
+                            2536.407822205765
+                        ]
+                    }
+                ],
+                "outputs": [
+                    {
+                        "id": "7e803ecc-270e-45b9-b4a9-ebb33645aba0",
+                        "name": "MODEL",
+                        "type": "MODEL",
+                        "linkIds": [
+                            220
+                        ],
+                        "label": "MODEL HIGH",
+                        "pos": [
+                            812.0196088868342,
+                            2456.407822205765
+                        ]
+                    },
+                    {
+                        "id": "0a67ae4f-2cf3-4cec-9190-6603edb5af0e",
+                        "name": "MODEL_1",
+                        "type": "MODEL",
+                        "linkIds": [
+                            210
+                        ],
+                        "label": "Model Low",
+                        "pos": [
+                            812.0196088868342,
+                            2476.407822205765
+                        ]
+                    },
+                    {
+                        "id": "881e1c66-8815-483e-93e3-c81b3f133693",
+                        "name": "CLIP",
+                        "type": "CLIP",
+                        "linkIds": [
+                            219
+                        ],
+                        "label": "clip high",
+                        "pos": [
+                            812.0196088868342,
+                            2496.407822205765
+                        ]
+                    },
+                    {
+                        "id": "027edb32-a22c-4f44-9a91-3aa1927a46dc",
+                        "name": "CLIP_1",
+                        "type": "CLIP",
+                        "linkIds": [
+                            211
+                        ],
+                        "label": "clip low",
+                        "pos": [
+                            812.0196088868342,
+                            2516.407822205765
+                        ]
+                    }
+                ],
+                "widgets": [],
+                "nodes": [
+                    {
+                        "id": 164,
+                        "type": "OptionalSwitchLoRA",
+                        "pos": [
+                            -109.07424310396671,
+                            2316.144363235697
+                        ],
+                        "size": [
+                            270,
+                            126
+                        ],
+                        "flags": {},
+                        "order": 1,
+                        "mode": 0,
+                        "inputs": [
+                            {
+                                "localized_name": "model",
+                                "name": "model",
+                                "type": "MODEL",
+                                "link": 199
+                            },
+                            {
+                                "localized_name": "clip",
+                                "name": "clip",
+                                "type": "CLIP",
+                                "link": 200
+                            },
+                            {
+                                "localized_name": "command_or_path",
+                                "name": "command_or_path",
+                                "type": "STRING",
+                                "widget": {
+                                    "name": "command_or_path"
+                                },
+                                "link": 212
+                            }
+                        ],
+                        "outputs": [
+                            {
+                                "localized_name": "MODEL",
+                                "name": "MODEL",
+                                "type": "MODEL",
+                                "links": [
+                                    218
+                                ]
+                            },
+                            {
+                                "localized_name": "CLIP",
+                                "name": "CLIP",
+                                "type": "CLIP",
+                                "links": [
+                                    217
+                                ]
+                            }
+                        ],
+                        "properties": {
+                            "cnr_id": "vsaan212-workflow-utilities",
+                            "ver": "1.0.0",
+                            "Node name for S&R": "OptionalSwitchLoRA",
+                            "ue_properties": {
+                                "widget_ue_connectable": {},
+                                "input_ue_unconnectable": {}
+                            }
+                        },
+                        "widgets_values": [
+                            "",
+                            1,
+                            1
+                        ]
+                    },
+                    {
+                        "id": 166,
+                        "type": "OptionalSwitchLoRA",
+                        "pos": [
+                            266.2105522948944,
+                            2323.6041117519944
+                        ],
+                        "size": [
+                            270,
+                            126
+                        ],
+                        "flags": {},
+                        "order": 3,
+                        "mode": 0,
+                        "inputs": [
+                            {
+                                "localized_name": "model",
+                                "name": "model",
+                                "type": "MODEL",
+                                "link": 218
+                            },
+                            {
+                                "localized_name": "clip",
+                                "name": "clip",
+                                "type": "CLIP",
+                                "link": 217
+                            },
+                            {
+                                "localized_name": "command_or_path",
+                                "name": "command_or_path",
+                                "type": "STRING",
+                                "widget": {
+                                    "name": "command_or_path"
+                                },
+                                "link": 221
+                            }
+                        ],
+                        "outputs": [
+                            {
+                                "localized_name": "MODEL",
+                                "name": "MODEL",
+                                "type": "MODEL",
+                                "links": [
+                                    220
+                                ]
+                            },
+                            {
+                                "localized_name": "CLIP",
+                                "name": "CLIP",
+                                "type": "CLIP",
+                                "links": [
+                                    219
+                                ]
+                            }
+                        ],
+                        "properties": {
+                            "cnr_id": "vsaan212-workflow-utilities",
+                            "ver": "1.0.0",
+                            "Node name for S&R": "OptionalSwitchLoRA",
+                            "ue_properties": {
+                                "widget_ue_connectable": {},
+                                "input_ue_unconnectable": {}
+                            }
+                        },
+                        "widgets_values": [
+                            "\n",
+                            1,
+                            1
+                        ]
+                    },
+                    {
+                        "id": 165,
+                        "type": "OptionalSwitchLoRA",
+                        "pos": [
+                            315.46719002350056,
+                            2565.894823380749
+                        ],
+                        "size": [
+                            270,
+                            126
+                        ],
+                        "flags": {},
+                        "order": 2,
+                        "mode": 0,
+                        "inputs": [
+                            {
+                                "localized_name": "model",
+                                "name": "model",
+                                "type": "MODEL",
+                                "link": 216
+                            },
+                            {
+                                "localized_name": "clip",
+                                "name": "clip",
+                                "type": "CLIP",
+                                "link": 208
+                            },
+                            {
+                                "localized_name": "command_or_path",
+                                "name": "command_or_path",
+                                "type": "STRING",
+                                "widget": {
+                                    "name": "command_or_path"
+                                },
+                                "link": 214
+                            }
+                        ],
+                        "outputs": [
+                            {
+                                "localized_name": "MODEL",
+                                "name": "MODEL",
+                                "type": "MODEL",
+                                "links": [
+                                    210
+                                ]
+                            },
+                            {
+                                "localized_name": "CLIP",
+                                "name": "CLIP",
+                                "type": "CLIP",
+                                "links": [
+                                    211
+                                ]
+                            }
+                        ],
+                        "properties": {
+                            "cnr_id": "vsaan212-workflow-utilities",
+                            "ver": "1.0.0",
+                            "Node name for S&R": "OptionalSwitchLoRA",
+                            "ue_properties": {
+                                "widget_ue_connectable": {},
+                                "input_ue_unconnectable": {}
+                            }
+                        },
+                        "widgets_values": [
+                            "\n",
+                            1,
+                            1
+                        ]
+                    },
+                    {
+                        "id": 163,
+                        "type": "OptionalSwitchLoRA",
+                        "pos": [
+                            -92.98635721703083,
+                            2578.0193946174595
+                        ],
+                        "size": [
+                            270,
+                            126
+                        ],
+                        "flags": {},
+                        "order": 0,
+                        "mode": 0,
+                        "inputs": [
+                            {
+                                "localized_name": "model",
+                                "name": "model",
+                                "type": "MODEL",
+                                "link": 204
+                            },
+                            {
+                                "localized_name": "clip",
+                                "name": "clip",
+                                "type": "CLIP",
+                                "link": 205
+                            },
+                            {
+                                "localized_name": "command_or_path",
+                                "name": "command_or_path",
+                                "type": "STRING",
+                                "widget": {
+                                    "name": "command_or_path"
+                                },
+                                "link": 213
+                            }
+                        ],
+                        "outputs": [
+                            {
+                                "localized_name": "MODEL",
+                                "name": "MODEL",
+                                "type": "MODEL",
+                                "links": [
+                                    216
+                                ]
+                            },
+                            {
+                                "localized_name": "CLIP",
+                                "name": "CLIP",
+                                "type": "CLIP",
+                                "links": [
+                                    208
+                                ]
+                            }
+                        ],
+                        "properties": {
+                            "cnr_id": "vsaan212-workflow-utilities",
+                            "ver": "1.0.0",
+                            "Node name for S&R": "OptionalSwitchLoRA",
+                            "ue_properties": {
+                                "widget_ue_connectable": {},
+                                "input_ue_unconnectable": {}
+                            }
+                        },
+                        "widgets_values": [
+                            "",
+                            1,
+                            1
+                        ]
+                    },
+                    {
+                        "id": 167,
+                        "type": "PreviewAny",
+                        "pos": [
+                            -185.7144865243207,
+                            2812.629610656859
+                        ],
+                        "size": [
+                            140,
+                            76
+                        ],
+                        "flags": {},
+                        "order": 4,
+                        "mode": 0,
+                        "inputs": [
+                            {
+                                "localized_name": "source",
+                                "name": "source",
+                                "type": "*",
+                                "link": 222
+                            }
+                        ],
+                        "outputs": [],
+                        "properties": {
+                            "cnr_id": "comfy-core",
+                            "ver": "0.3.67",
+                            "Node name for S&R": "PreviewAny",
+                            "ue_properties": {
+                                "widget_ue_connectable": {},
+                                "input_ue_unconnectable": {}
+                            }
+                        },
+                        "widgets_values": []
+                    }
+                ],
+                "groups": [
+                    {
+                        "id": 5,
+                        "title": "Group",
+                        "bounding": [
+                            -356.70386015447775,
+                            2182.54506421266,
+                            1088.723469041312,
+                            547.7255159862112
+                        ],
+                        "color": "#3f789e",
+                        "font_size": 24,
+                        "flags": {}
+                    }
+                ],
+                "links": [
+                    {
+                        "id": 199,
+                        "origin_id": -10,
+                        "origin_slot": 2,
+                        "target_id": 164,
+                        "target_slot": 0,
+                        "type": "MODEL"
+                    },
+                    {
+                        "id": 200,
+                        "origin_id": -10,
+                        "origin_slot": 4,
+                        "target_id": 164,
+                        "target_slot": 1,
+                        "type": "CLIP"
+                    },
+                    {
+                        "id": 204,
+                        "origin_id": -10,
+                        "origin_slot": 3,
+                        "target_id": 163,
+                        "target_slot": 0,
+                        "type": "MODEL"
+                    },
+                    {
+                        "id": 205,
+                        "origin_id": -10,
+                        "origin_slot": 4,
+                        "target_id": 163,
+                        "target_slot": 1,
+                        "type": "CLIP"
+                    },
+                    {
+                        "id": 208,
+                        "origin_id": 163,
+                        "origin_slot": 1,
+                        "target_id": 165,
+                        "target_slot": 1,
+                        "type": "CLIP"
+                    },
+                    {
+                        "id": 210,
+                        "origin_id": 165,
+                        "origin_slot": 0,
+                        "target_id": -20,
+                        "target_slot": 1,
+                        "type": "MODEL"
+                    },
+                    {
+                        "id": 211,
+                        "origin_id": 165,
+                        "origin_slot": 1,
+                        "target_id": -20,
+                        "target_slot": 3,
+                        "type": "CLIP"
+                    },
+                    {
+                        "id": 212,
+                        "origin_id": -10,
+                        "origin_slot": 0,
+                        "target_id": 164,
+                        "target_slot": 2,
+                        "type": "STRING"
+                    },
+                    {
+                        "id": 213,
+                        "origin_id": -10,
+                        "origin_slot": 0,
+                        "target_id": 163,
+                        "target_slot": 2,
+                        "type": "STRING"
+                    },
+                    {
+                        "id": 214,
+                        "origin_id": -10,
+                        "origin_slot": 1,
+                        "target_id": 165,
+                        "target_slot": 2,
+                        "type": "STRING"
+                    },
+                    {
+                        "id": 216,
+                        "origin_id": 163,
+                        "origin_slot": 0,
+                        "target_id": 165,
+                        "target_slot": 0,
+                        "type": "MODEL"
+                    },
+                    {
+                        "id": 217,
+                        "origin_id": 164,
+                        "origin_slot": 1,
+                        "target_id": 166,
+                        "target_slot": 1,
+                        "type": "CLIP"
+                    },
+                    {
+                        "id": 218,
+                        "origin_id": 164,
+                        "origin_slot": 0,
+                        "target_id": 166,
+                        "target_slot": 0,
+                        "type": "MODEL"
+                    },
+                    {
+                        "id": 219,
+                        "origin_id": 166,
+                        "origin_slot": 1,
+                        "target_id": -20,
+                        "target_slot": 2,
+                        "type": "CLIP"
+                    },
+                    {
+                        "id": 220,
+                        "origin_id": 166,
+                        "origin_slot": 0,
+                        "target_id": -20,
+                        "target_slot": 0,
+                        "type": "MODEL"
+                    },
+                    {
+                        "id": 221,
+                        "origin_id": -10,
+                        "origin_slot": 1,
+                        "target_id": 166,
+                        "target_slot": 2,
+                        "type": "STRING"
+                    },
+                    {
+                        "id": 222,
+                        "origin_id": -10,
+                        "origin_slot": 0,
+                        "target_id": 167,
+                        "target_slot": 0,
+                        "type": "*"
+                    }
+                ],
+                "extra": {
+                    "ue_links": [],
+                    "links_added_by_ue": []
+                }
+            },
+            {
+                "id": "0eaecb59-19ea-4512-ab11-4897b421c216",
+                "version": 1,
+                "state": {
+                    "lastGroupId": 5,
+                    "lastNodeId": 205,
+                    "lastLinkId": 264,
+                    "lastRerouteId": 0
+                },
+                "revision": 0,
+                "config": {},
+                "name": "Lora and prompt merge (models, prompt, footer)",
+                "inputNode": {
+                    "id": -10,
+                    "bounding": [
+                        -2804.865444766566,
+                        30.00422632844311,
+                        154.064453125,
+                        100
+                    ]
+                },
+                "outputNode": {
+                    "id": -20,
+                    "bounding": [
+                        -1513.7644782482848,
+                        10.00422632844311,
+                        120,
+                        100
+                    ]
+                },
+                "inputs": [
+                    {
+                        "id": "62e1ba30-fc14-4c05-9442-8c35f48c87c8",
+                        "name": "text",
+                        "type": "STRING",
+                        "linkIds": [
+                            251,
+                            255
+                        ],
+                        "localized_name": "text",
+                        "label": "Lora and lora triggers",
+                        "pos": [
+                            -2670.800991641566,
+                            50.00422632844311
+                        ]
+                    },
+                    {
+                        "id": "9c49a473-3e7e-4388-92b8-ad166a00488f",
+                        "name": "text_1",
+                        "type": "STRING",
+                        "linkIds": [
+                            263
+                        ],
+                        "label": "Prepend Text",
+                        "pos": [
+                            -2670.800991641566,
+                            70.00422632844311
+                        ]
+                    },
+                    {
+                        "id": "bdf799c0-3021-4c7d-85e8-65d098734524",
+                        "name": "text_2",
+                        "type": "STRING",
+                        "linkIds": [
+                            252
+                        ],
+                        "label": "Prompt",
+                        "pos": [
+                            -2670.800991641566,
+                            90.00422632844311
+                        ]
+                    }
+                ],
+                "outputs": [
+                    {
+                        "id": "061ee66b-482a-47b5-a09d-343f77cebb88",
+                        "name": "concat",
+                        "type": "STRING",
+                        "linkIds": [
+                            156,
+                            192,
+                            248
+                        ],
+                        "localized_name": "concat",
+                        "label": "Final Prompt",
+                        "pos": [
+                            -1493.7644782482848,
+                            30.00422632844311
+                        ]
+                    },
+                    {
+                        "id": "faf48eef-9d58-48f7-951a-1357c6916bc6",
+                        "name": "text_1",
+                        "type": "STRING",
+                        "linkIds": [
+                            257
+                        ],
+                        "localized_name": "text_1",
+                        "label": "Lora 1",
+                        "pos": [
+                            -1493.7644782482848,
+                            50.00422632844311
+                        ]
+                    },
+                    {
+                        "id": "d78ab1d0-3920-48fb-8d51-2783f9bb1977",
+                        "name": "text_2",
+                        "type": "STRING",
+                        "linkIds": [
+                            258
+                        ],
+                        "localized_name": "text_2",
+                        "label": "Lora 2",
+                        "pos": [
+                            -1493.7644782482848,
+                            70.00422632844311
+                        ]
+                    }
+                ],
+                "widgets": [],
+                "nodes": [
+                    {
+                        "id": 144,
+                        "type": "ttN text",
+                        "pos": [
+                            -2603.502315427449,
+                            216.3103558229956
+                        ],
+                        "size": [
+                            505.7416687011719,
+                            643.7003784179688
+                        ],
+                        "flags": {},
+                        "order": 2,
+                        "mode": 0,
+                        "inputs": [
+                            {
+                                "localized_name": "text",
+                                "name": "text",
+                                "type": "STRING",
+                                "widget": {
+                                    "name": "text"
+                                },
+                                "link": 252
+                            }
+                        ],
+                        "outputs": [
+                            {
+                                "localized_name": "text",
+                                "name": "text",
+                                "type": "STRING",
+                                "links": [
+                                    249
+                                ]
+                            }
+                        ],
+                        "title": "post text",
+                        "properties": {
+                            "cnr_id": "comfyui_tinyterranodes",
+                            "ver": "1a90e43480563e9202f7f5482629b1d444e805ed",
+                            "Node name for S&R": "ttN text",
+                            "ue_properties": {
+                                "widget_ue_connectable": {
+                                    "text": true
+                                },
+                                "version": "7.1",
+                                "input_ue_unconnectable": {}
+                            },
+                            "ttNnodeVersion": "1.0.0"
+                        },
+                        "widgets_values": [
+                            ""
+                        ]
+                    },
+                    {
+                        "id": 82,
+                        "type": "ttN concat",
+                        "pos": [
+                            -2072.7089087410645,
+                            -38.66125587355329
+                        ],
+                        "size": [
+                            400,
+                            220.00000000000017
+                        ],
+                        "flags": {
+                            "collapsed": false
+                        },
+                        "order": 0,
+                        "mode": 0,
+                        "inputs": [
+                            {
+                                "localized_name": "text1",
+                                "name": "text1",
+                                "type": "STRING",
+                                "widget": {
+                                    "name": "text1"
+                                },
+                                "link": 256
+                            },
+                            {
+                                "localized_name": "text2",
+                                "name": "text2",
+                                "type": "STRING",
+                                "widget": {
+                                    "name": "text2"
+                                },
+                                "link": 253
+                            },
+                            {
+                                "localized_name": "text3",
+                                "name": "text3",
+                                "type": "STRING",
+                                "widget": {
+                                    "name": "text3"
+                                },
+                                "link": 249
+                            }
+                        ],
+                        "outputs": [
+                            {
+                                "localized_name": "concat",
+                                "name": "concat",
+                                "type": "STRING",
+                                "links": [
+                                    156,
+                                    192,
+                                    248
+                                ]
+                            }
+                        ],
+                        "properties": {
+                            "cnr_id": "comfyui_tinyterranodes",
+                            "ver": "1a90e43480563e9202f7f5482629b1d444e805ed",
+                            "Node name for S&R": "ttN concat",
+                            "ue_properties": {
+                                "widget_ue_connectable": {
+                                    "text1": true,
+                                    "text2": true,
+                                    "text3": true,
+                                    "delimiter": true
+                                },
+                                "version": "7.1",
+                                "input_ue_unconnectable": {}
+                            },
+                            "ttNnodeVersion": "1.0.0"
+                        },
+                        "widgets_values": [
+                            "",
+                            "",
+                            "",
+                            ""
+                        ]
+                    },
+                    {
+                        "id": 203,
+                        "type": "Vsaan_TextSplit",
+                        "pos": [
+                            -2568.5303298478607,
+                            -445.6859465370412
+                        ],
+                        "size": [
+                            400,
+                            344
+                        ],
+                        "flags": {},
+                        "order": 3,
+                        "mode": 0,
+                        "inputs": [
+                            {
+                                "localized_name": "text",
+                                "name": "text",
+                                "type": "STRING",
+                                "widget": {
+                                    "name": "text"
+                                },
+                                "link": 255
+                            }
+                        ],
+                        "outputs": [
+                            {
+                                "localized_name": "text_1",
+                                "name": "text_1",
+                                "type": "STRING",
+                                "links": [
+                                    257,
+                                    259
+                                ]
+                            },
+                            {
+                                "localized_name": "text_2",
+                                "name": "text_2",
+                                "type": "STRING",
+                                "links": [
+                                    258
+                                ]
+                            },
+                            {
+                                "localized_name": "text_3",
+                                "name": "text_3",
+                                "type": "STRING",
+                                "links": [
+                                    256
+                                ]
+                            },
+                            {
+                                "localized_name": "text_4",
+                                "name": "text_4",
+                                "type": "STRING",
+                                "links": null
+                            },
+                            {
+                                "localized_name": "text_5",
+                                "name": "text_5",
+                                "type": "STRING",
+                                "links": null
+                            },
+                            {
+                                "localized_name": "text_6",
+                                "name": "text_6",
+                                "type": "STRING",
+                                "links": null
+                            },
+                            {
+                                "localized_name": "text_7",
+                                "name": "text_7",
+                                "type": "STRING",
+                                "links": null
+                            },
+                            {
+                                "localized_name": "text_8",
+                                "name": "text_8",
+                                "type": "STRING",
+                                "links": null
+                            },
+                            {
+                                "localized_name": "remainder",
+                                "name": "remainder",
+                                "type": "STRING",
+                                "links": null
+                            }
+                        ],
+                        "properties": {
+                            "cnr_id": "vsaan212-workflow-utilities",
+                            "ver": "1.0.0",
+                            "Node name for S&R": "Vsaan_TextSplit",
+                            "ue_properties": {
+                                "widget_ue_connectable": {},
+                                "input_ue_unconnectable": {}
+                            }
+                        },
+                        "widgets_values": [
+                            "",
+                            "#",
+                            3,
+                            true,
+                            true
+                        ]
+                    },
+                    {
+                        "id": 86,
+                        "type": "ttN text",
+                        "pos": [
+                            -2596.687045471305,
+                            -38.137410166883654
+                        ],
+                        "size": [
+                            400,
+                            200
+                        ],
+                        "flags": {},
+                        "order": 1,
+                        "mode": 0,
+                        "inputs": [
+                            {
+                                "localized_name": "text",
+                                "name": "text",
+                                "type": "STRING",
+                                "widget": {
+                                    "name": "text"
+                                },
+                                "link": 263
+                            }
+                        ],
+                        "outputs": [
+                            {
+                                "localized_name": "text",
+                                "name": "text",
+                                "type": "STRING",
+                                "links": [
+                                    253
+                                ]
+                            }
+                        ],
+                        "title": "pre text",
+                        "properties": {
+                            "cnr_id": "comfyui_tinyterranodes",
+                            "ver": "1a90e43480563e9202f7f5482629b1d444e805ed",
+                            "Node name for S&R": "ttN text",
+                            "ue_properties": {
+                                "widget_ue_connectable": {
+                                    "text": true
+                                },
+                                "version": "7.1",
+                                "input_ue_unconnectable": {}
+                            },
+                            "ttNnodeVersion": "1.0.0"
+                        },
+                        "widgets_values": [
+                            ""
+                        ]
+                    }
+                ],
+                "groups": [],
+                "links": [
+                    {
+                        "id": 249,
+                        "origin_id": 144,
+                        "origin_slot": 0,
+                        "target_id": 82,
+                        "target_slot": 2,
+                        "type": "STRING"
+                    },
+                    {
+                        "id": 156,
+                        "origin_id": 82,
+                        "origin_slot": 0,
+                        "target_id": -20,
+                        "target_slot": 0,
+                        "type": "*"
+                    },
+                    {
+                        "id": 192,
+                        "origin_id": 82,
+                        "origin_slot": 0,
+                        "target_id": -20,
+                        "target_slot": 0,
+                        "type": "STRING"
+                    },
+                    {
+                        "id": 248,
+                        "origin_id": 82,
+                        "origin_slot": 0,
+                        "target_id": -20,
+                        "target_slot": 0,
+                        "type": "STRING"
+                    },
+                    {
+                        "id": 252,
+                        "origin_id": -10,
+                        "origin_slot": 2,
+                        "target_id": 144,
+                        "target_slot": 0,
+                        "type": "STRING"
+                    },
+                    {
+                        "id": 253,
+                        "origin_id": 86,
+                        "origin_slot": 0,
+                        "target_id": 82,
+                        "target_slot": 1,
+                        "type": "STRING"
+                    },
+                    {
+                        "id": 255,
+                        "origin_id": -10,
+                        "origin_slot": 0,
+                        "target_id": 203,
+                        "target_slot": 0,
+                        "type": "STRING"
+                    },
+                    {
+                        "id": 256,
+                        "origin_id": 203,
+                        "origin_slot": 2,
+                        "target_id": 82,
+                        "target_slot": 0,
+                        "type": "STRING"
+                    },
+                    {
+                        "id": 257,
+                        "origin_id": 203,
+                        "origin_slot": 0,
+                        "target_id": -20,
+                        "target_slot": 1,
+                        "type": "STRING"
+                    },
+                    {
+                        "id": 258,
+                        "origin_id": 203,
+                        "origin_slot": 1,
+                        "target_id": -20,
+                        "target_slot": 2,
+                        "type": "STRING"
+                    },
+                    {
+                        "id": 263,
+                        "origin_id": -10,
+                        "origin_slot": 1,
+                        "target_id": 86,
+                        "target_slot": 0,
+                        "type": "STRING"
+                    }
+                ],
+                "extra": {
+                    "ue_links": [],
+                    "links_added_by_ue": []
+                }
+            },
+            {
+                "id": "40041e12-edc0-4f0f-9d64-48a998f2440e",
+                "version": 1,
+                "state": {
+                    "lastGroupId": 1,
+                    "lastNodeId": 35,
+                    "lastLinkId": 65,
+                    "lastRerouteId": 0
+                },
+                "revision": 0,
+                "config": {},
+                "name": "Wan 2.2 lora and prompt concat",
+                "inputNode": {
+                    "id": -10,
+                    "bounding": [
+                        -968.2027135083615,
+                        1889.4533651047445,
+                        166.720703125,
+                        180
+                    ]
+                },
+                "outputNode": {
+                    "id": -20,
+                    "bounding": [
+                        265.51223007268834,
+                        1899.4533651047445,
+                        131.39453125,
+                        140
+                    ]
+                },
+                "inputs": [
+                    {
+                        "id": "bad9a794-6568-4855-a059-c9ce854784cc",
+                        "name": "text1",
+                        "type": "STRING",
+                        "linkIds": [
+                            35
+                        ],
+                        "localized_name": "text1",
+                        "label": "2.2 scene in",
+                        "pos": [
+                            -821.4820103833615,
+                            1909.4533651047445
+                        ]
+                    },
+                    {
+                        "id": "d4a58b02-7517-4ae2-aa4a-4f0056b72cb2",
+                        "name": "text",
+                        "type": "STRING",
+                        "linkIds": [
+                            14,
+                            56,
+                            57,
+                            64,
+                            65
+                        ],
+                        "localized_name": "text",
+                        "label": "character lora prompt in",
+                        "pos": [
+                            -821.4820103833615,
+                            1929.4533651047445
+                        ]
+                    },
+                    {
+                        "id": "0fcb2410-6b77-448d-a62b-4fdeeaf34991",
+                        "name": "model",
+                        "type": "MODEL",
+                        "linkIds": [
+                            41,
+                            45
+                        ],
+                        "label": "wan 2.2 high in",
+                        "pos": [
+                            -821.4820103833615,
+                            1949.4533651047445
+                        ]
+                    },
+                    {
+                        "id": "13422582-965c-4ac7-a5fc-8823c15115c4",
+                        "name": "model_1",
+                        "type": "MODEL",
+                        "linkIds": [
+                            42,
+                            50
+                        ],
+                        "label": "wan 2.2 low in",
+                        "pos": [
+                            -821.4820103833615,
+                            1969.4533651047445
+                        ]
+                    },
+                    {
+                        "id": "4196c06f-9c18-43a2-a2b5-6c93f93f1678",
+                        "name": "clip",
+                        "type": "CLIP",
+                        "linkIds": [
+                            43,
+                            46
+                        ],
+                        "label": "clip high in",
+                        "pos": [
+                            -821.4820103833615,
+                            1989.4533651047445
+                        ]
+                    },
+                    {
+                        "id": "226a61f6-dd99-48ef-93aa-aefc9c731f70",
+                        "name": "clip_1",
+                        "type": "CLIP",
+                        "linkIds": [
+                            44,
+                            51
+                        ],
+                        "label": "clip low in",
+                        "pos": [
+                            -821.4820103833615,
+                            2009.4533651047445
+                        ]
+                    },
+                    {
+                        "id": "a3be3102-bdf2-4770-b8a3-ae3b7ac1ce32",
+                        "name": "text_1",
+                        "type": "STRING",
+                        "linkIds": [
+                            61
+                        ],
+                        "pos": [
+                            -821.4820103833615,
+                            2029.4533651047445
+                        ]
+                    }
+                ],
+                "outputs": [
+                    {
+                        "id": "65669490-a3f6-433f-bbe3-251c0f15f5f4",
+                        "name": "concat",
+                        "type": "STRING",
+                        "linkIds": [
+                            19
+                        ],
+                        "localized_name": "concat",
+                        "label": "final prompt out",
+                        "pos": [
+                            285.51223007268834,
+                            1919.4533651047445
+                        ]
+                    },
+                    {
+                        "id": "455ddfb7-deb1-40d4-b90a-595ed32607d8",
+                        "name": "MODEL",
+                        "type": "MODEL",
+                        "linkIds": [
+                            48
+                        ],
+                        "label": "wan lora high out",
+                        "pos": [
+                            285.51223007268834,
+                            1939.4533651047445
+                        ]
+                    },
+                    {
+                        "id": "ca1e9113-023c-4bac-b8a2-5d0998ede88d",
+                        "name": "MODEL_1",
+                        "type": "MODEL",
+                        "linkIds": [
+                            52
+                        ],
+                        "label": "wan lora low out",
+                        "pos": [
+                            285.51223007268834,
+                            1959.4533651047445
+                        ]
+                    },
+                    {
+                        "id": "2d8ce26b-c875-4aee-bf5c-887a9ce1c8e5",
+                        "name": "CLIP",
+                        "type": "CLIP",
+                        "linkIds": [
+                            49
+                        ],
+                        "label": "clip high",
+                        "pos": [
+                            285.51223007268834,
+                            1979.4533651047445
+                        ]
+                    },
+                    {
+                        "id": "3563494e-b106-490b-9165-1893d43ef6f2",
+                        "name": "CLIP_1",
+                        "type": "CLIP",
+                        "linkIds": [
+                            53
+                        ],
+                        "label": "clip low",
+                        "pos": [
+                            285.51223007268834,
+                            1999.4533651047445
+                        ]
+                    }
+                ],
+                "widgets": [],
+                "nodes": [
+                    {
+                        "id": 16,
+                        "type": "ttN concat",
+                        "pos": [
+                            -252.6126220038613,
+                            2008.1006553835384
+                        ],
+                        "size": [
+                            400,
+                            220.00000000000026
+                        ],
+                        "flags": {
+                            "collapsed": false
+                        },
+                        "order": 3,
+                        "mode": 0,
+                        "inputs": [
+                            {
+                                "localized_name": "text1",
+                                "name": "text1",
+                                "type": "STRING",
+                                "widget": {
+                                    "name": "text1"
+                                },
+                                "link": 35
+                            },
+                            {
+                                "localized_name": "text2",
+                                "name": "text2",
+                                "type": "STRING",
+                                "widget": {
+                                    "name": "text2"
+                                },
+                                "link": 60
+                            }
+                        ],
+                        "outputs": [
+                            {
+                                "localized_name": "concat",
+                                "name": "concat",
+                                "type": "STRING",
+                                "links": [
+                                    19
+                                ]
+                            }
+                        ],
+                        "properties": {
+                            "cnr_id": "comfyui_tinyterranodes",
+                            "ver": "1a90e43480563e9202f7f5482629b1d444e805ed",
+                            "Node name for S&R": "ttN concat",
+                            "ue_properties": {
+                                "widget_ue_connectable": {
+                                    "text1": true,
+                                    "text2": true,
+                                    "text3": true,
+                                    "delimiter": true
+                                },
+                                "version": "7.1",
+                                "input_ue_unconnectable": {}
+                            },
+                            "ttNnodeVersion": "1.0.0"
+                        },
+                        "widgets_values": [
+                            "",
+                            "",
+                            "",
+                            ""
+                        ]
+                    },
+                    {
+                        "id": 27,
+                        "type": "LoraLoader",
+                        "pos": [
+                            477.8166657112553,
+                            1835.4539877672971
+                        ],
+                        "size": [
+                            210,
+                            126
+                        ],
+                        "flags": {
+                            "collapsed": false
+                        },
+                        "order": 2,
+                        "mode": 0,
+                        "inputs": [
+                            {
+                                "localized_name": "model",
+                                "name": "model",
+                                "type": "MODEL",
+                                "link": null
+                            },
+                            {
+                                "localized_name": "clip",
+                                "name": "clip",
+                                "type": "CLIP",
+                                "link": null
+                            },
+                            {
+                                "localized_name": "lora_name",
+                                "name": "lora_name",
+                                "type": "COMBO",
+                                "widget": {
+                                    "name": "lora_name"
+                                },
+                                "link": 33
+                            }
+                        ],
+                        "outputs": [
+                            {
+                                "localized_name": "MODEL",
+                                "name": "MODEL",
+                                "type": "MODEL",
+                                "links": []
+                            },
+                            {
+                                "localized_name": "CLIP",
+                                "name": "CLIP",
+                                "type": "CLIP",
+                                "links": []
+                            }
+                        ],
+                        "properties": {
+                            "cnr_id": "comfy-core",
+                            "ver": "0.3.59",
+                            "Node name for S&R": "LoraLoader",
+                            "ue_properties": {
+                                "version": "7.0.1",
+                                "widget_ue_connectable": {
+                                    "lora_name": true,
+                                    "strength_model": true,
+                                    "strength_clip": true
+                                }
+                            },
+                            "ttNbgOverride": {
+                                "color": "#322",
+                                "bgcolor": "#533",
+                                "groupcolor": "#A88"
+                            }
+                        },
+                        "widgets_values": [
+                            "HiDream-E1-Full.safetensors",
+                            1,
+                            1
+                        ],
+                        "color": "#322",
+                        "bgcolor": "#533",
+                        "ndSuperSelectorEnabled": false,
+                        "ndPowerEnabled": false
+                    },
+                    {
+                        "id": 29,
+                        "type": "LoraNames_",
+                        "pos": [
+                            482.02571328003137,
+                            1693.6573860552992
+                        ],
+                        "size": [
+                            210,
+                            108
+                        ],
+                        "flags": {
+                            "collapsed": false
+                        },
+                        "order": 0,
+                        "mode": 0,
+                        "inputs": [],
+                        "outputs": [
+                            {
+                                "localized_name": "lora_names",
+                                "name": "lora_names",
+                                "shape": 6,
+                                "type": "*",
+                                "links": [
+                                    33
+                                ]
+                            },
+                            {
+                                "localized_name": "prompt",
+                                "name": "prompt",
+                                "shape": 6,
+                                "type": "STRING",
+                                "links": null
+                            }
+                        ],
+                        "properties": {
+                            "cnr_id": "comfyui-mixlab-nodes",
+                            "ver": "0.46.0",
+                            "Node name for S&R": "LoraNames_",
+                            "ue_properties": {
+                                "widget_ue_connectable": {
+                                    "lora_names": true
+                                },
+                                "version": "7.1",
+                                "input_ue_unconnectable": {}
+                            }
+                        },
+                        "widgets_values": [
+                            "\n"
+                        ]
+                    },
+                    {
+                        "id": 31,
+                        "type": "OptionalSwitchLoRA",
+                        "pos": [
+                            -193.72269016986937,
+                            1820.3686548580015
+                        ],
+                        "size": [
+                            270,
+                            126
+                        ],
+                        "flags": {},
+                        "order": 4,
+                        "mode": 0,
+                        "inputs": [
+                            {
+                                "localized_name": "model",
+                                "name": "model",
+                                "type": "MODEL",
+                                "link": 50
+                            },
+                            {
+                                "localized_name": "clip",
+                                "name": "clip",
+                                "type": "CLIP",
+                                "link": 51
+                            },
+                            {
+                                "localized_name": "command_or_path",
+                                "name": "command_or_path",
+                                "type": "STRING",
+                                "widget": {
+                                    "name": "command_or_path"
+                                },
+                                "link": 59
+                            }
+                        ],
+                        "outputs": [
+                            {
+                                "localized_name": "MODEL",
+                                "name": "MODEL",
+                                "type": "MODEL",
+                                "links": [
+                                    52
+                                ]
+                            },
+                            {
+                                "localized_name": "CLIP",
+                                "name": "CLIP",
+                                "type": "CLIP",
+                                "links": [
+                                    53
+                                ]
+                            }
+                        ],
+                        "properties": {
+                            "cnr_id": "vsaan212-workflow-utilities",
+                            "ver": "1.0.0",
+                            "Node name for S&R": "OptionalSwitchLoRA",
+                            "ue_properties": {
+                                "widget_ue_connectable": {},
+                                "input_ue_unconnectable": {}
+                            }
+                        },
+                        "widgets_values": [
+                            "",
+                            1,
+                            1
+                        ]
+                    },
+                    {
+                        "id": 32,
+                        "type": "OptionalSwitchLoRA",
+                        "pos": [
+                            -187.35753048909257,
+                            1636.5028741657068
+                        ],
+                        "size": [
+                            270,
+                            126
+                        ],
+                        "flags": {},
+                        "order": 5,
+                        "mode": 0,
+                        "inputs": [
+                            {
+                                "localized_name": "model",
+                                "name": "model",
+                                "type": "MODEL",
+                                "link": 45
+                            },
+                            {
+                                "localized_name": "clip",
+                                "name": "clip",
+                                "type": "CLIP",
+                                "link": 46
+                            },
+                            {
+                                "localized_name": "command_or_path",
+                                "name": "command_or_path",
+                                "type": "STRING",
+                                "widget": {
+                                    "name": "command_or_path"
+                                },
+                                "link": 58
+                            }
+                        ],
+                        "outputs": [
+                            {
+                                "localized_name": "MODEL",
+                                "name": "MODEL",
+                                "type": "MODEL",
+                                "links": [
+                                    48
+                                ]
+                            },
+                            {
+                                "localized_name": "CLIP",
+                                "name": "CLIP",
+                                "type": "CLIP",
+                                "links": [
+                                    49
+                                ]
+                            }
+                        ],
+                        "properties": {
+                            "cnr_id": "vsaan212-workflow-utilities",
+                            "ver": "1.0.0",
+                            "Node name for S&R": "OptionalSwitchLoRA",
+                            "ue_properties": {
+                                "widget_ue_connectable": {},
+                                "input_ue_unconnectable": {}
+                            }
+                        },
+                        "widgets_values": [
+                            "",
+                            1,
+                            1
+                        ]
+                    },
+                    {
+                        "id": 34,
+                        "type": "ttN text",
+                        "pos": [
+                            -832.377306123183,
+                            2127.345298868491
+                        ],
+                        "size": [
+                            400,
+                            200
+                        ],
+                        "flags": {},
+                        "order": 1,
+                        "mode": 0,
+                        "inputs": [],
+                        "outputs": [
+                            {
+                                "localized_name": "text",
+                                "name": "text",
+                                "type": "STRING",
+                                "links": null
+                            }
+                        ],
+                        "properties": {
+                            "cnr_id": "comfyui_tinyterranodes",
+                            "ver": "1a90e43480563e9202f7f5482629b1d444e805ed",
+                            "Node name for S&R": "ttN text",
+                            "ue_properties": {
+                                "widget_ue_connectable": {},
+                                "input_ue_unconnectable": {}
+                            },
+                            "ttNnodeVersion": "1.0.0"
+                        },
+                        "widgets_values": [
+                            ""
+                        ]
+                    },
+                    {
+                        "id": 33,
+                        "type": "Vsaan_TextSplit",
+                        "pos": [
+                            -1154.0986122402542,
+                            1471.2128513763917
+                        ],
+                        "size": [
+                            400,
+                            344
+                        ],
+                        "flags": {},
+                        "order": 6,
+                        "mode": 0,
+                        "inputs": [
+                            {
+                                "localized_name": "text",
+                                "name": "text",
+                                "type": "STRING",
+                                "widget": {
+                                    "name": "text"
+                                },
+                                "link": 65
+                            }
+                        ],
+                        "outputs": [
+                            {
+                                "localized_name": "text_1",
+                                "name": "text_1",
+                                "type": "STRING",
+                                "links": [
+                                    58
+                                ]
+                            },
+                            {
+                                "localized_name": "text_2",
+                                "name": "text_2",
+                                "type": "STRING",
+                                "links": [
+                                    59
+                                ]
+                            },
+                            {
+                                "localized_name": "text_3",
+                                "name": "text_3",
+                                "type": "STRING",
+                                "links": [
+                                    60
+                                ]
+                            },
+                            {
+                                "localized_name": "text_4",
+                                "name": "text_4",
+                                "type": "STRING",
+                                "links": null
+                            },
+                            {
+                                "localized_name": "text_5",
+                                "name": "text_5",
+                                "type": "STRING",
+                                "links": null
+                            },
+                            {
+                                "localized_name": "text_6",
+                                "name": "text_6",
+                                "type": "STRING",
+                                "links": null
+                            },
+                            {
+                                "localized_name": "text_7",
+                                "name": "text_7",
+                                "type": "STRING",
+                                "links": null
+                            },
+                            {
+                                "localized_name": "text_8",
+                                "name": "text_8",
+                                "type": "STRING",
+                                "links": null
+                            },
+                            {
+                                "localized_name": "remainder",
+                                "name": "remainder",
+                                "type": "STRING",
+                                "links": null
+                            }
+                        ],
+                        "properties": {
+                            "cnr_id": "vsaan212-workflow-utilities",
+                            "ver": "1.0.0",
+                            "Node name for S&R": "Vsaan_TextSplit",
+                            "ue_properties": {
+                                "widget_ue_connectable": {},
+                                "input_ue_unconnectable": {}
+                            }
+                        },
+                        "widgets_values": [
+                            "",
+                            "#",
+                            3,
+                            true,
+                            true
+                        ]
+                    }
+                ],
+                "groups": [],
+                "links": [
+                    {
+                        "id": 33,
+                        "origin_id": 29,
+                        "origin_slot": 0,
+                        "target_id": 27,
+                        "target_slot": 2,
+                        "type": "COMBO"
+                    },
+                    {
+                        "id": 35,
+                        "origin_id": -10,
+                        "origin_slot": 0,
+                        "target_id": 16,
+                        "target_slot": 0,
+                        "type": "STRING"
+                    },
+                    {
+                        "id": 19,
+                        "origin_id": 16,
+                        "origin_slot": 0,
+                        "target_id": -20,
+                        "target_slot": 0,
+                        "type": "*"
+                    },
+                    {
+                        "id": 45,
+                        "origin_id": -10,
+                        "origin_slot": 2,
+                        "target_id": 32,
+                        "target_slot": 0,
+                        "type": "MODEL"
+                    },
+                    {
+                        "id": 46,
+                        "origin_id": -10,
+                        "origin_slot": 4,
+                        "target_id": 32,
+                        "target_slot": 1,
+                        "type": "CLIP"
+                    },
+                    {
+                        "id": 48,
+                        "origin_id": 32,
+                        "origin_slot": 0,
+                        "target_id": -20,
+                        "target_slot": 1,
+                        "type": "MODEL"
+                    },
+                    {
+                        "id": 49,
+                        "origin_id": 32,
+                        "origin_slot": 1,
+                        "target_id": -20,
+                        "target_slot": 3,
+                        "type": "CLIP"
+                    },
+                    {
+                        "id": 50,
+                        "origin_id": -10,
+                        "origin_slot": 3,
+                        "target_id": 31,
+                        "target_slot": 0,
+                        "type": "MODEL"
+                    },
+                    {
+                        "id": 51,
+                        "origin_id": -10,
+                        "origin_slot": 5,
+                        "target_id": 31,
+                        "target_slot": 1,
+                        "type": "CLIP"
+                    },
+                    {
+                        "id": 52,
+                        "origin_id": 31,
+                        "origin_slot": 0,
+                        "target_id": -20,
+                        "target_slot": 2,
+                        "type": "MODEL"
+                    },
+                    {
+                        "id": 53,
+                        "origin_id": 31,
+                        "origin_slot": 1,
+                        "target_id": -20,
+                        "target_slot": 4,
+                        "type": "CLIP"
+                    },
+                    {
+                        "id": 58,
+                        "origin_id": 33,
+                        "origin_slot": 0,
+                        "target_id": 32,
+                        "target_slot": 2,
+                        "type": "STRING"
+                    },
+                    {
+                        "id": 59,
+                        "origin_id": 33,
+                        "origin_slot": 1,
+                        "target_id": 31,
+                        "target_slot": 2,
+                        "type": "STRING"
+                    },
+                    {
+                        "id": 60,
+                        "origin_id": 33,
+                        "origin_slot": 2,
+                        "target_id": 16,
+                        "target_slot": 1,
+                        "type": "STRING"
+                    },
+                    {
+                        "id": 65,
+                        "origin_id": -10,
+                        "origin_slot": 1,
+                        "target_id": 33,
+                        "target_slot": 0,
+                        "type": "STRING"
+                    }
+                ],
+                "extra": {
+                    "ue_links": [],
+                    "links_added_by_ue": []
+                }
+            }
+        ]
+    },
+    "config": {},
+    "extra": {
+        "frontendVersion": "1.28.8",
+        "VHS_latentpreview": false,
+        "VHS_latentpreviewrate": 0,
+        "VHS_MetadataImage": true,
+        "VHS_KeepIntermediate": true,
+        "ue_links": [],
+        "links_added_by_ue": [],
+        "ds": {
+            "scale": 0.7181127350870319,
+            "offset": [
+                -7.418525594866935,
+                -201.76016700065537
+            ]
+        },
+        "workspace_info": {
+            "id": "83673148-89fe-43d3-adb5-7448d9254c6a"
+        }
+    },
+    "version": 0.4
+}

@@ -1,0 +1,16 @@
+WWAA First & Last Frame with Wan 2.2 Video Workflow
+======================================================
+
+Workflow that lets you use Wan2.2 to create video by supplying the first and the last frame with a text prompt. It takes the video from first to last frame following the prompt.
+
+Designed for ComfyUI
+Download this and more workflows as https://weirdwonderfulai.art/comfyui-workflow/
+
+
+Installation
+======================================================
+1. Launch ComfyUI (make sure you update to latest)
+2. Drag the provide PNG or JSON file into ComfyUI
+3. Install any missing Custom Node (that show up in red) using ComfyUI Manager. 
+   Quick tutorial on installing ComfyUI Manager https://youtu.be/ltMbJaZoifQ
+

@@ -1,0 +1,22 @@
+WWAA LoRA Tester
+======================================================
+
+Thanks to the opensource community I've put together this workflow that let's you
+compare the results of images generated with and without selected LoRA.
+By default Two LoRA can be loaded in this workflow however you can add more. 
+Disable one of the LoRAs by Bypassing it (right click > Bypass)
+
+Links to download the model and more resources available on the blog.
+https://weirdwonderfulai.art/resources/
+
+Designed for ComfyUI
+
+Download this and more workflows as https://weirdwonderfulai.art/
+
+Installation
+======================================================
+1. Launch ComfyUI
+2. Drag the provide PNG or JSON file into ComfyUI
+3. Install any missing Custom Node (that show up in red) using ComfyUI Manager.
+   Quick tutorial on installing ComfyUI Manager https://youtu.be/ltMbJaZoifQ
+

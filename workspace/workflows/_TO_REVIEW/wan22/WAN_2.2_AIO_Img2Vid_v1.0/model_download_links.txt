@@ -1,0 +1,217 @@
+# AI Model Download Links
+
+
+## Stable Diffusion 1.5 Models
+===============================================================================================================
+### Download Links for SD 1.5 Checkpoints
+https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned-emaonly.safetensors
+
+### Download Links for SD 1.5 Encoders
+https://huggingface.co/openai/clip-vit-large-patch14/resolve/main/pytorch_model.bin
+
+### Download Links for SD 1.5 VAE
+https://huggingface.co/stabilityai/sd-vae-ft-mse/resolve/main/vae-ft-mse-840000-ema-pruned.safetensors
+
+## Stable Diffusion XL Models
+===============================================================================================================
+### Download Links for SDXL Checkpoints
+https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors
+https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/resolve/main/sd_xl_refiner_1.0.safetensors
+
+### Download Links for SDXL Encoders
+https://huggingface.co/laion/CLIP-ViT-L-336px/resolve/main/open_clip_pytorch_model.bin
+https://huggingface.co/google/t5-v1_1-xxl/resolve/main/pytorch_model.bin
+
+https://huggingface.co/refiners/sdxl.juggernaut.v10.text_encoder/resolve/main/model.safetensors
+
+### Download Links for SDXL VAE
+https://huggingface.co/stabilityai/sdxl-vae/resolve/main/sdxl_vae.safetensors
+
+## Stable Diffusion 3.5 Models
+===============================================================================================================
+### Download Links for SD 3.5 Checkpoints
+https://huggingface.co/city96/stable-diffusion-3.5-medium-gguf/resolve/main/sd3.5_medium-Q4_0.gguf
+https://huggingface.co/city96/stable-diffusion-3.5-large-gguf/resolve/main/sd3.5_large-Q4_0.gguf
+https://huggingface.co/city96/stable-diffusion-3.5-large-turbo-gguf/resolve/main/sd3.5_large_turbo-Q4_0.gguf
+
+### Download Links for SD 3.5 Encoders
+https://huggingface.co/calcuis/sd3.5-medium-gguf/resolve/main/clip_g.safetensors
+https://huggingface.co/calcuis/sd3.5-medium-gguf/resolve/main/clip_l.safetensors
+https://huggingface.co/calcuis/sd3.5-medium-gguf/resolve/main/t5xxl_fp8_e4m3fn.safetensors
+
+### Download Links for SD 3.5 VAE
+https://huggingface.co/calcuis/sd3.5-medium-gguf/resolve/main/diffusion_pytorch_model.safetensors
+
+## Flux Models
+===============================================================================================================
+### Download Links for Flux Checkpoints
+https://huggingface.co/city96/FLUX.1-dev-gguf/resolve/main/flux1-dev-Q4_0.gguf
+https://huggingface.co/city96/FLUX.1-schnell-gguf/resolve/main/flux1-schnell-Q4_0.gguf
+https://huggingface.co/YarvixPA/FLUX.1-Fill-dev-GGUF/resolve/main/flux1-fill-dev-Q4_0.gguf
+https://huggingface.co/SporkySporkness/FLUX.1-Canny-dev-GGUF/resolve/main/flux1-canny-dev-fp16-Q4_0-GGUF.gguf
+https://huggingface.co/romanfratric234/FLUX.1-Depth-dev-lora/resolve/main/flux1-depth-dev-lora.safetensors
+https://huggingface.co/Comfy-Org/Flux1-Redux-Dev/resolve/main/flux1-redux-dev.safetensors
+
+https://huggingface.co/QuantStack/FLUX.1-Kontext-dev-GGUF/resolve/main/flux1-kontext-dev-Q4_0.gguf
+
+https://huggingface.co/QuantStack/FLUX.1-Krea-dev-GGUF/resolve/main/flux1-krea-dev-Q4_0.gguf
+https://huggingface.co/belisarius/FLUX.1-dev-FLUX-KREA-BLAZE-v1-GGUF/resolve/main/FLUX-KREA-BLAZE-v1-Q4_K_M.gguf
+
+### Download Links for Chroma GGUF Checkpoint (An Excellent Fork of flux1-schnell)
+https://huggingface.co/silveroxides/Chroma-GGUF/resolve/main/chroma-unlocked-v50/chroma-unlocked-v50-Q4_0.gguf
+
+### Download Links for Flux Encoders
+https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/clip_l.safetensors
+https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp8_e4m3fn.safetensors
+https://huggingface.co/city96/t5-v1_1-xxl-encoder-gguf/resolve/main/t5-v1_1-xxl-encoder-Q4_K_S.gguf
+
+### Download Links for Flux VAE
+https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/ae.safetensors
+
+
+## HiDream Models
+===============================================================================================================
+### Download Links for HiDream Checkpoints
+https://huggingface.co/city96/HiDream-I1-Fast-gguf/resolve/main/hidream-i1-fast-Q2_K.gguf
+https://huggingface.co/city96/HiDream-I1-Dev-gguf/resolve/main/hidream-i1-dev-Q2_K.gguf
+https://huggingface.co/ND911/HiDream_e1_full_bf16-ggufs/resolve/main/hidream_e1_full_bf16-Q2_K.gguf
+https://huggingface.co/QuantStack/HiDream-E1-1-GGUF/resolve/main/HiDream_E1_1_-Q2_K.gguf
+
+### Download Links for HiDream VAE
+https://huggingface.co/HiDream-ai/HiDream-I1-Dev/resolve/main/vae/diffusion_pytorch_model.safetensors
+
+### Download Links for HiDream Text Encoders
+https://huggingface.co/Comfy-Org/HiDream-I1_ComfyUI/resolve/main/split_files/text_encoders/clip_g_hidream.safetensors
+https://huggingface.co/Comfy-Org/HiDream-I1_ComfyUI/resolve/main/split_files/text_encoders/clip_l_hidream.safetensors
+https://huggingface.co/Comfy-Org/HiDream-I1_ComfyUI/resolve/main/split_files/text_encoders/llama_3.1_8b_instruct_fp8_scaled.safetensors
+https://huggingface.co/bartowski/Meta-Llama-3.1-8B-Instruct-GGUF/resolve/main/Meta-Llama-3.1-8B-Instruct-IQ2_M.gguf
+https://huggingface.co/Comfy-Org/HiDream-I1_ComfyUI/resolve/main/split_files/text_encoders/t5xxl_fp8_e4m3fn_scaled.safetensors
+
+## WAN 2.1 Models
+===============================================================================================================
+### Download Links for WAN 2.1 Checkpoints
+https://huggingface.co/city96/Wan2.1-T2V-14B-gguf/resolve/main/wan2.1-t2v-14b-Q3_K_S.gguf
+
+https://huggingface.co/city96/Wan2.1-I2V-14B-480P-gguf/resolve/main/wan2.1-i2v-14b-480p-Q3_K_S.gguf
+https://huggingface.co/city96/Wan2.1-Fun-14B-Control-gguf/resolve/main/wan2.1-fun-14b-control-Q3_K_S.gguf
+
+https://huggingface.co/city96/Wan2.1-I2V-14B-720P-gguf/resolve/main/wan2.1-i2v-14b-720p-Q3_K_S.gguf
+https://huggingface.co/city96/Wan2.1-FLF2V-14B-720P-gguf/resolve/main/wan2.1-flf2v-14b-720p-Q3_K_S.gguf
+
+https://huggingface.co/QuantStack/Wan2.1_T2V_14B_FusionX-GGUF/resolve/main/Wan2.1_T2V_14B_FusionX-Q3_K_S.gguf
+https://huggingface.co/QuantStack/Wan2.1_I2V_14B_FusionX-GGUF/resolve/main/Wan2.1_I2V_14B_FusionX-Q3_K_S.gguf
+
+https://huggingface.co/QuantStack/Wan2.1_14B_VACE-GGUF/resolve/main/Wan2.1_14B_VACE-Q3_K_S.gguf
+
+
+### Download Links for WAN 2.1 Encoders
+https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/clip_vision/clip_vision_h.safetensors
+https://huggingface.co/calcuis/wan-gguf/resolve/main/clip_vision_h_fp8_e4m3fn.safetensors
+https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/blob/main/split_files/text_encoders/umt5_xxl_fp8_e4m3fn_scaled.safetensors
+
+https://huggingface.co/city96/umt5-xxl-encoder-gguf/resolve/main/umt5-xxl-encoder-Q3_K_S.gguf
+
+### Download Links for WAN 2.1 VAE
+https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/vae/wan_2.1_vae.safetensors
+
+### Download Links for WAN 2.1 LORA
+https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/Wan21_CausVid_14B_T2V_lora_rank32.safetensors
+
+## WAN 2.2 Models
+===============================================================================================================
+### Download Links for WAN 2.2 Checkpoints
+https://huggingface.co/befox/WAN2.2-14B-Rapid-AllInOne-GGUF/resolve/main/v10/wan2.2-t2v-rapid-aio-v10-Q3_K.gguf
+https://huggingface.co/befox/WAN2.2-14B-Rapid-AllInOne-GGUF/resolve/main/v10/wan2.2-t2v-rapid-aio-v10-nsfw-Q3_K.gguf
+
+https://huggingface.co/befox/WAN2.2-14B-Rapid-AllInOne-GGUF/resolve/main/v10/wan2.2-i2v-rapid-aio-v10-Q3_K.gguf
+https://huggingface.co/befox/WAN2.2-14B-Rapid-AllInOne-GGUF/resolve/main/v10/wan2.2-i2v-rapid-aio-v10-nsfw-Q3_K.gguf
+
+https://huggingface.co/QuantStack/Wan2.2-TI2V-5B-GGUF/resolve/main/Wan2.2-TI2V-5B-Q3_K_M.gguf
+
+### Download Links for WAN 2.2 Encoders
+https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/text_encoders/umt5_xxl_fp16.safetensors
+https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/blob/main/split_files/text_encoders/umt5_xxl_fp8_e4m3fn_scaled.safetensors
+
+### Download Links for WAN 2.2 VAE (Only for WAN 2.2 TI2V 5b model, 14b model uses WAN 2.1 VAE)
+https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/vae/wan2.2_vae.safetensors
+
+## QWEN Image Models
+===============================================================================================================
+### Download Links for QWEN Image Checkpoints
+https://huggingface.co/calcuis/qwen-image-gguf/resolve/main/qwen-image-q2_k.gguf
+https://huggingface.co/QuantStack/Qwen-Image-Edit-GGUF/resolve/main/Qwen_Image_Edit-Q2_K.gguf
+
+https://huggingface.co/QuantStack/Qwen-Image-Edit-2509-GGUF/resolve/main/Qwen-Image-Edit-2509-Q2_K.gguf
+
+### Download Links for QWEN Image Patches
+https://huggingface.co/Comfy-Org/Qwen-Image-DiffSynth-ControlNets/resolve/main/split_files/model_patches/qwen_image_inpaint_diffsynth_controlnet.safetensors
+https://huggingface.co/Comfy-Org/Qwen-Image-DiffSynth-ControlNets/resolve/main/split_files/model_patches/qwen_image_depth_diffsynth_controlnet.safetensors
+https://huggingface.co/Comfy-Org/Qwen-Image-DiffSynth-ControlNets/resolve/main/split_files/model_patches/qwen_image_canny_diffsynth_controlnet.safetensors
+
+### Download Links for QWEN Image ControlNet Union
+https://huggingface.co/Comfy-Org/Qwen-Image-InstantX-ControlNets/resolve/main/split_files/controlnet/Qwen-Image-InstantX-ControlNet-Union.safetensors
+
+### Download Links for QWEN Image Encoders
+https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/text_encoders/qwen_2.5_vl_7b_fp8_scaled.safetensors
+https://huggingface.co/unsloth/Qwen2.5-VL-7B-Instruct-GGUF/resolve/main/Qwen2.5-VL-7B-Instruct-Q2_K.gguf
+
+### Download Links for QWEN Image VAE
+https://huggingface.co/QuantStack/Qwen-Image-Edit-GGUF/resolve/main/VAE/Qwen_Image-VAE.safetensors
+https://huggingface.co/calcuis/pig-vae/resolve/main/pig_qwen_image_vae_fp32-f16.gguf
+
+____________________________
+
+SEGMENTATION MODELS
+
+models/sam2
+
+sam2.1_hiera_large.pt
+
+https://huggingface.co/facebook/sam2.1-hiera-large/resolve/main/sam2.1_hiera_large.pt 
+
+models/grounding-dino
+
+groundingdino_swinb_cogcoor.pth
+
+https://huggingface.co/ShilongLiu/GroundingDINO/resolve/main/groundingdino_swinb_cogcoor.pth 
+
+GroundingDINO_SwinB.cfg.py
+
+https://huggingface.co/ShilongLiu/GroundingDINO/resolve/main/GroundingDINO_SwinB.cfg.py 
+UPSCALE MODELS:
+
+models/upscale 
+
+4x-UltraSharp.pth
+
+https://huggingface.co/datasets/Kizi-Art/Upscale/resolve/fa98e357882a23b8e7928957a39462fbfaee1af5/4x-UltraSharp.pth 
+
+Mochi-1 Models
+===============================================================================================================
+
+### Download Links for Mochi-1 Checkpoints
+https://huggingface.co/calcuis/mochi-gguf/resolve/main/mochi-q4_k_m.gguf
+
+### Download Links for Mochi-1 Encoders
+https://huggingface.co/calcuis/mochi-gguf/resolve/main/t5xxl_fp32-q4_0.gguf
+
+### Download Links for Mochi-1 VAE
+https://huggingface.co/calcuis/mochi-gguf/resolve/main/pig_mochi_vae_fp32-f16.gguf
+
+ltxv Models
+===============================================================================================================
+
+### Download Links for ltxv Checkpoints
+https://huggingface.co/calcuis/ltxv0.9.6-gguf/resolve/main/ltxv-2b-0.9.6-dev-q4_0.gguf
+https://huggingface.co/calcuis/ltxv0.9.6-gguf/resolve/main/ltxv-2b-0.9.6-distilled-q4_0.gguf
+
+### Download Links for ltxv Encoders
+https://huggingface.co/calcuis/ltxv0.9.6-gguf/resolve/main/t5xxl_fp32-q4_0.gguf
+ 
+### Download Links for ltxv VAE
+https://huggingface.co/calcuis/ltxv0.9.6-gguf/resolve/main/pig_video_enhanced_vae_fp32-f16.gguf
+
+JoyCaption GGUF Models
+===============================================================================================================
+https://huggingface.co/mradermacher/llama-joycaption-beta-one-hf-llava-GGUF/resolve/main/llama-joycaption-beta-one-hf-llava.Q4_K_M.gguf
+https://huggingface.co/concedo/llama-joycaption-beta-one-hf-llava-mmproj-gguf/resolve/main/Llama-Joycaption-Beta-One-Hf-Llava-Q4_K.gguf

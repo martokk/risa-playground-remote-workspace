@@ -1,0 +1,75 @@
+# Example symlinks.yaml
+#
+# This file is used by the pre_start.sh script to create symlinks at container startup.
+# Add entries here to link files or directories from a source to a destination.
+#
+# - source: /path/to/original/file
+#   destination: /path/to/symlink
+
+# DOCKER CONTAINER ---------------------------------------------------------------------------------------------
+- source: /workspace/.cache/.unison
+  destination: /root/.unison
+
+# A1111 --------------------------------------------------------------------------------------------------------
+- source: /workspace/__OUTPUTS__/a1111
+  destination: /apps/stable-diffusion-webui/output
+
+- source: /workspace/configs/a1111/config.json
+  destination: /apps/stable-diffusion-webui/config.json
+
+- source: /workspace/configs/a1111/ui-config.json
+  destination: /apps/stable-diffusion-webui/ui-config.json
+
+- source: /workspace/configs/a1111/styles.csv
+  destination: /apps/stable-diffusion-webui/styles.csv
+
+- source: /workspace/configs/a1111/webui-user.shv
+  destination: /apps/stable-diffusion-webui/webui-user.sh
+
+- source: /workspace/configs/a1111/notification.mp3
+  destination: /apps/stable-diffusion-webui/notification.mp3
+
+# KOHYA_SS -----------------------------------------------------------------------------------------------------
+- source: /workspace/configs/kohya_ss/.env
+  destination: /apps/kohya_ss/.env
+
+- source: /workspace/configs/kohya_ss/gui.sh
+  destination: /apps/kohya_ss/gui.sh
+
+- source: /workspace/__OUTPUTS__/kohya_ss
+  destination: /apps/kohya_ss/outputs
+
+# KOHYA_SS PRESETS ---------------------------------------------------------------------------------------------
+- source: /workspace/configs/kohya_ss/presets/vLab
+  destination: /apps/kohya_ss/presets/vLab
+
+# COMFYUI ------------------------------------------------------------------------------------------------------
+- source: /workspace/__INPUTS__/comfyui
+  destination: /apps/comfyui/input
+
+- source: /workspace/__OUTPUTS__/comfyui
+  destination: /apps/comfyui/output
+
+- source: /workspace/configs/comfyui/extra_model_paths.yaml
+  destination: /apps/comfyui/extra_model_paths.yaml
+
+- source: /workspace/configs/comfyui/user/default/comfy.settings.json
+  destination: /apps/comfyui/user/default/comfy.settings.json
+
+- source: /workspace/workflows
+  destination: /apps/comfyui/user/default/workflows
+
+- source: /workspace/configs/comfyui/custom_nodes
+  destination: /apps/comfyui/custom_nodes
+
+- source: /workspace/configs/comfyui/user/default/ComfyUI-Manager/config.ini
+  destination: /apps/comfyui/user/default/ComfyUI-Manager/config.ini
+
+- source: /workspace/models/ipadapter
+  destination: /apps/comfyui/models/ipadapter
+
+- source: /workspace/configs/comfyui/custom_nodes
+  destination: /apps/comfyui/custom_nodes
+# RISA ---------------------------------------------------------------------------------------------------------
+
+# WEBDAV ------------------------------------------------------------------------------------------------------

@@ -1,0 +1,18 @@
+WWAA Flux Dev Image2Prompt Workflow with Upscaler
+======================================================
+
+Shared with the community, I'm sharing lazy workflow where you don't need to create prompts just use your choice of image that is analysed by Florence 2 LLM model and then it creates the prompt for image generation.
+
+https://weirdwonderfulai.art/ - search "flux"
+
+Designed for ComfyUI
+
+Download this and more workflows as https://weirdwonderfulai.art/
+
+Installation
+======================================================
+1. Launch ComfyUI (make sure you update to latest)
+2. Drag the provide PNG or JSON file into ComfyUI
+3. Install any missing Custom Node (that show up in red) using ComfyUI Manager.
+   Quick tutorial on installing ComfyUI Manager https://youtu.be/ltMbJaZoifQ
+

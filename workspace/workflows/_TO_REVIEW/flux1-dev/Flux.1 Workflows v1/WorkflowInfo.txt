@@ -1,0 +1,18 @@
+WWAA Flux.1 Text2Image and Image2Image Workflows
+======================================================
+
+Shared by the opensource community, I'm sharing my edits of these two workflows that I have built for my own use.
+
+https://weirdwonderfulai.art/ - search "flux"
+
+Designed for ComfyUI
+
+Download this and more workflows as https://weirdwonderfulai.art/
+
+Installation
+======================================================
+1. Launch ComfyUI
+2. Drag the provide PNG or JSON file into ComfyUI
+3. Install any missing Custom Node (that show up in red) using ComfyUI Manager.
+   Quick tutorial on installing ComfyUI Manager https://youtu.be/ltMbJaZoifQ
+

@@ -1,0 +1,11 @@
+{
+    "favorites": [
+        "workflows/templates/flux1-kontext/flux1-kontext-dev.json",
+        "workflows/image-edit/upscale/upscaler - flux1-kontext-dev.json"
+    ],
+    "extra": {
+        "workspace_info": {
+            "id": "be22ffcb-53fe-44c5-ab54-99053e628ada"
+        }
+    }
+}

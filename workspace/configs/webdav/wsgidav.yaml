@@ -1,0 +1,24 @@
+host: 0.0.0.0
+port: 9999
+
+provider_mapping:
+  "/": "/workspace"
+
+auth:
+  method: htpasswd
+  htpasswd_file: /workspace/configs/webdav/.htpasswd
+  accept_basic: true
+  accept_digest: false
+  default_to_anonymous: false
+
+simple_dc:
+  user_mapping:
+    "*":
+      "martokk_admin":
+        password: "vV42557406"
+
+middleware_stack:
+  - wsgidav.error_printer.ErrorPrinter
+  - wsgidav.http_authenticator.HTTPAuthenticator
+  - wsgidav.dir_browser.WsgiDavDirBrowser
+  - wsgidav.request_resolver.RequestResolver

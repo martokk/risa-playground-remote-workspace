@@ -1,0 +1,3962 @@
+{
+    "id": "63bca167-62f7-4177-8c63-cfd75366f966",
+    "revision": 0,
+    "last_node_id": 176,
+    "last_link_id": 96,
+    "nodes": [
+        {
+            "id": 51,
+            "type": "EmptyLatentImage",
+            "pos": [
+                1980,
+                1170
+            ],
+            "size": [
+                270,
+                106
+            ],
+            "flags": {
+                "collapsed": true
+            },
+            "order": 0,
+            "mode": 0,
+            "inputs": [
+                {
+                    "localized_name": "width",
+                    "name": "width",
+                    "type": "INT",
+                    "widget": {
+                        "name": "width"
+                    },
+                    "link": null
+                },
+                {
+                    "localized_name": "height",
+                    "name": "height",
+                    "type": "INT",
+                    "widget": {
+                        "name": "height"
+                    },
+                    "link": null
+                },
+                {
+                    "localized_name": "batch_size",
+                    "name": "batch_size",
+                    "type": "INT",
+                    "widget": {
+                        "name": "batch_size"
+                    },
+                    "link": null
+                }
+            ],
+            "outputs": [
+                {
+                    "localized_name": "LATENT",
+                    "name": "LATENT",
+                    "type": "LATENT",
+                    "links": null
+                }
+            ],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.34",
+                "Node name for S&R": "EmptyLatentImage",
+                "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+                512,
+                512,
+                1
+            ],
+            "color": "#2a363b",
+            "bgcolor": "#3f5159"
+        },
+        {
+            "id": 60,
+            "type": "Power Lora Loader (rgthree)",
+            "pos": [
+                1700,
+                1730
+            ],
+            "size": [
+                216.54745483398438,
+                118
+            ],
+            "flags": {
+                "collapsed": false
+            },
+            "order": 61,
+            "mode": 0,
+            "inputs": [
+                {
+                    "dir": 3,
+                    "name": "model",
+                    "type": "MODEL",
+                    "link": 52
+                },
+                {
+                    "dir": 3,
+                    "name": "clip",
+                    "type": "CLIP",
+                    "link": 53
+                }
+            ],
+            "outputs": [
+                {
+                    "dir": 4,
+                    "name": "MODEL",
+                    "shape": 3,
+                    "type": "MODEL",
+                    "links": [
+                        46
+                    ]
+                },
+                {
+                    "dir": 4,
+                    "name": "CLIP",
+                    "shape": 3,
+                    "type": "CLIP",
+                    "links": [
+                        45,
+                        51
+                    ]
+                }
+            ],
+            "properties": {
+                "cnr_id": "rgthree-comfy",
+                "ver": "1.0.0",
+                "Show Strengths": "Single Strength",
+                "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+                {},
+                {
+                    "type": "PowerLoraLoaderHeaderWidget"
+                },
+                {},
+                ""
+            ],
+            "color": "#323",
+            "bgcolor": "#535"
+        },
+        {
+            "id": 63,
+            "type": "VAEDecode",
+            "pos": [
+                2640,
+                1730
+            ],
+            "size": [
+                140,
+                46
+            ],
+            "flags": {
+                "collapsed": false
+            },
+            "order": 76,
+            "mode": 0,
+            "inputs": [
+                {
+                    "localized_name": "samples",
+                    "name": "samples",
+                    "type": "LATENT",
+                    "link": 54
+                },
+                {
+                    "localized_name": "vae",
+                    "name": "vae",
+                    "type": "VAE",
+                    "link": 55
+                }
+            ],
+            "outputs": [
+                {
+                    "localized_name": "IMAGE",
+                    "name": "IMAGE",
+                    "type": "IMAGE",
+                    "links": [
+                        50
+                    ]
+                }
+            ],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.29",
+                "Node name for S&R": "VAEDecode",
+                "widget_ue_connectable": {}
+            },
+            "widgets_values": []
+        },
+        {
+            "id": 97,
+            "type": "ImageUpscaleWithModel",
+            "pos": [
+                1300,
+                2670
+            ],
+            "size": [
+                260,
+                46
+            ],
+            "flags": {
+                "collapsed": false
+            },
+            "order": 64,
+            "mode": 0,
+            "inputs": [
+                {
+                    "localized_name": "upscale_model",
+                    "name": "upscale_model",
+                    "type": "UPSCALE_MODEL",
+                    "link": 70
+                },
+                {
+                    "localized_name": "image",
+                    "name": "image",
+                    "type": "IMAGE",
+                    "link": 71
+                }
+            ],
+            "outputs": [
+                {
+                    "localized_name": "IMAGE",
+                    "name": "IMAGE",
+                    "type": "IMAGE",
+                    "links": [
+                        73
+                    ]
+                }
+            ],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.27",
+                "Node name for S&R": "ImageUpscaleWithModel",
+                "widget_ue_connectable": {}
+            },
+            "widgets_values": []
+        },
+        {
+            "id": 24,
+            "type": "VAEDecode",
+            "pos": [
+                2670,
+                710
+            ],
+            "size": [
+                140,
+                46
+            ],
+            "flags": {
+                "collapsed": false
+            },
+            "order": 75,
+            "mode": 0,
+            "inputs": [
+                {
+                    "localized_name": "samples",
+                    "name": "samples",
+                    "type": "LATENT",
+                    "link": 66
+                },
+                {
+                    "localized_name": "vae",
+                    "name": "vae",
+                    "type": "VAE",
+                    "link": 43
+                }
+            ],
+            "outputs": [
+                {
+                    "localized_name": "IMAGE",
+                    "name": "IMAGE",
+                    "type": "IMAGE",
+                    "links": [
+                        68
+                    ]
+                }
+            ],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.29",
+                "Node name for S&R": "VAEDecode",
+                "widget_ue_connectable": {}
+            },
+            "widgets_values": []
+        },
+        {
+            "id": 89,
+            "type": "SaveImage",
+            "pos": [
+                2840,
+                670
+            ],
+            "size": [
+                270,
+                270
+            ],
+            "flags": {
+                "collapsed": true
+            },
+            "order": 1,
+            "mode": 0,
+            "inputs": [
+                {
+                    "localized_name": "images",
+                    "name": "images",
+                    "type": "IMAGE",
+                    "link": null
+                },
+                {
+                    "localized_name": "filename_prefix",
+                    "name": "filename_prefix",
+                    "type": "STRING",
+                    "widget": {
+                        "name": "filename_prefix"
+                    },
+                    "link": null
+                }
+            ],
+            "outputs": [],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.34",
+                "Node name for S&R": "SaveImage",
+                "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+                "Sdxl/test"
+            ],
+            "color": "#222",
+            "bgcolor": "#000"
+        },
+        {
+            "id": 83,
+            "type": "MarkdownNote",
+            "pos": [
+                3300,
+                1700
+            ],
+            "size": [
+                290,
+                90
+            ],
+            "flags": {
+                "collapsed": true
+            },
+            "order": 2,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [],
+            "title": "Load Image",
+            "properties": {
+                "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+                "This is where you load your **input image** for editing.  \n- Click the node and press **`Ctrl + V`** to paste  \n- Or drag an image straight from **Google or your files** into it"
+            ],
+            "color": "#222",
+            "bgcolor": "#000"
+        },
+        {
+            "id": 82,
+            "type": "MarkdownNote",
+            "pos": [
+                3300,
+                1780
+            ],
+            "size": [
+                280,
+                110
+            ],
+            "flags": {
+                "collapsed": true
+            },
+            "order": 3,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [],
+            "title": "VAE Encode",
+            "properties": {
+                "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+                "Just like **VAE Decode** turns AI-generated data into a visible image, **VAE Encode** does the reverse.\n\nIt **encodes a real image into latent space**, so the **UNet** can alter it.\n\nYou **always** need this node for image to image."
+            ],
+            "color": "#432",
+            "bgcolor": "#653"
+        },
+        {
+            "id": 109,
+            "type": "MarkdownNote",
+            "pos": [
+                2060,
+                2650
+            ],
+            "size": [
+                290,
+                210
+            ],
+            "flags": {
+                "collapsed": true
+            },
+            "order": 4,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [],
+            "title": "Image Comparer (rgthree)",
+            "properties": {
+                "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+                "A visual comparison node that shows **image_a** by default, and reveals **image_b** when you hover for the slide effect.\n\n- You can use this instead of **Preview Image** instead. Or add this one to **image-to-image**\n\nTo **copy or save an image**, right-click on the side showing the image you want which depends on order of inputs. In this case:  \n- Right of the node = processed version  \n- Left = original  \nIf the right-click doesn't behave as expected, try **updating rgthree nodes** in the Manager—or just switch to **Preview** or **Save Image**.\n"
+            ],
+            "color": "#222",
+            "bgcolor": "#000"
+        },
+        {
+            "id": 96,
+            "type": "MarkdownNote",
+            "pos": [
+                3300,
+                1740
+            ],
+            "size": [
+                290,
+                100
+            ],
+            "flags": {
+                "collapsed": true
+            },
+            "order": 5,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [],
+            "title": "KSampler",
+            "properties": {
+                "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+                "Here the **denoise** value becomes your strength slider for **change**.\n\n- **0.5** some change, good starting point\n- Raise to 0.70 (for example) if not enough change  \n- Lower it if you want less change"
+            ],
+            "color": "#871717",
+            "bgcolor": "#730303"
+        },
+        {
+            "id": 117,
+            "type": "MarkdownNote",
+            "pos": [
+                3330,
+                910
+            ],
+            "size": [
+                290,
+                120
+            ],
+            "flags": {
+                "collapsed": true
+            },
+            "order": 6,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [],
+            "title": "Fast Groups Bypasser",
+            "properties": {
+                "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+                "When you first add this node, it will auto-detect **all groups**.  \nTo make it only apply to a **specific group**:\n\n1. Right-click the node  \n2. Open the **Properties Panel**  \n3. In the **\"matchtitle\"** box, type the **exact name of the group** you want it to match\n"
+            ],
+            "color": "#222",
+            "bgcolor": "#000"
+        },
+        {
+            "id": 87,
+            "type": "MarkdownNote",
+            "pos": [
+                3330,
+                830
+            ],
+            "size": [
+                280,
+                150
+            ],
+            "flags": {
+                "collapsed": true
+            },
+            "order": 7,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [],
+            "title": "VAE Decode",
+            "properties": {
+                "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+                "Think of this as the final translator:\n\nCLIP encodes your prompt  \nUNet builds the image in latent space (math/numbers)  \n**VAE Decode** turns that into pixels you can see\n\nIt can also work in reverse. See **Image-to-Image**.\n\nP.S: Markdown Note nodes won't stay grey and revert back to their default yellowish color. The others that look grey are in fact black."
+            ],
+            "color": "#432",
+            "bgcolor": "#653"
+        },
+        {
+            "id": 127,
+            "type": "Image Scale To Total Pixels (SDXL Safe)",
+            "pos": [
+                1710,
+                1970
+            ],
+            "size": [
+                220,
+                82
+            ],
+            "flags": {
+                "collapsed": false
+            },
+            "order": 63,
+            "mode": 0,
+            "inputs": [
+                {
+                    "localized_name": "image",
+                    "name": "image",
+                    "type": "IMAGE",
+                    "link": 79
+                },
+                {
+                    "localized_name": "upscale_method",
+                    "name": "upscale_method",
+                    "type": "COMBO",
+                    "widget": {
+                        "name": "upscale_method"
+                    },
+                    "link": null
+                },
+                {
+                    "localized_name": "total_megapixels",
+                    "name": "total_megapixels",
+                    "type": "FLOAT",
+                    "widget": {
+                        "name": "total_megapixels"
+                    },
+                    "link": null
+                }
+            ],
+            "outputs": [
+                {
+                    "localized_name": "IMAGE",
+                    "name": "IMAGE",
+                    "type": "IMAGE",
+                    "links": [
+                        80
+                    ]
+                }
+            ],
+            "properties": {
+                "aux_id": "Maxed-Out-99/ComfyUI-MaxedOut",
+                "ver": "9967096b4da13cc4efa2b1ff0a47d4fababda3af",
+                "Node name for S&R": "Image Scale To Total Pixels (SDXL Safe)",
+                "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+                "nearest-exact",
+                1
+            ]
+        },
+        {
+            "id": 139,
+            "type": "ShowText|pysssss",
+            "pos": [
+                3630,
+                2670
+            ],
+            "size": [
+                250,
+                300
+            ],
+            "flags": {},
+            "order": 72,
+            "mode": 0,
+            "inputs": [
+                {
+                    "localized_name": "text",
+                    "name": "text",
+                    "type": "STRING",
+                    "link": 81
+                }
+            ],
+            "outputs": [
+                {
+                    "localized_name": "STRING",
+                    "name": "STRING",
+                    "shape": 6,
+                    "type": "STRING",
+                    "slot_index": 0,
+                    "links": []
+                }
+            ],
+            "title": "Text",
+            "properties": {
+                "cnr_id": "comfyui-custom-scripts",
+                "ver": "bfe88489ff250a84bc25c210d84a58135f9a8a8f",
+                "Node name for S&R": "ShowText|pysssss",
+                "aux_id": "KoreTeknology/ComfyUI-Universal-Styler",
+                "widget_ue_connectable": {}
+            },
+            "widgets_values": [],
+            "color": "#232",
+            "bgcolor": "#353"
+        },
+        {
+            "id": 140,
+            "type": "DownloadAndLoadFlorence2Model",
+            "pos": [
+                3020,
+                3040
+            ],
+            "size": [
+                280,
+                130
+            ],
+            "flags": {},
+            "order": 8,
+            "mode": 0,
+            "inputs": [
+                {
+                    "localized_name": "lora",
+                    "name": "lora",
+                    "shape": 7,
+                    "type": "PEFTLORA",
+                    "link": null
+                },
+                {
+                    "localized_name": "model",
+                    "name": "model",
+                    "type": "COMBO",
+                    "widget": {
+                        "name": "model"
+                    },
+                    "link": null
+                },
+                {
+                    "localized_name": "precision",
+                    "name": "precision",
+                    "type": "COMBO",
+                    "widget": {
+                        "name": "precision"
+                    },
+                    "link": null
+                },
+                {
+                    "localized_name": "attention",
+                    "name": "attention",
+                    "type": "COMBO",
+                    "widget": {
+                        "name": "attention"
+                    },
+                    "link": null
+                },
+                {
+                    "localized_name": "convert_to_safetensors",
+                    "name": "convert_to_safetensors",
+                    "shape": 7,
+                    "type": "BOOLEAN",
+                    "widget": {
+                        "name": "convert_to_safetensors"
+                    },
+                    "link": null
+                }
+            ],
+            "outputs": [
+                {
+                    "localized_name": "florence2_model",
+                    "name": "florence2_model",
+                    "type": "FL2MODEL",
+                    "links": [
+                        83
+                    ]
+                }
+            ],
+            "properties": {
+                "cnr_id": "comfyui-florence2",
+                "ver": "dffd12506d50f0540b8a7f4b36a05d4fb5fed2de",
+                "Node name for S&R": "DownloadAndLoadFlorence2Model",
+                "widget_ue_connectable": {
+                    "model": true,
+                    "precision": true,
+                    "attention": true
+                },
+                "ttNbgOverride": {
+                    "color": "#223",
+                    "bgcolor": "#335",
+                    "groupcolor": "#88A"
+                }
+            },
+            "widgets_values": [
+                "MiaoshouAI/Florence-2-large-PromptGen-v2.0",
+                "fp16",
+                "sdpa",
+                false
+            ],
+            "color": "#223",
+            "bgcolor": "#335"
+        },
+        {
+            "id": 143,
+            "type": "Florence2Run",
+            "pos": [
+                3340,
+                2670
+            ],
+            "size": [
+                260,
+                364
+            ],
+            "flags": {},
+            "order": 65,
+            "mode": 0,
+            "inputs": [
+                {
+                    "localized_name": "image",
+                    "name": "image",
+                    "type": "IMAGE",
+                    "link": 82
+                },
+                {
+                    "localized_name": "florence2_model",
+                    "name": "florence2_model",
+                    "type": "FL2MODEL",
+                    "link": 83
+                },
+                {
+                    "localized_name": "text_input",
+                    "name": "text_input",
+                    "type": "STRING",
+                    "widget": {
+                        "name": "text_input"
+                    },
+                    "link": null
+                },
+                {
+                    "localized_name": "task",
+                    "name": "task",
+                    "type": "COMBO",
+                    "widget": {
+                        "name": "task"
+                    },
+                    "link": null
+                },
+                {
+                    "localized_name": "fill_mask",
+                    "name": "fill_mask",
+                    "type": "BOOLEAN",
+                    "widget": {
+                        "name": "fill_mask"
+                    },
+                    "link": null
+                },
+                {
+                    "localized_name": "keep_model_loaded",
+                    "name": "keep_model_loaded",
+                    "shape": 7,
+                    "type": "BOOLEAN",
+                    "widget": {
+                        "name": "keep_model_loaded"
+                    },
+                    "link": null
+                },
+                {
+                    "localized_name": "max_new_tokens",
+                    "name": "max_new_tokens",
+                    "shape": 7,
+                    "type": "INT",
+                    "widget": {
+                        "name": "max_new_tokens"
+                    },
+                    "link": null
+                },
+                {
+                    "localized_name": "num_beams",
+                    "name": "num_beams",
+                    "shape": 7,
+                    "type": "INT",
+                    "widget": {
+                        "name": "num_beams"
+                    },
+                    "link": null
+                },
+                {
+                    "localized_name": "do_sample",
+                    "name": "do_sample",
+                    "shape": 7,
+                    "type": "BOOLEAN",
+                    "widget": {
+                        "name": "do_sample"
+                    },
+                    "link": null
+                },
+                {
+                    "localized_name": "output_mask_select",
+                    "name": "output_mask_select",
+                    "shape": 7,
+                    "type": "STRING",
+                    "widget": {
+                        "name": "output_mask_select"
+                    },
+                    "link": null
+                },
+                {
+                    "localized_name": "seed",
+                    "name": "seed",
+                    "shape": 7,
+                    "type": "INT",
+                    "widget": {
+                        "name": "seed"
+                    },
+                    "link": null
+                }
+            ],
+            "outputs": [
+                {
+                    "localized_name": "image",
+                    "name": "image",
+                    "type": "IMAGE",
+                    "slot_index": 0,
+                    "links": []
+                },
+                {
+                    "localized_name": "mask",
+                    "name": "mask",
+                    "type": "MASK",
+                    "slot_index": 1,
+                    "links": []
+                },
+                {
+                    "localized_name": "caption",
+                    "name": "caption",
+                    "type": "STRING",
+                    "slot_index": 2,
+                    "links": [
+                        81
+                    ]
+                },
+                {
+                    "localized_name": "data",
+                    "name": "data",
+                    "type": "JSON",
+                    "links": null
+                }
+            ],
+            "properties": {
+                "cnr_id": "comfyui-florence2",
+                "ver": "dffd12506d50f0540b8a7f4b36a05d4fb5fed2de",
+                "Node name for S&R": "Florence2Run",
+                "widget_ue_connectable": {
+                    "text_input": true,
+                    "task": true,
+                    "fill_mask": true,
+                    "keep_model_loaded": true,
+                    "max_new_tokens": true,
+                    "num_beams": true,
+                    "do_sample": true,
+                    "output_mask_select": true,
+                    "seed": true
+                },
+                "ttNbgOverride": {
+                    "color": "#223",
+                    "bgcolor": "#335",
+                    "groupcolor": "#88A"
+                }
+            },
+            "widgets_values": [
+                "",
+                "caption",
+                true,
+                false,
+                50,
+                3,
+                true,
+                "",
+                136870253886399,
+                "randomize"
+            ],
+            "color": "#4e4f4f",
+            "bgcolor": "#3a3b3b"
+        },
+        {
+            "id": 144,
+            "type": "MarkdownNote",
+            "pos": [
+                3920,
+                2650
+            ],
+            "size": [
+                360,
+                270
+            ],
+            "flags": {
+                "collapsed": true
+            },
+            "order": 9,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [],
+            "title": "Florence2Run",
+            "properties": {
+                "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+                "This node handles the **text generation task**. Here are the most important options:\n\n1. **caption** – Short, natural-sounding description  \n2. **detailed_caption** – Longer than caption  \n3. **more_detailed_caption** – Even longer  \n4. **prompt_gen_tags** – Outputs tag-style prompts like `1girl, pose, environment` instead of natural sentences\n\n**caption** is the best default for most workflows.\n\n---\n\n**max_new_tokens:**  \nControls the **length** of the generated text. Depends on the **task** selected:\n\n- For **caption**, **detailed_caption**, and **more_detailed_caption**: keep at default (`1024`) or lower if needed\n- For **prompt_gen_tags**: reduce to around **50** (already preset)\n\nYou can tweak the other settings if you’re curious, but the **defaults are already tuned** for most use cases."
+            ],
+            "color": "#4e4f4f",
+            "bgcolor": "#3a3b3b"
+        },
+        {
+            "id": 146,
+            "type": "MarkdownNote",
+            "pos": [
+                3920,
+                2610
+            ],
+            "size": [
+                290,
+                120
+            ],
+            "flags": {
+                "collapsed": true
+            },
+            "order": 10,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [],
+            "title": "DownloadAndLoadFlorence2Model",
+            "properties": {
+                "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+                "\nThis node auto-downloads your selected model.  \n🕐 You’ll need to wait for the download to finish before using ComfyUI again.\n\nThe differences between models aren’t super significant. I’ve pre-selected a **good choice (last in the list)** to simplify it."
+            ],
+            "color": "#223",
+            "bgcolor": "#335"
+        },
+        {
+            "id": 147,
+            "type": "Label (rgthree)",
+            "pos": [
+                3920,
+                2480
+            ],
+            "size": [
+                454.765625,
+                90
+            ],
+            "flags": {
+                "allow_interaction": true
+            },
+            "order": 11,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [],
+            "title": "Cheat Sheet",
+            "properties": {
+                "fontSize": 80,
+                "fontFamily": "Arial",
+                "fontColor": "grey",
+                "textAlign": "center",
+                "backgroundColor": "black",
+                "padding": 5,
+                "borderRadius": 20,
+                "widget_ue_connectable": {}
+            },
+            "color": "#322",
+            "bgcolor": "#533"
+        },
+        {
+            "id": 100,
+            "type": "Label (rgthree)",
+            "pos": [
+                940,
+                2370
+            ],
+            "size": [
+                694.7265625,
+                100
+            ],
+            "flags": {
+                "allow_interaction": true
+            },
+            "order": 12,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [],
+            "title": "Simple Upscale",
+            "properties": {
+                "fontSize": 100,
+                "fontFamily": "Arial",
+                "fontColor": "green",
+                "textAlign": "left",
+                "backgroundColor": "transparent",
+                "padding": 0,
+                "borderRadius": 0,
+                "widget_ue_connectable": {}
+            },
+            "color": "#fff0",
+            "bgcolor": "#fff0"
+        },
+        {
+            "id": 104,
+            "type": "Label (rgthree)",
+            "pos": [
+                2060,
+                2480
+            ],
+            "size": [
+                454.765625,
+                90
+            ],
+            "flags": {
+                "allow_interaction": true
+            },
+            "order": 13,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [],
+            "title": "Cheat Sheet",
+            "properties": {
+                "fontSize": 80,
+                "fontFamily": "Arial",
+                "fontColor": "green",
+                "textAlign": "center",
+                "backgroundColor": "black",
+                "padding": 5,
+                "borderRadius": 20,
+                "widget_ue_connectable": {}
+            },
+            "color": "#322",
+            "bgcolor": "#533"
+        },
+        {
+            "id": 105,
+            "type": "MarkdownNote",
+            "pos": [
+                2060,
+                2610
+            ],
+            "size": [
+                290,
+                90
+            ],
+            "flags": {
+                "collapsed": true
+            },
+            "order": 14,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [],
+            "title": "Load Upscale Model",
+            "properties": {
+                "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+                "The model you load here determines the **amount upscaled** typically **x2, x4, or x8**.  \nEach model is trained to upscale by a specific amount, so the **Upscale Image (using Model)** node automatically applies the correct scaling."
+            ],
+            "color": "#223",
+            "bgcolor": "#335"
+        },
+        {
+            "id": 94,
+            "type": "Label (rgthree)",
+            "pos": [
+                3300,
+                1530
+            ],
+            "size": [
+                454.765625,
+                90
+            ],
+            "flags": {
+                "allow_interaction": true
+            },
+            "order": 15,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [],
+            "title": "Cheat Sheet",
+            "properties": {
+                "fontSize": 80,
+                "fontFamily": "Arial",
+                "fontColor": "red",
+                "textAlign": "center",
+                "backgroundColor": "black",
+                "padding": 5,
+                "borderRadius": 20,
+                "widget_ue_connectable": {}
+            },
+            "color": "#322",
+            "bgcolor": "#533"
+        },
+        {
+            "id": 81,
+            "type": "MarkdownNote",
+            "pos": [
+                3300,
+                1660
+            ],
+            "size": [
+                290,
+                150
+            ],
+            "flags": {
+                "collapsed": true
+            },
+            "order": 16,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [],
+            "title": "Scale Image to Total Pixels",
+            "properties": {
+                "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+                "SDXL works best around **1 megapixel.**  \nThat’s why the **SDXL Empty Latent Image** node uses fixed resolutions. Random sizes can cause extra heads, torsos, and traumatize you 🥲\n\nThis node **scales** oversized or tiny images to closer to SDXL-safe dimensions** (not perfect), but **skips scaling** if the image already matches any resolution from the **SDXL Empty Latent Image** node.  \nThat’s why it’s a **custom node**. I had to edit the default.\n"
+            ],
+            "color": "#432",
+            "bgcolor": "#653"
+        },
+        {
+            "id": 26,
+            "type": "Label (rgthree)",
+            "pos": [
+                1720,
+                280
+            ],
+            "size": [
+                1245.01953125,
+                200
+            ],
+            "flags": {
+                "allow_interaction": true
+            },
+            "order": 17,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [],
+            "title": "Text To Image",
+            "properties": {
+                "fontSize": 200,
+                "fontFamily": "Arial",
+                "fontColor": "#222fe3",
+                "textAlign": "left",
+                "backgroundColor": "transparent",
+                "padding": 0,
+                "borderRadius": 0,
+                "widget_ue_connectable": {}
+            },
+            "color": "#322",
+            "bgcolor": "#533"
+        },
+        {
+            "id": 65,
+            "type": "Label (rgthree)",
+            "pos": [
+                1610,
+                1320
+            ],
+            "size": [
+                1434.08203125,
+                200
+            ],
+            "flags": {
+                "allow_interaction": true
+            },
+            "order": 18,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [],
+            "title": "Image To Image",
+            "properties": {
+                "fontSize": 200,
+                "fontFamily": "Arial",
+                "fontColor": "red",
+                "textAlign": "left",
+                "backgroundColor": "transparent",
+                "padding": 0,
+                "borderRadius": 0,
+                "widget_ue_connectable": {}
+            },
+            "color": "#fff0",
+            "bgcolor": "#fff0"
+        },
+        {
+            "id": 157,
+            "type": "MarkdownNote",
+            "pos": [
+                3330,
+                1210
+            ],
+            "size": [
+                210,
+                88
+            ],
+            "flags": {
+                "collapsed": true
+            },
+            "order": 19,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [],
+            "title": "Reroutes",
+            "properties": {
+                "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+                "Wires have a dots in the middle. Click that, add reroute. "
+            ],
+            "color": "#222",
+            "bgcolor": "#000"
+        },
+        {
+            "id": 158,
+            "type": "MarkdownNote",
+            "pos": [
+                3330,
+                1250
+            ],
+            "size": [
+                280,
+                120
+            ],
+            "flags": {
+                "collapsed": true
+            },
+            "order": 20,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [],
+            "title": "Label (rgthree)",
+            "properties": {
+                "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+                "The giant titles are \"Label (rgthree)\" nodes. Add one. Double click it to open the properties panel. You can add a title of course but as well as font size or color. \n\nYou can just type common color names in or use hex's like \"#9c0c02\" is red. Search \"hex color\" on google and it should pop up an easy way to get them for your desired color."
+            ],
+            "color": "#222",
+            "bgcolor": "#000"
+        },
+        {
+            "id": 156,
+            "type": "MarkdownNote",
+            "pos": [
+                3330,
+                1170
+            ],
+            "size": [
+                290,
+                190
+            ],
+            "flags": {
+                "collapsed": true
+            },
+            "order": 21,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [],
+            "title": "Groups",
+            "properties": {
+                "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+                "To create a group:  \n- Select nodes using **Ctrl + **click and drag** to box select  \n- Press **Ctrl + G** to group them\n\nTo change the **group color** beyond the presets:\n- Right-click the group  \n- Scroll to **\"Edit Group\" → \"Colors\" → \"Custom\"** and choose your own\n\nYou can also right-click a group and select **\"Fit to Nodes\"** to resize it cleanly."
+            ],
+            "color": "#222",
+            "bgcolor": "#000"
+        },
+        {
+            "id": 155,
+            "type": "MarkdownNote",
+            "pos": [
+                3330,
+                1130
+            ],
+            "size": [
+                290,
+                120
+            ],
+            "flags": {
+                "collapsed": true
+            },
+            "order": 22,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [],
+            "title": "Fast Groups Bypasser",
+            "properties": {
+                "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+                "When you first add this node, it will auto-detect **all groups**.  \nTo make it only apply to a **specific group**:\n\n1. Right-click the node  \n2. Open the **Properties Panel**  \n3. In the **\"matchtitle\"** box, type the **exact name of the group** you want it to match\n"
+            ],
+            "color": "#222",
+            "bgcolor": "#000"
+        },
+        {
+            "id": 159,
+            "type": "Label (rgthree)",
+            "pos": [
+                3330,
+                1040
+            ],
+            "size": [
+                123.359375,
+                50
+            ],
+            "flags": {
+                "allow_interaction": true
+            },
+            "order": 23,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [],
+            "title": "Extras",
+            "properties": {
+                "fontSize": 40,
+                "fontFamily": "Arial",
+                "fontColor": "blue",
+                "textAlign": "center",
+                "backgroundColor": "black",
+                "padding": 5,
+                "borderRadius": 20,
+                "widget_ue_connectable": {}
+            },
+            "color": "#322",
+            "bgcolor": "#533"
+        },
+        {
+            "id": 67,
+            "type": "VAEEncode",
+            "pos": [
+                1960,
+                2080
+            ],
+            "size": [
+                300,
+                46
+            ],
+            "flags": {
+                "collapsed": false
+            },
+            "order": 70,
+            "mode": 0,
+            "inputs": [
+                {
+                    "label": "pixels",
+                    "localized_name": "pixels",
+                    "name": "pixels",
+                    "type": "IMAGE",
+                    "link": 80
+                },
+                {
+                    "label": "vae",
+                    "localized_name": "vae",
+                    "name": "vae",
+                    "type": "VAE",
+                    "link": 60
+                }
+            ],
+            "outputs": [
+                {
+                    "label": "LATENT",
+                    "localized_name": "LATENT",
+                    "name": "LATENT",
+                    "type": "LATENT",
+                    "slot_index": 0,
+                    "links": [
+                        90
+                    ]
+                }
+            ],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.18",
+                "Node name for S&R": "VAEEncode",
+                "widget_ue_connectable": {}
+            },
+            "widgets_values": []
+        },
+        {
+            "id": 120,
+            "type": "MarkdownNote",
+            "pos": [
+                4000,
+                120
+            ],
+            "size": [
+                420,
+                530
+            ],
+            "flags": {
+                "collapsed": false
+            },
+            "order": 24,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [],
+            "title": "Final Tips (Optional Read)",
+            "properties": {
+                "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+                "**🛠️ Node Groups & Renaming Tips**\n\nCreating **node groups** (select multiple, right-click → Convert to Node Group) can help keep things tidy when building your own workflows.  \nHowever, when **sharing workflows**, groups used to cause issues (maybe fixed now), and they can still confuse people especially beginners.\n\n---\n\n**Node Renaming**\n\nI renamed nodes in **v1**, but started undoing that before release and won’t be doing it again, even for myself.\n\nWhy? Renaming nodes can cause confusion:\n- Makes it harder for others to find the original node\n- Breaks searchability (e.g. this is a **\"markdown note\"** node, renaming it hides that)\n\n💡 Right-click a node to see its **real name** (like this one) at the top of the popup box.\n\n---\n\n**v1 vs v1.5 – Which Style Is Better?**\n\nThis version isn’t automatically better than **v1**. It depends on the user:\n\n- If you want to **learn ComfyUI** and understand what’s going on, **v1.5 is for you**.\n- If you just want to **plug and play**, **v1 might be faster**.\n\nLet me know in the **Patreon comments** which one worked better for you if you used both.\n\n---\n\n**🤖 About Noodletron**\n\nI personally liked making Noodletron. I didn't use him here because his instructions were: \"explain only what you need to, offload everything else to google, assume the user laughs at your jokes, and use emojis like your life depends on it\"\n\nI genuinely do not know what people thought of him 😅\n\n---\nLevel 2 is waiting 🚀\n---\n\n---\n"
+            ],
+            "color": "#841414",
+            "bgcolor": "#700000"
+        },
+        {
+            "id": 168,
+            "type": "MarkdownNote",
+            "pos": [
+                2540,
+                2610
+            ],
+            "size": [
+                440,
+                130
+            ],
+            "flags": {
+                "collapsed": false
+            },
+            "order": 25,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [],
+            "title": "Prompt from Image",
+            "properties": {
+                "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+                "---\n\n### Generate a prompt from an image automatically\n\n---\n\n1. Load an image and hit **Run**  \n2. A prompt will be generated from the image  \n3. You can edit or refine the output if needed\n\n---\n"
+            ],
+            "color": "#565151",
+            "bgcolor": "#423d3d"
+        },
+        {
+            "id": 167,
+            "type": "Label (rgthree)",
+            "pos": [
+                2540,
+                2480
+            ],
+            "size": [
+                441.25,
+                90
+            ],
+            "flags": {
+                "allow_interaction": true
+            },
+            "order": 26,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [],
+            "title": "How To Use",
+            "properties": {
+                "fontSize": 80,
+                "fontFamily": "Arial",
+                "fontColor": "grey",
+                "textAlign": "center",
+                "backgroundColor": "black",
+                "padding": 5,
+                "borderRadius": 20,
+                "widget_ue_connectable": {}
+            },
+            "color": "#322",
+            "bgcolor": "#533"
+        },
+        {
+            "id": 142,
+            "type": "Label (rgthree)",
+            "pos": [
+                2990,
+                2370
+            ],
+            "size": [
+                622.509765625,
+                100
+            ],
+            "flags": {
+                "allow_interaction": true
+            },
+            "order": 27,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [],
+            "title": "Image To Text",
+            "properties": {
+                "fontSize": 100,
+                "fontFamily": "Arial",
+                "fontColor": "grey",
+                "textAlign": "left",
+                "backgroundColor": "transparent",
+                "padding": 0,
+                "borderRadius": 0,
+                "widget_ue_connectable": {}
+            },
+            "color": "#fff0",
+            "bgcolor": "#fff0"
+        },
+        {
+            "id": 169,
+            "type": "Label (rgthree)",
+            "pos": [
+                490,
+                2480
+            ],
+            "size": [
+                441.25,
+                90
+            ],
+            "flags": {
+                "allow_interaction": true
+            },
+            "order": 28,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [],
+            "title": "How To Use",
+            "properties": {
+                "fontSize": 80,
+                "fontFamily": "Arial",
+                "fontColor": "green",
+                "textAlign": "center",
+                "backgroundColor": "black",
+                "padding": 5,
+                "borderRadius": 20,
+                "widget_ue_connectable": {}
+            },
+            "color": "#322",
+            "bgcolor": "#533"
+        },
+        {
+            "id": 170,
+            "type": "MarkdownNote",
+            "pos": [
+                500,
+                2610
+            ],
+            "size": [
+                430,
+                140
+            ],
+            "flags": {
+                "collapsed": false
+            },
+            "order": 29,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [],
+            "title": "Simple Upscale",
+            "properties": {
+                "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+                "---\n\n### Upscale an image fast\n\n---\n\n1. Load your image and choose an upscale model (e.g. `x2` to double size)  \n2. Hit **Run** → That’s it\n\n*Use Advanced Upscale for better results especially with 4x*\n\n---\n"
+            ],
+            "color": "#174f17",
+            "bgcolor": "#033b03"
+        },
+        {
+            "id": 165,
+            "type": "Label (rgthree)",
+            "pos": [
+                910,
+                1520
+            ],
+            "size": [
+                441.25,
+                90
+            ],
+            "flags": {
+                "allow_interaction": true
+            },
+            "order": 30,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [],
+            "title": "How To Use",
+            "properties": {
+                "fontSize": 80,
+                "fontFamily": "Arial",
+                "fontColor": "red",
+                "textAlign": "center",
+                "backgroundColor": "black",
+                "padding": 5,
+                "borderRadius": 20,
+                "widget_ue_connectable": {}
+            },
+            "color": "#322",
+            "bgcolor": "#533"
+        },
+        {
+            "id": 166,
+            "type": "MarkdownNote",
+            "pos": [
+                920,
+                1660
+            ],
+            "size": [
+                430,
+                120
+            ],
+            "flags": {
+                "collapsed": false
+            },
+            "order": 31,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [],
+            "title": "Image-to-Image",
+            "properties": {
+                "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+                "---\n\n### Use an image as a starting point for generation\n\n---\n\n1. Load an image and write your prompt  \n2. Hit **Run** → Raise denoise strength if image did not change enough\n\n---\n"
+            ],
+            "color": "#871717",
+            "bgcolor": "#730303"
+        },
+        {
+            "id": 163,
+            "type": "Label (rgthree)",
+            "pos": [
+                900,
+                500
+            ],
+            "size": [
+                441.25,
+                90
+            ],
+            "flags": {
+                "allow_interaction": true
+            },
+            "order": 32,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [],
+            "title": "How To Use",
+            "properties": {
+                "fontSize": 80,
+                "fontFamily": "Arial",
+                "fontColor": "blue",
+                "textAlign": "center",
+                "backgroundColor": "black",
+                "padding": 5,
+                "borderRadius": 20,
+                "widget_ue_connectable": {}
+            },
+            "color": "#322",
+            "bgcolor": "#533"
+        },
+        {
+            "id": 150,
+            "type": "Label (rgthree)",
+            "pos": [
+                220,
+                800
+            ],
+            "size": [
+                686.5234375,
+                500
+            ],
+            "flags": {
+                "allow_interaction": true
+            },
+            "order": 33,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [],
+            "title": "👆",
+            "properties": {
+                "fontSize": 500,
+                "fontFamily": "Arial",
+                "fontColor": "#ffffff",
+                "textAlign": "left",
+                "backgroundColor": "transparent",
+                "padding": 0,
+                "borderRadius": 0,
+                "widget_ue_connectable": {}
+            },
+            "color": "#fff0",
+            "bgcolor": "#fff0"
+        },
+        {
+            "id": 151,
+            "type": "Label (rgthree)",
+            "pos": [
+                200,
+                1270
+            ],
+            "size": [
+                911.42578125,
+                200
+            ],
+            "flags": {
+                "allow_interaction": true
+            },
+            "order": 34,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [],
+            "title": "Start Here",
+            "properties": {
+                "fontSize": 200,
+                "fontFamily": "Arial",
+                "fontColor": "#ffffff",
+                "textAlign": "left",
+                "backgroundColor": "transparent",
+                "padding": 0,
+                "borderRadius": 0,
+                "widget_ue_connectable": {}
+            },
+            "color": "#fff0",
+            "bgcolor": "#fff0"
+        },
+        {
+            "id": 76,
+            "type": "MarkdownNote",
+            "pos": [
+                320,
+                120
+            ],
+            "size": [
+                430,
+                590
+            ],
+            "flags": {
+                "collapsed": false
+            },
+            "order": 35,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [],
+            "title": "📌 Must Read First (You'll Live)",
+            "properties": {
+                "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+                "---\nFirst-time users\n--- \nIf completely new to ComfyUI and not coming from another UI, consider **doing v1 workflows first** (on Patreon, easy to find). They were made exactly for you. These will be waiting for you when you want them.\n\n---\nTeach ComfyUI\n---\nv1.5 is designed to **teach you ComfyUI**.\n\nClean layout. No collapsed nodes (except notes). Only *necessary* custom nodes. Reroutes for clarity. Left-to-right logic. v1 = just use it. v1.5 = learn it.\n\n---\n**Wire Style Recommendation**:\n---\nUse the **default wire link type** (spline), not **\"straight\"**.\n\n- If you changed it: go to settings (bottom left), search for \"link render mode\", change to spline.\n- Straight wires look tidy, but make it harder to trace wires in messy workflows. \n---\n**Must Know Tips**\n---\n\n- To see previews as images are made: **Manager → Preview Method → Auto**\n- To **collapse or expand a node**, click the **gray dot** in its top-left corner\n- **Double-click empty space** to open the **node search** bar\n- To **change node colors**, click the node and use popup top bar  \n- For more options: **Right-click → Colors → Custom** (**eyedropper** tool lives here)\n\n---\nHow To Use  \n---\nEach group starts with a **“How To Use”** note. This is the **minimum** you need to get a result. For deeper understanding and tips, check the **Cheat Sheet** section.\n\n---\nLast But Not Least:\n---\nHuge thanks to **Power Users 💪**. If you subscribed, I saw. **I appreciate you.** Huge motivation to keep going. 🫡"
+            ],
+            "color": "#841414",
+            "bgcolor": "#700000"
+        },
+        {
+            "id": 164,
+            "type": "MarkdownNote",
+            "pos": [
+                900,
+                630
+            ],
+            "size": [
+                440,
+                140
+            ],
+            "flags": {
+                "collapsed": false
+            },
+            "order": 36,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [],
+            "title": "Text-to-Image Prompting",
+            "properties": {
+                "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+                "---\n\n### Prompt to generate an image from scratch\n\n---\n\n1. Load a checkpoint you actually have (or you will get an error)\n2. Type your *positive prompt* in the green `CLIP Text Encode (Prompt)` node  \n3. Type your *negative prompt* in the red one  \n4. Hit **Run** → That’s it\n\n---\n"
+            ],
+            "color": "#151c86",
+            "bgcolor": "#010872"
+        },
+        {
+            "id": 175,
+            "type": "Power Lora Loader (rgthree)",
+            "pos": [
+                1700,
+                710
+            ],
+            "size": [
+                230,
+                118
+            ],
+            "flags": {},
+            "order": 62,
+            "mode": 0,
+            "inputs": [
+                {
+                    "dir": 3,
+                    "name": "model",
+                    "type": "MODEL",
+                    "link": 91
+                },
+                {
+                    "dir": 3,
+                    "name": "clip",
+                    "type": "CLIP",
+                    "link": 92
+                }
+            ],
+            "outputs": [
+                {
+                    "dir": 4,
+                    "name": "MODEL",
+                    "shape": 3,
+                    "type": "MODEL",
+                    "links": [
+                        96
+                    ]
+                },
+                {
+                    "dir": 4,
+                    "name": "CLIP",
+                    "shape": 3,
+                    "type": "CLIP",
+                    "links": [
+                        94,
+                        95
+                    ]
+                }
+            ],
+            "properties": {
+                "cnr_id": "rgthree-comfy",
+                "ver": "1.0.0",
+                "Show Strengths": "Single Strength",
+                "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+                {},
+                {
+                    "type": "PowerLoraLoaderHeaderWidget"
+                },
+                {},
+                ""
+            ],
+            "color": "#323",
+            "bgcolor": "#535"
+        },
+        {
+            "id": 33,
+            "type": "Sdxl Empty Latent Image",
+            "pos": [
+                1980,
+                1020
+            ],
+            "size": [
+                300,
+                106
+            ],
+            "flags": {
+                "collapsed": false
+            },
+            "order": 37,
+            "mode": 0,
+            "inputs": [
+                {
+                    "localized_name": "resolution",
+                    "name": "resolution",
+                    "type": "COMBO",
+                    "widget": {
+                        "name": "resolution"
+                    },
+                    "link": null
+                },
+                {
+                    "localized_name": "vertical",
+                    "name": "vertical",
+                    "type": "BOOLEAN",
+                    "widget": {
+                        "name": "vertical"
+                    },
+                    "link": null
+                },
+                {
+                    "localized_name": "batch_size",
+                    "name": "batch_size",
+                    "type": "INT",
+                    "widget": {
+                        "name": "batch_size"
+                    },
+                    "link": null
+                }
+            ],
+            "outputs": [
+                {
+                    "localized_name": "LATENT",
+                    "name": "LATENT",
+                    "type": "LATENT",
+                    "slot_index": 0,
+                    "links": [
+                        65
+                    ]
+                }
+            ],
+            "properties": {
+                "aux_id": "Maxed-Out-99/ComfyUI-MaxedOut",
+                "ver": "9967096b4da13cc4efa2b1ff0a47d4fababda3af",
+                "Node name for S&R": "Sdxl Empty Latent Image",
+                "widget_ue_connectable": {
+                    "resolution": true,
+                    "vertical": true,
+                    "batch_size": true
+                }
+            },
+            "widgets_values": [
+                "Square (1:1) 1024x1024",
+                false,
+                1
+            ],
+            "color": "#2a363b",
+            "bgcolor": "#3f5159"
+        },
+        {
+            "id": 30,
+            "type": "Fast Groups Bypasser (rgthree)",
+            "pos": [
+                1350,
+                530
+            ],
+            "size": [
+                1970,
+                60
+            ],
+            "flags": {},
+            "order": 38,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+                {
+                    "label": "OPT_CONNECTION",
+                    "name": "OPT_CONNECTION",
+                    "type": "*",
+                    "links": null
+                }
+            ],
+            "title": "Fast Groups Bypasser",
+            "properties": {
+                "matchColors": "",
+                "matchTitle": "Text to Image",
+                "showNav": false,
+                "sort": "position",
+                "customSortAlphabet": "",
+                "toggleRestriction": "default",
+                "widget_ue_connectable": {}
+            },
+            "color": "#151c86",
+            "bgcolor": "#010872"
+        },
+        {
+            "id": 59,
+            "type": "CheckpointLoaderSimple",
+            "pos": [
+                1390,
+                1730
+            ],
+            "size": [
+                270,
+                98
+            ],
+            "flags": {},
+            "order": 39,
+            "mode": 0,
+            "inputs": [
+                {
+                    "localized_name": "ckpt_name",
+                    "name": "ckpt_name",
+                    "type": "COMBO",
+                    "widget": {
+                        "name": "ckpt_name"
+                    },
+                    "link": null
+                }
+            ],
+            "outputs": [
+                {
+                    "localized_name": "MODEL",
+                    "name": "MODEL",
+                    "type": "MODEL",
+                    "slot_index": 0,
+                    "links": [
+                        52
+                    ]
+                },
+                {
+                    "localized_name": "CLIP",
+                    "name": "CLIP",
+                    "type": "CLIP",
+                    "slot_index": 1,
+                    "links": [
+                        53
+                    ]
+                },
+                {
+                    "localized_name": "VAE",
+                    "name": "VAE",
+                    "type": "VAE",
+                    "slot_index": 2,
+                    "links": [
+                        55,
+                        60
+                    ]
+                }
+            ],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.18",
+                "Node name for S&R": "CheckpointLoaderSimple",
+                "widget_ue_connectable": {
+                    "ckpt_name": true
+                }
+            },
+            "widgets_values": [
+                "Hyper3d.safetensors"
+            ],
+            "color": "#223",
+            "bgcolor": "#335"
+        },
+        {
+            "id": 71,
+            "type": "KSampler",
+            "pos": [
+                2340,
+                710
+            ],
+            "size": [
+                280,
+                486
+            ],
+            "flags": {},
+            "order": 73,
+            "mode": 0,
+            "inputs": [
+                {
+                    "localized_name": "model",
+                    "name": "model",
+                    "type": "MODEL",
+                    "link": 96
+                },
+                {
+                    "localized_name": "positive",
+                    "name": "positive",
+                    "type": "CONDITIONING",
+                    "link": 63
+                },
+                {
+                    "localized_name": "negative",
+                    "name": "negative",
+                    "type": "CONDITIONING",
+                    "link": 64
+                },
+                {
+                    "localized_name": "latent_image",
+                    "name": "latent_image",
+                    "type": "LATENT",
+                    "link": 65
+                },
+                {
+                    "localized_name": "seed",
+                    "name": "seed",
+                    "type": "INT",
+                    "widget": {
+                        "name": "seed"
+                    },
+                    "link": null
+                },
+                {
+                    "localized_name": "steps",
+                    "name": "steps",
+                    "type": "INT",
+                    "widget": {
+                        "name": "steps"
+                    },
+                    "link": null
+                },
+                {
+                    "localized_name": "cfg",
+                    "name": "cfg",
+                    "type": "FLOAT",
+                    "widget": {
+                        "name": "cfg"
+                    },
+                    "link": null
+                },
+                {
+                    "localized_name": "sampler_name",
+                    "name": "sampler_name",
+                    "type": "COMBO",
+                    "widget": {
+                        "name": "sampler_name"
+                    },
+                    "link": null
+                },
+                {
+                    "localized_name": "scheduler",
+                    "name": "scheduler",
+                    "type": "COMBO",
+                    "widget": {
+                        "name": "scheduler"
+                    },
+                    "link": null
+                },
+                {
+                    "localized_name": "denoise",
+                    "name": "denoise",
+                    "type": "FLOAT",
+                    "widget": {
+                        "name": "denoise"
+                    },
+                    "link": null
+                }
+            ],
+            "outputs": [
+                {
+                    "localized_name": "LATENT",
+                    "name": "LATENT",
+                    "type": "LATENT",
+                    "links": [
+                        66
+                    ]
+                }
+            ],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.34",
+                "Node name for S&R": "KSampler",
+                "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+                351617312134897,
+                "increment",
+                30,
+                6,
+                "dpmpp_2m_sde_gpu",
+                "karras",
+                1
+            ],
+            "color": "#161d86",
+            "bgcolor": "#020972"
+        },
+        {
+            "id": 29,
+            "type": "Label (rgthree)",
+            "pos": [
+                320,
+                -220
+            ],
+            "size": [
+                4101.85546875,
+                300
+            ],
+            "flags": {
+                "allow_interaction": true
+            },
+            "order": 40,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [],
+            "title": "Sdxl Bootcamp (Level 1) - v1.5",
+            "properties": {
+                "fontSize": 300,
+                "fontFamily": "Arial",
+                "fontColor": "white",
+                "textAlign": "left",
+                "backgroundColor": "black",
+                "padding": 0,
+                "borderRadius": 0,
+                "widget_ue_connectable": {}
+            },
+            "color": "#223",
+            "bgcolor": "#335"
+        },
+        {
+            "id": 54,
+            "type": "Fast Groups Bypasser (rgthree)",
+            "pos": [
+                1360,
+                1560
+            ],
+            "size": [
+                1930,
+                60
+            ],
+            "flags": {},
+            "order": 41,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+                {
+                    "label": "OPT_CONNECTION",
+                    "name": "OPT_CONNECTION",
+                    "type": "*",
+                    "links": null
+                }
+            ],
+            "title": "Fast Groups Bypasser",
+            "properties": {
+                "matchColors": "",
+                "matchTitle": "Image to Image",
+                "showNav": false,
+                "sort": "position",
+                "customSortAlphabet": "",
+                "toggleRestriction": "default",
+                "widget_ue_connectable": {}
+            },
+            "color": "#861616",
+            "bgcolor": "#720202"
+        },
+        {
+            "id": 102,
+            "type": "Fast Groups Bypasser (rgthree)",
+            "pos": [
+                940,
+                2510
+            ],
+            "size": [
+                1110,
+                60
+            ],
+            "flags": {},
+            "order": 42,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+                {
+                    "label": "OPT_CONNECTION",
+                    "name": "OPT_CONNECTION",
+                    "type": "*",
+                    "links": null
+                }
+            ],
+            "title": "Fast Groups Bypasser",
+            "properties": {
+                "matchColors": "",
+                "matchTitle": "Simple Upscale",
+                "showNav": false,
+                "sort": "position",
+                "customSortAlphabet": "",
+                "toggleRestriction": "default",
+                "widget_ue_connectable": {}
+            },
+            "color": "#164e16",
+            "bgcolor": "#023a02"
+        },
+        {
+            "id": 145,
+            "type": "Fast Groups Bypasser (rgthree)",
+            "pos": [
+                2990,
+                2510
+            ],
+            "size": [
+                920,
+                58
+            ],
+            "flags": {},
+            "order": 43,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+                {
+                    "label": "OPT_CONNECTION",
+                    "name": "OPT_CONNECTION",
+                    "type": "*",
+                    "links": null
+                }
+            ],
+            "title": "Fast Groups Bypasser",
+            "properties": {
+                "matchColors": "",
+                "matchTitle": "Image To Text",
+                "showNav": false,
+                "sort": "position",
+                "customSortAlphabet": "",
+                "toggleRestriction": "default",
+                "widget_ue_connectable": {}
+            },
+            "color": "#4e4f4f",
+            "bgcolor": "#3a3b3b"
+        },
+        {
+            "id": 72,
+            "type": "PreviewImage",
+            "pos": [
+                2840,
+                710
+            ],
+            "size": [
+                450,
+                490
+            ],
+            "flags": {},
+            "order": 77,
+            "mode": 0,
+            "inputs": [
+                {
+                    "localized_name": "images",
+                    "name": "images",
+                    "type": "IMAGE",
+                    "link": 68
+                }
+            ],
+            "outputs": [],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.34",
+                "Node name for S&R": "PreviewImage",
+                "widget_ue_connectable": {}
+            },
+            "widgets_values": [],
+            "color": "#222",
+            "bgcolor": "#000"
+        },
+        {
+            "id": 92,
+            "type": "Label (rgthree)",
+            "pos": [
+                3330,
+                500
+            ],
+            "size": [
+                454.765625,
+                90
+            ],
+            "flags": {
+                "allow_interaction": true
+            },
+            "order": 44,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [],
+            "title": "Cheat Sheet",
+            "properties": {
+                "fontSize": 80,
+                "fontFamily": "Arial",
+                "fontColor": "blue",
+                "textAlign": "center",
+                "backgroundColor": "black",
+                "padding": 5,
+                "borderRadius": 20,
+                "widget_ue_connectable": {}
+            },
+            "color": "#322",
+            "bgcolor": "#533"
+        },
+        {
+            "id": 88,
+            "type": "MarkdownNote",
+            "pos": [
+                3330,
+                870
+            ],
+            "size": [
+                290,
+                270
+            ],
+            "flags": {
+                "collapsed": true
+            },
+            "order": 45,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [],
+            "title": "Preview/Save Image",
+            "properties": {
+                "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+                "Above this is a **Save Image** node, but I almost always use **Preview Image** instead to avoid saving every generation.\n\nWhen you increase the **\"run\"** number to generate multiple outputs, use **Save Image** so each run saves individually, instead of overwriting the preview.\n\n🗂️ Use file_prefix in Save Image to organize outputs:\n\nExample: sdxl/test will create a sdxl folder in your outputs folder and save images as test_0001, test_0002, etc.\n\n🔎 Final Tip:  \nYou don’t need to stretch the Preview Image node to see “more pixels.”  \nZoomed in to a small image or zoomed out to a big image, displays the same pixels on screen.  \nInstead, size this node for **workflow cleanliness** or to reduce scrolling when going from prompt to preview over and over."
+            ],
+            "color": "#222",
+            "bgcolor": "#000"
+        },
+        {
+            "id": 118,
+            "type": "MarkdownNote",
+            "pos": [
+                3330,
+                950
+            ],
+            "size": [
+                290,
+                190
+            ],
+            "flags": {
+                "collapsed": true
+            },
+            "order": 46,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [],
+            "title": "Groups",
+            "properties": {
+                "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+                "To create a group:  \n- Select nodes using **Ctrl + **click and drag** to box select  \n- Press **Ctrl + G** to group them\n\nTo change the **group color** beyond the presets:\n- Right-click the group  \n- Scroll to **\"Edit Group\" → \"Colors\" → \"Custom\"** and choose your own\n\nYou can also right-click a group and select **\"Fit to Nodes\"** to resize it cleanly."
+            ],
+            "color": "#222",
+            "bgcolor": "#000"
+        },
+        {
+            "id": 123,
+            "type": "MarkdownNote",
+            "pos": [
+                3330,
+                990
+            ],
+            "size": [
+                210,
+                88
+            ],
+            "flags": {
+                "collapsed": true
+            },
+            "order": 47,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [],
+            "title": "Reroutes",
+            "properties": {
+                "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+                "Wires have a dots in the middle. Click that, add reroute. "
+            ],
+            "color": "#222",
+            "bgcolor": "#000"
+        },
+        {
+            "id": 153,
+            "type": "MarkdownNote",
+            "pos": [
+                3330,
+                1030
+            ],
+            "size": [
+                210,
+                88
+            ],
+            "flags": {
+                "collapsed": true
+            },
+            "order": 48,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [],
+            "title": "Label (rgthree)",
+            "properties": {
+                "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+                "Wires have a dots in the middle. Click that, add reroute. "
+            ],
+            "color": "#222",
+            "bgcolor": "#000"
+        },
+        {
+            "id": 57,
+            "type": "PreviewImage",
+            "pos": [
+                2810,
+                1730
+            ],
+            "size": [
+                450,
+                490
+            ],
+            "flags": {},
+            "order": 78,
+            "mode": 0,
+            "inputs": [
+                {
+                    "localized_name": "images",
+                    "name": "images",
+                    "type": "IMAGE",
+                    "link": 50
+                }
+            ],
+            "outputs": [],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.34",
+                "Node name for S&R": "PreviewImage",
+                "widget_ue_connectable": {}
+            },
+            "widgets_values": [],
+            "color": "#222",
+            "bgcolor": "#000"
+        },
+        {
+            "id": 58,
+            "type": "CLIPTextEncode",
+            "pos": [
+                1960,
+                1910
+            ],
+            "size": [
+                300,
+                130
+            ],
+            "flags": {
+                "collapsed": false
+            },
+            "order": 67,
+            "mode": 0,
+            "inputs": [
+                {
+                    "localized_name": "clip",
+                    "name": "clip",
+                    "type": "CLIP",
+                    "link": 51
+                },
+                {
+                    "localized_name": "text",
+                    "name": "text",
+                    "type": "STRING",
+                    "widget": {
+                        "name": "text"
+                    },
+                    "link": null
+                }
+            ],
+            "outputs": [
+                {
+                    "localized_name": "CONDITIONING",
+                    "name": "CONDITIONING",
+                    "type": "CONDITIONING",
+                    "links": [
+                        48
+                    ]
+                }
+            ],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.34",
+                "Node name for S&R": "CLIPTextEncode",
+                "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+                "score_6, score_5, score_4, "
+            ],
+            "color": "#322",
+            "bgcolor": "#533"
+        },
+        {
+            "id": 98,
+            "type": "UpscaleModelLoader",
+            "pos": [
+                970,
+                2670
+            ],
+            "size": [
+                300,
+                60
+            ],
+            "flags": {},
+            "order": 49,
+            "mode": 0,
+            "inputs": [
+                {
+                    "localized_name": "model_name",
+                    "name": "model_name",
+                    "type": "COMBO",
+                    "widget": {
+                        "name": "model_name"
+                    },
+                    "link": null
+                }
+            ],
+            "outputs": [
+                {
+                    "localized_name": "UPSCALE_MODEL",
+                    "name": "UPSCALE_MODEL",
+                    "type": "UPSCALE_MODEL",
+                    "slot_index": 0,
+                    "links": [
+                        70
+                    ]
+                }
+            ],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.23",
+                "Node name for S&R": "UpscaleModelLoader",
+                "widget_ue_connectable": {
+                    "model_name": true
+                }
+            },
+            "widgets_values": [
+                "RealESRGAN_x2plus.pth"
+            ],
+            "color": "#223",
+            "bgcolor": "#335"
+        },
+        {
+            "id": 84,
+            "type": "MarkdownNote",
+            "pos": [
+                3330,
+                630
+            ],
+            "size": [
+                290,
+                130
+            ],
+            "flags": {
+                "collapsed": true
+            },
+            "order": 50,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [],
+            "title": "Load Checkpoint",
+            "properties": {
+                "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+                "⚠️ If this node is looking for a file you don't have, you will get an error with phrases like:\n\n**Prompt execution failed**  \n**Value not in list**\n\nThis is **extremely common** for loading workflows where the creator has different files names."
+            ],
+            "color": "#223",
+            "bgcolor": "#335"
+        },
+        {
+            "id": 85,
+            "type": "MarkdownNote",
+            "pos": [
+                3330,
+                670
+            ],
+            "size": [
+                290,
+                140
+            ],
+            "flags": {
+                "collapsed": true
+            },
+            "order": 51,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [],
+            "title": "Power Lora Loader (rgthree)",
+            "properties": {
+                "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+                "LoRAs add extra knowledge to your checkpoint, usually **style** or **characters**.  \n👉 Download LoRAs from [Civitai](https://civitai.com), then follow the creator's **trigger words** and **recommended settings** in the descriptions.\n\nI used **Power Lora Loader** instead of the default **Load LoRA** so you can use **multiple LoRAs at once** without chaining them (and ruining the clean workflow 😔)."
+            ],
+            "color": "#323",
+            "bgcolor": "#535"
+        },
+        {
+            "id": 90,
+            "type": "MarkdownNote",
+            "pos": [
+                3330,
+                710
+            ],
+            "size": [
+                210.29940795898438,
+                88
+            ],
+            "flags": {
+                "collapsed": true
+            },
+            "order": 52,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [],
+            "title": "CLIP Text Encode (Prompt)",
+            "properties": {
+                "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+                "This node uses the clip model to convert your **text prompt** into something the **UNet** (the model) can understand."
+            ],
+            "color": "#232",
+            "bgcolor": "#353"
+        },
+        {
+            "id": 91,
+            "type": "MarkdownNote",
+            "pos": [
+                3330,
+                750
+            ],
+            "size": [
+                290,
+                180
+            ],
+            "flags": {
+                "collapsed": true
+            },
+            "order": 53,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [],
+            "title": "Sdxl Empty Latent Image",
+            "properties": {
+                "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+                "A Maxed Out custom version of the default **Empty Latent Image**, made to avoid manually typing resolution. Every. Single. Time. The resolutions are all the ones SDXL can and should do.\n\n**Batch Size:** How many images to make at once (more = more VRAM)\n\n💡 Pro Tip: Want to run multiple generations in one click?  \nIncrease the number next to **\"run\"** or **\"queue\"**. Instead of smashing run 5 times, just set it to 5. You’ll see a queue number top left.\n"
+            ],
+            "color": "#2a363b",
+            "bgcolor": "#3f5159"
+        },
+        {
+            "id": 75,
+            "type": "MarkdownNote",
+            "pos": [
+                3330,
+                790
+            ],
+            "size": [
+                490,
+                430
+            ],
+            "flags": {
+                "collapsed": true
+            },
+            "order": 54,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [],
+            "title": "KSampler 👴👓",
+            "properties": {
+                "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+                "**Seed:** Adds randomness. Same prompt + settings = same image unless you change the seed.\n\n---\n\n**Control Before/After Generate:** Controls seed so you don't have to manually.  \n1. **Increment** works well to quickly get back to a seed if you like the image\n2. If on **\"fixed\"** and you make an image but change nothing else, ComfyUI won't make the same image twice in a row and will seem unresponsive when hitting run. Keep that in mind before you smash your keyboard wondering why ComfyUI won't listen 🙂\n\n---\n\n**Steps:**  Steps are mostly the same for all SDXL finetunes or merges\n1. Keep this at **30**  \n2. Less can work (**20**, **25**)  \n3. More gives diminishing returns\n\n---\n\n**CFG:** Controls how strongly your prompt is followed. Also affects how the image looks:  \n1. Low = dull, high = overbaked  \n2. 4–8 range is pretty good  \n3. If your image has artifacts (like solid color 2D shapes), lower CFG\n\n---\n\n**Sampler + Scheduler:** These work together.  \n1. I recommend: **dpmpp_2m_sde_gpu + karras**  \n2. Faster alternative: **euler_ancestral + karras** (smoother textures, can be good)  \n3. Some combos work better on certain checkpoints. Check Civitai descriptions.\n\n---\n\n**Denoise:**  \n1. For text-to-image, keep this at **1.00**  \n2. See **Image-to-Image** for when to change it"
+            ],
+            "color": "#151c86",
+            "bgcolor": "#010872"
+        },
+        {
+            "id": 50,
+            "type": "CLIPTextEncode",
+            "pos": [
+                1980,
+                890
+            ],
+            "size": [
+                300,
+                88
+            ],
+            "flags": {
+                "collapsed": false
+            },
+            "order": 69,
+            "mode": 0,
+            "inputs": [
+                {
+                    "localized_name": "clip",
+                    "name": "clip",
+                    "type": "CLIP",
+                    "link": 95
+                },
+                {
+                    "localized_name": "text",
+                    "name": "text",
+                    "type": "STRING",
+                    "widget": {
+                        "name": "text"
+                    },
+                    "link": null
+                }
+            ],
+            "outputs": [
+                {
+                    "localized_name": "CONDITIONING",
+                    "name": "CONDITIONING",
+                    "type": "CONDITIONING",
+                    "links": [
+                        64
+                    ]
+                }
+            ],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.34",
+                "Node name for S&R": "CLIPTextEncode",
+                "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+                "score_6_up, score_5_up, score_4_up, "
+            ],
+            "color": "#322",
+            "bgcolor": "#533"
+        },
+        {
+            "id": 36,
+            "type": "CheckpointLoaderSimple",
+            "pos": [
+                1390,
+                710
+            ],
+            "size": [
+                270,
+                98
+            ],
+            "flags": {},
+            "order": 55,
+            "mode": 0,
+            "inputs": [
+                {
+                    "localized_name": "ckpt_name",
+                    "name": "ckpt_name",
+                    "type": "COMBO",
+                    "widget": {
+                        "name": "ckpt_name"
+                    },
+                    "link": null
+                }
+            ],
+            "outputs": [
+                {
+                    "localized_name": "MODEL",
+                    "name": "MODEL",
+                    "type": "MODEL",
+                    "slot_index": 0,
+                    "links": [
+                        91
+                    ]
+                },
+                {
+                    "localized_name": "CLIP",
+                    "name": "CLIP",
+                    "type": "CLIP",
+                    "slot_index": 1,
+                    "links": [
+                        92
+                    ]
+                },
+                {
+                    "localized_name": "VAE",
+                    "name": "VAE",
+                    "type": "VAE",
+                    "slot_index": 2,
+                    "links": [
+                        43
+                    ]
+                }
+            ],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.18",
+                "Node name for S&R": "CheckpointLoaderSimple",
+                "widget_ue_connectable": {
+                    "ckpt_name": true
+                }
+            },
+            "widgets_values": [
+                "Hyper3d.safetensors"
+            ],
+            "color": "#223",
+            "bgcolor": "#335"
+        },
+        {
+            "id": 49,
+            "type": "CLIPTextEncode",
+            "pos": [
+                1980,
+                710
+            ],
+            "size": [
+                300,
+                140
+            ],
+            "flags": {
+                "collapsed": false
+            },
+            "order": 68,
+            "mode": 0,
+            "inputs": [
+                {
+                    "localized_name": "clip",
+                    "name": "clip",
+                    "type": "CLIP",
+                    "link": 94
+                },
+                {
+                    "localized_name": "text",
+                    "name": "text",
+                    "type": "STRING",
+                    "widget": {
+                        "name": "text"
+                    },
+                    "link": null
+                }
+            ],
+            "outputs": [
+                {
+                    "localized_name": "CONDITIONING",
+                    "name": "CONDITIONING",
+                    "type": "CONDITIONING",
+                    "links": [
+                        63
+                    ]
+                }
+            ],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.34",
+                "Node name for S&R": "CLIPTextEncode",
+                "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+                "score_9, score_8_up, score_7_up, a cat girl reclines on a couch in a dim-lit room\nfurry, low lighting, relaxed pose, sleek design, white fur, black clothes, holding a drink, (smiling:0.5)"
+            ],
+            "color": "#232",
+            "bgcolor": "#353"
+        },
+        {
+            "id": 70,
+            "type": "LoadImage",
+            "pos": [
+                1390,
+                1870
+            ],
+            "size": [
+                274.080078125,
+                314.0001220703125
+            ],
+            "flags": {},
+            "order": 56,
+            "mode": 0,
+            "inputs": [
+                {
+                    "localized_name": "image",
+                    "name": "image",
+                    "type": "COMBO",
+                    "widget": {
+                        "name": "image"
+                    },
+                    "link": null
+                },
+                {
+                    "localized_name": "choose file to upload",
+                    "name": "upload",
+                    "type": "IMAGEUPLOAD",
+                    "widget": {
+                        "name": "upload"
+                    },
+                    "link": null
+                }
+            ],
+            "outputs": [
+                {
+                    "localized_name": "IMAGE",
+                    "name": "IMAGE",
+                    "type": "IMAGE",
+                    "links": [
+                        79
+                    ]
+                },
+                {
+                    "localized_name": "MASK",
+                    "name": "MASK",
+                    "type": "MASK",
+                    "links": null
+                }
+            ],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.34",
+                "Node name for S&R": "LoadImage",
+                "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+                "ComfyUI_temp_otckr_00004_.png",
+                "image"
+            ],
+            "color": "#222",
+            "bgcolor": "#000"
+        },
+        {
+            "id": 55,
+            "type": "CLIPTextEncode",
+            "pos": [
+                1960,
+                1730
+            ],
+            "size": [
+                300,
+                140
+            ],
+            "flags": {
+                "collapsed": false
+            },
+            "order": 66,
+            "mode": 0,
+            "inputs": [
+                {
+                    "localized_name": "clip",
+                    "name": "clip",
+                    "type": "CLIP",
+                    "link": 45
+                },
+                {
+                    "localized_name": "text",
+                    "name": "text",
+                    "type": "STRING",
+                    "widget": {
+                        "name": "text"
+                    },
+                    "link": null
+                }
+            ],
+            "outputs": [
+                {
+                    "localized_name": "CONDITIONING",
+                    "name": "CONDITIONING",
+                    "type": "CONDITIONING",
+                    "links": [
+                        47
+                    ]
+                }
+            ],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.34",
+                "Node name for S&R": "CLIPTextEncode",
+                "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+                "score_9, score_8_up, score_7_up, batgirl, "
+            ],
+            "color": "#232",
+            "bgcolor": "#353"
+        },
+        {
+            "id": 56,
+            "type": "KSampler",
+            "pos": [
+                2320,
+                1730
+            ],
+            "size": [
+                280,
+                486
+            ],
+            "flags": {
+                "collapsed": false
+            },
+            "order": 74,
+            "mode": 0,
+            "inputs": [
+                {
+                    "localized_name": "model",
+                    "name": "model",
+                    "type": "MODEL",
+                    "link": 46
+                },
+                {
+                    "localized_name": "positive",
+                    "name": "positive",
+                    "type": "CONDITIONING",
+                    "link": 47
+                },
+                {
+                    "localized_name": "negative",
+                    "name": "negative",
+                    "type": "CONDITIONING",
+                    "link": 48
+                },
+                {
+                    "localized_name": "latent_image",
+                    "name": "latent_image",
+                    "type": "LATENT",
+                    "link": 90
+                },
+                {
+                    "localized_name": "seed",
+                    "name": "seed",
+                    "type": "INT",
+                    "widget": {
+                        "name": "seed"
+                    },
+                    "link": null
+                },
+                {
+                    "localized_name": "steps",
+                    "name": "steps",
+                    "type": "INT",
+                    "widget": {
+                        "name": "steps"
+                    },
+                    "link": null
+                },
+                {
+                    "localized_name": "cfg",
+                    "name": "cfg",
+                    "type": "FLOAT",
+                    "widget": {
+                        "name": "cfg"
+                    },
+                    "link": null
+                },
+                {
+                    "localized_name": "sampler_name",
+                    "name": "sampler_name",
+                    "type": "COMBO",
+                    "widget": {
+                        "name": "sampler_name"
+                    },
+                    "link": null
+                },
+                {
+                    "localized_name": "scheduler",
+                    "name": "scheduler",
+                    "type": "COMBO",
+                    "widget": {
+                        "name": "scheduler"
+                    },
+                    "link": null
+                },
+                {
+                    "localized_name": "denoise",
+                    "name": "denoise",
+                    "type": "FLOAT",
+                    "widget": {
+                        "name": "denoise"
+                    },
+                    "link": null
+                }
+            ],
+            "outputs": [
+                {
+                    "localized_name": "LATENT",
+                    "name": "LATENT",
+                    "type": "LATENT",
+                    "links": [
+                        54
+                    ]
+                }
+            ],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.29",
+                "Node name for S&R": "KSampler",
+                "widget_ue_connectable": {
+                    "seed": true,
+                    "steps": true,
+                    "cfg": true,
+                    "sampler_name": true,
+                    "scheduler": true,
+                    "denoise": true
+                }
+            },
+            "widgets_values": [
+                351617312134917,
+                "increment",
+                30,
+                6,
+                "dpmpp_2m_sde_gpu",
+                "karras",
+                0.6500000000000001
+            ],
+            "color": "#861616",
+            "bgcolor": "#720202"
+        },
+        {
+            "id": 99,
+            "type": "Image Comparer (rgthree)",
+            "pos": [
+                1590,
+                2670
+            ],
+            "size": [
+                430,
+                430
+            ],
+            "flags": {},
+            "order": 71,
+            "mode": 0,
+            "inputs": [
+                {
+                    "dir": 3,
+                    "name": "image_a",
+                    "type": "IMAGE",
+                    "link": 72
+                },
+                {
+                    "dir": 3,
+                    "name": "image_b",
+                    "type": "IMAGE",
+                    "link": 73
+                }
+            ],
+            "outputs": [],
+            "properties": {
+                "cnr_id": "rgthree-comfy",
+                "ver": "1.0.0",
+                "comparer_mode": "Slide",
+                "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+                [
+                    {
+                        "name": "A",
+                        "selected": true,
+                        "url": "/api/view?filename=rgthree.compare._temp_rpegb_00001_.png&type=temp&subfolder=&rand=0.3871178044439483"
+                    },
+                    {
+                        "name": "B",
+                        "selected": true,
+                        "url": "/api/view?filename=rgthree.compare._temp_rpegb_00002_.png&type=temp&subfolder=&rand=0.20179379116817353"
+                    }
+                ]
+            ],
+            "color": "#222",
+            "bgcolor": "#000"
+        },
+        {
+            "id": 101,
+            "type": "LoadImage",
+            "pos": [
+                970,
+                2770
+            ],
+            "size": [
+                300,
+                326
+            ],
+            "flags": {},
+            "order": 57,
+            "mode": 0,
+            "inputs": [
+                {
+                    "localized_name": "image",
+                    "name": "image",
+                    "type": "COMBO",
+                    "widget": {
+                        "name": "image"
+                    },
+                    "link": null
+                },
+                {
+                    "localized_name": "choose file to upload",
+                    "name": "upload",
+                    "type": "IMAGEUPLOAD",
+                    "widget": {
+                        "name": "upload"
+                    },
+                    "link": null
+                }
+            ],
+            "outputs": [
+                {
+                    "localized_name": "IMAGE",
+                    "name": "IMAGE",
+                    "type": "IMAGE",
+                    "links": [
+                        71,
+                        72
+                    ]
+                },
+                {
+                    "localized_name": "MASK",
+                    "name": "MASK",
+                    "type": "MASK",
+                    "links": null
+                }
+            ],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.29",
+                "Node name for S&R": "LoadImage",
+                "widget_ue_connectable": {
+                    "image": true,
+                    "upload": true
+                }
+            },
+            "widgets_values": [
+                "ComfyUI_temp_xnyer_00035_.png",
+                "image"
+            ],
+            "color": "#222",
+            "bgcolor": "#000"
+        },
+        {
+            "id": 141,
+            "type": "LoadImage",
+            "pos": [
+                3020,
+                2670
+            ],
+            "size": [
+                280,
+                326
+            ],
+            "flags": {},
+            "order": 58,
+            "mode": 0,
+            "inputs": [
+                {
+                    "localized_name": "image",
+                    "name": "image",
+                    "type": "COMBO",
+                    "widget": {
+                        "name": "image"
+                    },
+                    "link": null
+                },
+                {
+                    "localized_name": "choose file to upload",
+                    "name": "upload",
+                    "type": "IMAGEUPLOAD",
+                    "widget": {
+                        "name": "upload"
+                    },
+                    "link": null
+                }
+            ],
+            "outputs": [
+                {
+                    "localized_name": "IMAGE",
+                    "name": "IMAGE",
+                    "type": "IMAGE",
+                    "links": [
+                        82
+                    ]
+                },
+                {
+                    "localized_name": "MASK",
+                    "name": "MASK",
+                    "type": "MASK",
+                    "links": null
+                }
+            ],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.34",
+                "Node name for S&R": "LoadImage",
+                "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+                "ComfyUI_temp_ilivg_00009_.png",
+                "image"
+            ],
+            "color": "#222",
+            "bgcolor": "#000"
+        },
+        {
+            "id": 95,
+            "type": "LoraLoaderModelOnly",
+            "pos": [
+                1700,
+                670
+            ],
+            "size": [
+                230,
+                82
+            ],
+            "flags": {
+                "collapsed": true
+            },
+            "order": 59,
+            "mode": 0,
+            "inputs": [
+                {
+                    "localized_name": "model",
+                    "name": "model",
+                    "type": "MODEL",
+                    "link": null
+                },
+                {
+                    "localized_name": "lora_name",
+                    "name": "lora_name",
+                    "type": "COMBO",
+                    "widget": {
+                        "name": "lora_name"
+                    },
+                    "link": null
+                },
+                {
+                    "localized_name": "strength_model",
+                    "name": "strength_model",
+                    "type": "FLOAT",
+                    "widget": {
+                        "name": "strength_model"
+                    },
+                    "link": null
+                }
+            ],
+            "outputs": [
+                {
+                    "localized_name": "MODEL",
+                    "name": "MODEL",
+                    "type": "MODEL",
+                    "links": null
+                }
+            ],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.34",
+                "Node name for S&R": "LoraLoaderModelOnly",
+                "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+                "comfyui_portrait_lora64.safetensors",
+                1
+            ],
+            "color": "#323",
+            "bgcolor": "#535"
+        },
+        {
+            "id": 176,
+            "type": "MarkdownNote",
+            "pos": [
+                2210,
+                130
+            ],
+            "size": [
+                210,
+                88
+            ],
+            "flags": {
+                "collapsed": false
+            },
+            "order": 60,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [],
+            "title": "By Maxed Out",
+            "properties": {
+                "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+                "Patreon: [MaxedOut99](https://www.patreon.com/MaxedOut99)\n\n[Maxed Out Discord Server](https://discord.gg/2sQNc59HdY)"
+            ],
+            "color": "#222",
+            "bgcolor": "#000"
+        }
+    ],
+    "links": [
+        [
+            43,
+            36,
+            2,
+            24,
+            1,
+            "VAE"
+        ],
+        [
+            45,
+            60,
+            1,
+            55,
+            0,
+            "CLIP"
+        ],
+        [
+            46,
+            60,
+            0,
+            56,
+            0,
+            "MODEL"
+        ],
+        [
+            47,
+            55,
+            0,
+            56,
+            1,
+            "CONDITIONING"
+        ],
+        [
+            48,
+            58,
+            0,
+            56,
+            2,
+            "CONDITIONING"
+        ],
+        [
+            50,
+            63,
+            0,
+            57,
+            0,
+            "IMAGE"
+        ],
+        [
+            51,
+            60,
+            1,
+            58,
+            0,
+            "CLIP"
+        ],
+        [
+            52,
+            59,
+            0,
+            60,
+            0,
+            "MODEL"
+        ],
+        [
+            53,
+            59,
+            1,
+            60,
+            1,
+            "CLIP"
+        ],
+        [
+            54,
+            56,
+            0,
+            63,
+            0,
+            "LATENT"
+        ],
+        [
+            55,
+            59,
+            2,
+            63,
+            1,
+            "VAE"
+        ],
+        [
+            60,
+            59,
+            2,
+            67,
+            1,
+            "VAE"
+        ],
+        [
+            63,
+            49,
+            0,
+            71,
+            1,
+            "CONDITIONING"
+        ],
+        [
+            64,
+            50,
+            0,
+            71,
+            2,
+            "CONDITIONING"
+        ],
+        [
+            65,
+            33,
+            0,
+            71,
+            3,
+            "LATENT"
+        ],
+        [
+            66,
+            71,
+            0,
+            24,
+            0,
+            "LATENT"
+        ],
+        [
+            68,
+            24,
+            0,
+            72,
+            0,
+            "IMAGE"
+        ],
+        [
+            70,
+            98,
+            0,
+            97,
+            0,
+            "UPSCALE_MODEL"
+        ],
+        [
+            71,
+            101,
+            0,
+            97,
+            1,
+            "IMAGE"
+        ],
+        [
+            72,
+            101,
+            0,
+            99,
+            0,
+            "IMAGE"
+        ],
+        [
+            73,
+            97,
+            0,
+            99,
+            1,
+            "IMAGE"
+        ],
+        [
+            79,
+            70,
+            0,
+            127,
+            0,
+            "IMAGE"
+        ],
+        [
+            80,
+            127,
+            0,
+            67,
+            0,
+            "IMAGE"
+        ],
+        [
+            81,
+            143,
+            2,
+            139,
+            0,
+            "STRING"
+        ],
+        [
+            82,
+            141,
+            0,
+            143,
+            0,
+            "IMAGE"
+        ],
+        [
+            83,
+            140,
+            0,
+            143,
+            1,
+            "FL2MODEL"
+        ],
+        [
+            90,
+            67,
+            0,
+            56,
+            3,
+            "LATENT"
+        ],
+        [
+            91,
+            36,
+            0,
+            175,
+            0,
+            "MODEL"
+        ],
+        [
+            92,
+            36,
+            1,
+            175,
+            1,
+            "CLIP"
+        ],
+        [
+            94,
+            175,
+            1,
+            49,
+            0,
+            "CLIP"
+        ],
+        [
+            95,
+            175,
+            1,
+            50,
+            0,
+            "CLIP"
+        ],
+        [
+            96,
+            175,
+            0,
+            71,
+            0,
+            "MODEL"
+        ]
+    ],
+    "groups": [
+        {
+            "id": 2,
+            "title": "Text to Image",
+            "bounding": [
+                1350,
+                600,
+                1970,
+                640
+            ],
+            "color": "#0011ff",
+            "font_size": 24,
+            "flags": {}
+        },
+        {
+            "id": 6,
+            "title": "Image To Image",
+            "bounding": [
+                1360,
+                1630,
+                1930,
+                630
+            ],
+            "color": "#ff0000",
+            "font_size": 24,
+            "flags": {}
+        },
+        {
+            "id": 7,
+            "title": "Simple Upscale",
+            "bounding": [
+                940,
+                2580,
+                1110,
+                550
+            ],
+            "color": "#008000",
+            "font_size": 24,
+            "flags": {}
+        },
+        {
+            "id": 8,
+            "title": "Image To Text",
+            "bounding": [
+                2990,
+                2580,
+                920,
+                600
+            ],
+            "color": "#808080",
+            "font_size": 24,
+            "flags": {}
+        }
+    ],
+    "config": {},
+    "extra": {
+        "ds": {
+            "scale": 0.9726476193864843,
+            "offset": [
+                -949.4912496093395,
+                271.2031233236304
+            ]
+        },
+        "reroutes": [
+            {
+                "id": 3,
+                "parentId": 15,
+                "pos": [
+                    1960,
+                    1210
+                ],
+                "linkIds": [
+                    43
+                ]
+            },
+            {
+                "id": 5,
+                "parentId": 3,
+                "pos": [
+                    2650,
+                    1210
+                ],
+                "linkIds": [
+                    43
+                ]
+            },
+            {
+                "id": 9,
+                "parentId": 17,
+                "pos": [
+                    1690,
+                    2230
+                ],
+                "linkIds": [
+                    55,
+                    60
+                ]
+            },
+            {
+                "id": 10,
+                "parentId": 9,
+                "pos": [
+                    2620,
+                    2230
+                ],
+                "linkIds": [
+                    55
+                ]
+            },
+            {
+                "id": 11,
+                "pos": [
+                    1950,
+                    1690
+                ],
+                "linkIds": [
+                    46
+                ]
+            },
+            {
+                "id": 12,
+                "parentId": 11,
+                "pos": [
+                    2270,
+                    1690
+                ],
+                "linkIds": [
+                    46
+                ]
+            },
+            {
+                "id": 15,
+                "pos": [
+                    1680,
+                    860
+                ],
+                "linkIds": [
+                    43
+                ]
+            },
+            {
+                "id": 16,
+                "parentId": 5,
+                "pos": [
+                    2650,
+                    760
+                ],
+                "linkIds": [
+                    43
+                ]
+            },
+            {
+                "id": 17,
+                "pos": [
+                    1680,
+                    1860
+                ],
+                "linkIds": [
+                    55,
+                    60
+                ]
+            },
+            {
+                "id": 18,
+                "parentId": 10,
+                "pos": [
+                    2620,
+                    1790
+                ],
+                "linkIds": [
+                    55
+                ]
+            },
+            {
+                "id": 19,
+                "pos": [
+                    2280,
+                    1840
+                ],
+                "linkIds": [
+                    48
+                ]
+            },
+            {
+                "id": 20,
+                "pos": [
+                    2300,
+                    810
+                ],
+                "linkIds": [
+                    64
+                ]
+            },
+            {
+                "id": 21,
+                "pos": [
+                    1560,
+                    2730
+                ],
+                "linkIds": [
+                    72
+                ]
+            },
+            {
+                "id": 22,
+                "pos": [
+                    1970,
+                    670
+                ],
+                "linkIds": [
+                    96
+                ]
+            },
+            {
+                "id": 23,
+                "parentId": 22,
+                "pos": [
+                    2290,
+                    670
+                ],
+                "linkIds": [
+                    96
+                ]
+            }
+        ],
+        "ue_links": [],
+        "links_added_by_ue": [],
+        "linkExtensions": [
+            {
+                "id": 43,
+                "parentId": 16
+            },
+            {
+                "id": 46,
+                "parentId": 12
+            },
+            {
+                "id": 48,
+                "parentId": 19
+            },
+            {
+                "id": 55,
+                "parentId": 18
+            },
+            {
+                "id": 60,
+                "parentId": 9
+            },
+            {
+                "id": 64,
+                "parentId": 20
+            },
+            {
+                "id": 72,
+                "parentId": 21
+            },
+            {
+                "id": 96,
+                "parentId": 23
+            }
+        ],
+        "workspace_info": {
+            "id": "04c5985e-6ded-41ee-9e67-979170f42944"
+        }
+    },
+    "version": 0.4
+}

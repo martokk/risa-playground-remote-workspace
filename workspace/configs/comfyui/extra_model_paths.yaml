@@ -1,0 +1,63 @@
+#Rename this to extra_model_paths.yaml and ComfyUI will load it
+
+#config for comfyui
+#your base path should be either an existing comfy install or a central folder where you store all of your models, loras, etc.
+
+hub:
+    base_path: /workspace/models/
+    # You can use is_default to mark that these folders should be listed first, and used as the default dirs for eg downloads
+    # is_default: true
+
+    # models
+    audio_encoders: audio_encoders/
+    checkpoints: checkpoints/
+    clip: clip/
+    clip_vision: clip_vision/
+    configs: configs/
+    controlnet: controlnet/
+    diffusers: diffusers/
+    diffusion_models: |
+        diffusion_models/
+        unet/
+    embeddings: embeddings/
+    gligen: gligen/
+    hypernetworks: hypernetworks/
+    ipadapter: ipadapter/
+    loras: loras/
+    model_patches: model_patches/
+    photomaker: photomaker/
+    style_models: style_models/
+    text_encoders: |
+        text_encoders/
+        clip/  # legacy location still supported
+    unet: unet/
+    upscale_models: upscale_models/
+    vae: vae/
+    vae_approx: vae_approx/
+#config for a1111 ui
+#all you have to do is uncomment this (remove the #) and change the base_path to where yours is installed
+
+#a111:
+#     base_path: path/to/stable-diffusion-webui/
+#     checkpoints: models/Stable-diffusion
+#     configs: models/Stable-diffusion
+#     vae: models/VAE
+#     loras: |
+#          models/Lora
+#          models/LyCORIS
+#     upscale_models: |
+#                   models/ESRGAN
+#                   models/RealESRGAN
+#                   models/SwinIR
+#     embeddings: embeddings
+#     hypernetworks: models/hypernetworks
+#     controlnet: models/ControlNet
+
+# For a full list of supported keys (style_models, vae_approx, hypernetworks, photomaker,
+# model_patches, audio_encoders, classifiers, etc.) see folder_paths.py.
+
+#other_ui:
+#    base_path: path/to/ui
+#    checkpoints: models/checkpoints
+#    gligen: models/gligen
+#    custom_nodes: path/custom_nodes

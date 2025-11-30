@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>About this workflow | Weird Wonderful AI Art</title>
+<style type='text/css'>
+body {
+   color: black;
+   font-family:"Open Sans", Arial, sans-serif
+}
+
+</style>
+</head>
+<body>
+<h1 id="flux-kontext-photo-restoration-workflow">Flux Kontext Photo Restoration Workflow</h1>
+<p>Flux Dev Kontext is a versatile model that can let you edit images simply using text prompts, no need to use complex masks and layers. One of the coolest tricks it can do it take an old vintage photograph and restore it in regards to any damage and even colorise it. 
+This workflow can demonstrates this powerful capability.</p>
+<h2 id="about-this-workflow">About this workflow</h2>
+<p>This workflow is brought to you by the team at WeirdWonderful Ai Art. The workflow is provided for experimental and educational purpose. It comes with no warranty or guarantee of any kind. 
+Due to the complexity of ComfyUI versions, custom nodes you may have to install or update your installation. </p>
+<h2 id="connect-with-us">Connect with us</h2>
+<p><a href="https://www.youtube.com/@weirdwonderfulaiart">▶️ YouTube</a> - <a href="https://weirdwonderfulai.art/">💻 Blog</a> - <a href="https://ko-fi.com/weirdwonderfulaiart/shop">🏪 Shop</a> - <a href="https://x.com/wwAIArt">𝕏 aka Twitter</a></p>
+<h2 id="workflow-models">Workflow models</h2>
+<p><strong>Diffusion model</strong></p>
+<ul>
+<li><a href="https://huggingface.co/Comfy-Org/flux1-kontext-dev_ComfyUI/resolve/main/split_files/diffusion_models/flux1-dev-kontext_fp8_scaled.safetensors">flux1-dev-kontext_fp8_scaled.safetensors</a> or <a href="https://huggingface.co/black-forest-labs/FLUX.1-Kontext-dev">flux1-kontext-dev.safetensors</a></li>
+</ul>
+<p><strong>VAE</strong></p>
+<ul>
+<li><a href="https://huggingface.co/Comfy-Org/Lumina_Image_2.0_Repackaged/blob/main/split_files/vae/ae.safetensors">ae.safetensors</a></li>
+</ul>
+<p><strong>Text encoder</strong></p>
+<ul>
+<li><a href="https://huggingface.co/comfyanonymous/flux_text_encoders/blob/main/clip_l.safetensors">clip_l.safetensors</a></li>
+<li><a href="https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp16.safetensors">t5xxl_fp16.safetensors</a> or <a href="https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp8_e4m3fn_scaled.safetensors">t5xxl_fp8_e4m3fn_scaled.safetensors</a></li>
+</ul>
+<p><strong>Model Storage Location</strong></p>
+<pre><code>📂 ComfyUI/
+├── 📂 models/
+│   ├── 📂 diffusion_models/
+│   │   └── flux1-dev-kontext_fp8_scaled.safetensors or flux1-kontext-dev.safetensors
+│   ├── 📂 vae/
+│   │   └── ae.safetensor
+│   └── 📂 text_encoders/
+│       ├── clip_l.safetensors
+│       └── t5xxl_fp16.safetensors or t5xxl_fp8_e4m3fn_scaled.safetensors
+</code></pre>
+</body>
+</html>
