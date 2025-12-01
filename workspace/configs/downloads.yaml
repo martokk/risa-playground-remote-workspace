@@ -2,7 +2,7 @@ groups:
   # Flux.1 Base Models
   - name: "flux1-base"
     downloads:
-      - url: "https://huggingface.co/comfyanonymous/flux_text_encoders/blob/main/clip_l.safetensors"
+      - url: "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/clip_l.safetensors"
         destination: "/workspace/models/clip/flux1"
       - url: "https://huggingface.co/city96/t5-v1_1-xxl-encoder-gguf/resolve/main/t5-v1_1-xxl-encoder-Q8_0.gguf"
         destination: "/workspace/models/clip/flux1"
