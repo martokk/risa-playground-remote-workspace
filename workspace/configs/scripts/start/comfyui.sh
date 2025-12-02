@@ -34,9 +34,23 @@ clone_repo https://github.com/lquesada/ComfyUI-AutoCropFaces
 clone_repo https://github.com/GaiZhenbiao/ComfyUI-FlashVSR-Ultra-Fast
 clone_repo https://github.com/M1kep/comfyui-tensorops
 clone_repo https://github.com/kay-f/kaytool
+
+# --- START FIX: PREVENT VERSION CONFLICTS ---
+# Create a temporary constraints file to lock critical libraries
+echo "numpy<2" > /tmp/pip_constraints.txt
+echo "transformers>=4.38.0" >> /tmp/pip_constraints.txt
+echo "diffusers>=0.26.0" >> /tmp/pip_constraints.txt
+echo "insightface>=0.7" >> /tmp/pip_constraints.txt
+
+# Tell PIP to check this file before installing ANYTHING.
+# If a repo asks for numpy 2.0, PIP will refuse and use the highest compatible 1.x version instead.
+export PIP_CONSTRAINT="/tmp/pip_constraints.txt"
+# --- END FIX ---
+
 for dir in */; do
     if [ -f "$dir/requirements.txt" ]; then
         echo "Installing requirements for $dir..."
+        # The constraint file is automatically applied here because of the export above
         pip install -r "$dir/requirements.txt"
     fi
 done
